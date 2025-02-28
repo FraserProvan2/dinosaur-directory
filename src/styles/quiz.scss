@@ -1,0 +1,59 @@
+
+@import './theme';
+
+.quiz {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+
+  .dino-image {
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: $color-option-bg;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      filter: brightness(95%);
+    }
+
+    &.correct {
+      background-color: $color-correct;
+      color: #fff;
+    }
+
+    &.incorrect {
+      background-color: $color-incorrect;
+      color: #fff;
+    }
+
+    &.highlight {
+      background-color: $color-highlight;
+      color: #fff;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  .feedback {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
