@@ -1,10 +1,10 @@
-
 import React, { useState } from "react";
 import "../styles/quiz.scss";
 
 function Quiz({ questions, onQuit }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [attempts, setAttempts] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
 
@@ -15,9 +15,10 @@ function Quiz({ questions, onQuit }) {
 
     setSelectedAnswer(answer);
     setShowFeedback(true);
+    setAttempts((prev) => prev + 1); // Update attempts immediately
 
     if (answer === currentQuestion.correct) {
-      setScore((prev) => prev + 1);
+      setScore((prev) => prev + 1); // Update score immediately
     }
 
     setTimeout(() => {
@@ -31,7 +32,7 @@ function Quiz({ questions, onQuit }) {
     return (
       <div className="quiz">
         <h2>Quiz Complete!</h2>
-        <p>Score: {score} / {questions.length}</p>
+        <p>Score: {score} / {questions.length} ({((score / questions.length) * 100).toFixed(1)}%)</p>
         <button onClick={onQuit}>Back to Menu</button>
       </div>
     );
@@ -56,6 +57,12 @@ function Quiz({ questions, onQuit }) {
           </button>
         ))}
       </div>
+      {showFeedback && (
+        <div className="feedback">
+          {selectedAnswer === currentQuestion.correct ? "Correct! 🎉" : "Incorrect! ❌"}
+        </div>
+      )}
+      <div className="score">Score: {score} / {attempts} ({attempts > 0 ? ((score / attempts) * 100).toFixed(1) : 0}%)</div>
     </div>
   );
 }

@@ -1,5 +1,8 @@
 export function generateQuestions(dinoList, mode) {
-  return dinoList.map((dino) => {
+  // Shuffle dinosaurs to ensure random order per quiz
+  const shuffledDinos = [...dinoList].sort(() => Math.random() - 0.5);
+
+  return shuffledDinos.map((dino) => {
     const isHard = mode === "hard";
 
     // Correct answer logic
@@ -7,7 +10,7 @@ export function generateQuestions(dinoList, mode) {
       ? `${dino.yearsMya.start}-${dino.yearsMya.end} MYA`
       : dino.fullPeriod;
 
-    // Generate incorrect answers
+    // Periods ordered chronologically
     const allPeriods = [
       "Late Triassic",
       "Early Jurassic",
@@ -17,21 +20,38 @@ export function generateQuestions(dinoList, mode) {
       "Late Cretaceous",
     ];
 
-    const filteredPeriods = allPeriods.filter((p) => p !== dino.fullPeriod);
-    const incorrectAnswers = getRandomItems(filteredPeriods, 3);
-
-    // In hard mode, generate MYA values instead of periods
-    const options = isHard
-      ? [
-          correctAnswer,
-          ...generateRandomMYA(dino.yearsMya.start, dino.yearsMya.end),
-        ]
-      : [correctAnswer, ...incorrectAnswers];
+    let options;
+    if (isHard) {
+      // Generate 3 unique incorrect MYA ranges
+      const incorrectMYA = generateUniqueMYA(dino.yearsMya.start, dino.yearsMya.end, 3);
+      options = [correctAnswer, ...incorrectMYA];
+      // Sort MYA values from newest to oldest
+      options.sort((a, b) => parseInt(b.split("-")[0]) - parseInt(a.split("-")[0]));
+    } else {
+      // Find index of correct period
+      const correctIndex = allPeriods.indexOf(dino.fullPeriod);
+      let possibleIncorrect = [];
+      if (correctIndex > 0) possibleIncorrect.push(allPeriods[correctIndex - 1]);
+      if (correctIndex < allPeriods.length - 1) possibleIncorrect.push(allPeriods[correctIndex + 1]);
+      if (correctIndex > 1) possibleIncorrect.push(allPeriods[correctIndex - 2]);
+      if (correctIndex < allPeriods.length - 2) possibleIncorrect.push(allPeriods[correctIndex + 2]);
+      
+      // Ensure we have exactly 3 incorrect options
+      while (possibleIncorrect.length < 3) {
+        const fallbackOptions = allPeriods.filter(p => p !== dino.fullPeriod && !possibleIncorrect.includes(p));
+        possibleIncorrect.push(fallbackOptions[Math.floor(Math.random() * fallbackOptions.length)]);
+      }
+      
+      const incorrectAnswers = getRandomItems(possibleIncorrect, 3);
+      options = [correctAnswer, ...incorrectAnswers];
+      // Sort periods chronologically
+      options.sort((a, b) => allPeriods.indexOf(a) - allPeriods.indexOf(b));
+    }
 
     return {
       dinosaur: dino,
       correct: correctAnswer,
-      options: shuffle(options),
+      options: options,
     };
   });
 }
@@ -42,20 +62,17 @@ function getRandomItems(arr, num) {
   return shuffled.slice(0, num);
 }
 
-// Generate 3 random MYA periods for hard mode
-function generateRandomMYA(correctStart, correctEnd) {
-  const randomRanges = [];
-  while (randomRanges.length < 3) {
-    const start = Math.floor(Math.random() * 100) + 50; // Random start between 50 and 150 MYA
-    const end = start - Math.floor(Math.random() * 20) - 1; // Random end within 20 MYA
+// Generate unique MYA periods for hard mode
+function generateUniqueMYA(correctStart, correctEnd, count) {
+  const uniqueMYA = new Set();
+  uniqueMYA.add(`${correctStart}-${correctEnd} MYA`);
+  
+  while (uniqueMYA.size < count + 1) {
+    const start = Math.floor(Math.random() * 100) + 50;
+    const end = start - Math.floor(Math.random() * 20) - 1;
     if (start !== correctStart && end !== correctEnd) {
-      randomRanges.push(`${start}-${end} MYA`);
+      uniqueMYA.add(`${start}-${end} MYA`);
     }
   }
-  return randomRanges;
-}
-
-// Shuffle function for randomizing options
-function shuffle(arr) {
-  return arr.sort(() => Math.random() - 0.5);
+  return [...uniqueMYA].slice(1); // Remove correct answer from the set
 }
