@@ -732,6 +732,522 @@ const dinosaurs = [
     diet: "herbivorous",
     length: 17, // in meters
     foundIn: ["China"]
+  },
+  {
+    name: "Agilisaurus",
+    image: "agilisaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 164, end: 145 },
+    pronunciation: "ah-GIL-ee-sore-us",
+    meaning: "'agile lizard'",
+    diet: "herbivorous",
+    length: 1.2, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Allosaurus",
+    image: "allosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 155, end: 145 },
+    pronunciation: "AL-oh-sore-us",
+    meaning: "'different lizard'",
+    diet: "carnivorous",
+    length: 12, // in meters
+    foundIn: ["USA", "Portugal"]
+  },
+  {
+    name: "Anchiornis",
+    image: "anchiornis.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 160, end: 155 },
+    pronunciation: "an-kee-OR-nis",
+    meaning: "'near bird'",
+    diet: "carnivorous",
+    length: 0.35, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Apatosaurus",
+    image: "apatosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 152, end: 145 },
+    pronunciation: "ah-PAT-oh-sore-us",
+    meaning: "'deceptive lizard'",
+    diet: "herbivorous",
+    length: 21, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Archaeopteryx",
+    image: "archaeopteryx.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 150, end: 145 },
+    pronunciation: "ar-kee-OP-ter-iks",
+    meaning: "'ancient wing'",
+    diet: "carnivorous",
+    length: 0.5, // in meters
+    foundIn: ["Germany"]
+  },
+  {
+    name: "Barosaurus",
+    image: "barosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 155, end: 150 },
+    pronunciation: "BAR-oh-sore-us",
+    meaning: "'heavy lizard'",
+    diet: "herbivorous",
+    length: 26, // in meters
+    foundIn: ["USA", "Tanzania"]
+  },
+  {
+    name: "Brachiosaurus",
+    image: "brachiosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 154, end: 153 },
+    pronunciation: "BRAK-ee-oh-sore-us",
+    meaning: "'arm lizard'",
+    diet: "herbivorous",
+    length: 25, // in meters
+    foundIn: ["USA", "Algeria", "Portugal"]
+  },
+  {
+    name: "Camarasaurus",
+    image: "camarasaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 155, end: 145 },
+    pronunciation: "kam-ah-rah-SORE-us",
+    meaning: "'chambered lizard'",
+    diet: "herbivorous",
+    length: 18, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Camptosaurus",
+    image: "camptosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 156, end: 145 },
+    pronunciation: "KAMP-toh-sore-us",
+    meaning: "'bent lizard'",
+    diet: "herbivorous",
+    length: 7, // in meters
+    foundIn: ["USA", "England"]
+  },
+  {
+    name: "Ceratosaurus",
+    image: "ceratosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 153, end: 148 },
+    pronunciation: "seh-RAT-oh-SORE-us",
+    meaning: "'horned lizard'",
+    diet: "carnivorous",
+    length: 6, // in meters
+    foundIn: ["USA", "Portugal", "Tanzania"]
+  },
+  {
+    name: "Chaoyangsaurus",
+    image: "chaoyangsaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 150, end: 145 },
+    pronunciation: "chow-YANG-sore-us",
+    meaning: "'Chaoyang lizard'",
+    diet: "herbivorous",
+    length: 1, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Chinshakiangosaurus",
+    image: "chinshakiangosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 160, end: 155 },
+    pronunciation: "chin-shah-kee-ang-oh-SORE-us",
+    meaning: "'Chinshakiang lizard'",
+    diet: "herbivorous",
+    length: 9, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Chungkingosaurus",
+    image: "chungkingosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 160, end: 155 },
+    pronunciation: "chung-king-oh-SORE-us",
+    meaning: "'Chongqing lizard'",
+    diet: "herbivorous",
+    length: 4, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Coelurus",
+    image: "coelurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 153, end: 150 },
+    pronunciation: "see-LOOR-us",
+    meaning: "'hollow tail'",
+    diet: "carnivorous",
+    length: 2, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Compsognathus",
+    image: "compsognathus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 150, end: 145 },
+    pronunciation: "komp-sog-NAY-thus",
+    meaning: "'elegant jaw'",
+    diet: "carnivorous",
+    length: 1, // in meters
+    foundIn: ["Germany", "France"]
+  },
+  {
+    name: "Dacentrurus",
+    image: "dacentrurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 154, end: 150 },
+    pronunciation: "da-sen-TROO-rus",
+    meaning: "'tail full of points'",
+    diet: "herbivorous",
+    length: 8, // in meters
+    foundIn: ["England", "France", "Spain"]
+  },
+  {
+    name: "Dicraeosaurus",
+    image: "dicraeosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 155, end: 150 },
+    pronunciation: "di-KRAY-oh-sore-us",
+    meaning: "'bifurcated lizard'",
+    diet: "herbivorous",
+    length: 12, // in meters
+    foundIn: ["Tanzania"]
+  },
+  {
+    name: "Diplodocus",
+    image: "diplodocus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 154, end: 150 },
+    pronunciation: "dip-LOW-doh-kus",
+    meaning: "'double beam'",
+    diet: "herbivorous",
+    length: 27, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Dryosaurus",
+    image: "dryosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 155, end: 145 },
+    pronunciation: "dry-oh-SORE-us",
+    meaning: "'tree lizard'",
+    diet: "herbivorous",
+    length: 3, // in meters
+    foundIn: ["USA", "Tanzania"]
+  },
+  {
+    name: "Dubreuillosaurus",
+    image: "dubreuillosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 164, end: 161 },
+    pronunciation: "doo-BRAY-lee-oh-SORE-us",
+    meaning: "'Dubreuil's lizard'",
+    diet: "carnivorous",
+    length: 5, // in meters
+    foundIn: ["France"]
+  },
+  {
+    name: "Elaphrosaurus",
+    image: "elaphrosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 154, end: 150 },
+    pronunciation: "el-af-roh-SORE-us",
+    meaning: "'lightweight lizard'",
+    diet: "carnivorous",
+    length: 6.2, // in meters
+    foundIn: ["Tanzania"]
+  },
+  {
+    name: "Euhelopus",
+    image: "euhelopus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 160, end: 155 },
+    pronunciation: "yoo-HEH-loh-pus",
+    meaning: "'good marsh foot'",
+    diet: "herbivorous",
+    length: 15, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Europasaurus",
+    image: "europasaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 154, end: 151 },
+    pronunciation: "yoo-ROH-puh-sore-us",
+    meaning: "'European lizard'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["Germany"]
+  },
+  {
+    name: "Gargoyleosaurus",
+    image: "gargoyleosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 155, end: 150 },
+    pronunciation: "gar-GOY-lee-oh-SORE-us",
+    meaning: "'gargoyle lizard'",
+    diet: "herbivorous",
+    length: 3, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Giraffatitan",
+    image: "giraffatitan.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 150, end: 145 },
+    pronunciation: "ji-RAF-uh-TY-tan",
+    meaning: "'giant giraffe'",
+    diet: "herbivorous",
+    length: 22, // in meters
+    foundIn: ["Tanzania"]
+  },
+  {
+    name: "Guanlong",
+    image: "guanlong.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 160, end: 155 },
+    pronunciation: "gwan-LONG",
+    meaning: "'crowned dragon'",
+    diet: "carnivorous",
+    length: 3, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Haplocanthosaurus",
+    image: "haplocanthosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 155, end: 152 },
+    pronunciation: "hap-lo-KAN-tho-SORE-us",
+    meaning: "'simple spined lizard'",
+    diet: "herbivorous",
+    length: 14, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Hesperosaurus",
+    image: "hesperosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 156, end: 144 },
+    pronunciation: "HES-per-oh-SORE-us",
+    meaning: "'western lizard'",
+    diet: "herbivorous",
+    length: 6.5, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Janenschia",
+    image: "janenschia.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 155, end: 150 },
+    pronunciation: "yah-NEN-shia",
+    meaning: "'Janensch's lizard'",
+    diet: "herbivorous",
+    length: 15, // in meters
+    foundIn: ["Tanzania"]
+  },
+  {
+    name: "Juravenator",
+    image: "juravenator.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 151, end: 146 },
+    pronunciation: "yoo-rah-ven-AY-tor",
+    meaning: "'Jurassic hunter'",
+    diet: "carnivorous",
+    length: 0.75, // in meters
+    foundIn: ["Germany"]
+  },
+  {
+    name: "Kentrosaurus",
+    image: "kentrosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 155, end: 150 },
+    pronunciation: "KEN-troh-SORE-us",
+    meaning: "'pointed lizard'",
+    diet: "herbivorous",
+    length: 4.5, // in meters
+    foundIn: ["Tanzania"]
+  },
+  {
+    name: "Mamenchisaurus",
+    image: "mamenchisaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 160, end: 145 },
+    pronunciation: "ma-MEN-chi-SORE-us",
+    meaning: "'Mamenxi lizard'",
+    diet: "herbivorous",
+    length: 22, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Marshosaurus",
+    image: "marshosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 155, end: 150 },
+    pronunciation: "MARSH-oh-SORE-us",
+    meaning: "'Marsh's lizard'",
+    diet: "carnivorous",
+    length: 4.5, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Metriacanthosaurus",
+    image: "metriacanthosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 160, end: 155 },
+    pronunciation: "meh-tree-ah-KAN-tho-SORE-us",
+    meaning: "'moderate-spined lizard'",
+    diet: "carnivorous",
+    length: 8, // in meters
+    foundIn: ["England"]
+  },
+  {
+    name: "Ornitholestes",
+    image: "ornitholestes.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 156, end: 145 },
+    pronunciation: "or-NITH-oh-LES-teez",
+    meaning: "'bird robber'",
+    diet: "carnivorous",
+    length: 2, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Othnielia",
+    image: "othnielia.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 156, end: 145 },
+    pronunciation: "oth-NEE-lee-ah",
+    meaning: "'Othniel's lizard'",
+    diet: "herbivorous",
+    length: 1.5, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Piatnitzkysaurus",
+    image: "piatnitzkysaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 165, end: 161 },
+    pronunciation: "pee-aht-NEET-skee-SORE-us",
+    meaning: "'Piatnitzky's lizard'",
+    diet: "carnivorous",
+    length: 5, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Saurophaganax",
+    image: "saurophaganax.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 151, end: 145 },
+    pronunciation: "sore-oh-FAG-an-aks",
+    meaning: "'lizard-eating master'",
+    diet: "carnivorous",
+    length: 10.5, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Stegosaurus",
+    image: "stegosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 155, end: 150 },
+    pronunciation: "STEG-oh-SORE-us",
+    meaning: "'roofed lizard'",
+    diet: "herbivorous",
+    length: 9, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Torvosaurus",
+    image: "torvosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 153, end: 148 },
+    pronunciation: "TOR-voh-SORE-us",
+    meaning: "'savage lizard'",
+    diet: "carnivorous",
+    length: 10, // in meters
+    foundIn: ["USA", "Portugal"]
+  },
+  {
+    name: "Tuojiangosaurus",
+    image: "tuojiangosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 157, end: 152 },
+    pronunciation: "TWOH-jyang-oh-SORE-us",
+    meaning: "'Tuo River lizard'",
+    diet: "herbivorous",
+    length: 7, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Yangchuanosaurus",
+    image: "yangchuanosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 163, end: 157 },
+    pronunciation: "yang-chwan-oh-SORE-us",
+    meaning: "'Yangchuan lizard'",
+    diet: "carnivorous",
+    length: 10, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Yingshanosaurus",
+    image: "yingshanosaurus.png",
+    period: "Jurassic",
+    fullPeriod: "Late Jurassic",
+    yearsMya: { start: 160, end: 155 },
+    pronunciation: "ying-shan-oh-SORE-us",
+    meaning: "'Yingshan lizard'",
+    diet: "herbivorous",
+    length: 5, // in meters
+    foundIn: ["China"]
   }
 ];
 
