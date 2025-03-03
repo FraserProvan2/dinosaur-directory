@@ -2064,6 +2064,1134 @@ const dinosaurs = [
     diet: "herbivorous",
     length: 1.8, // in meters
     foundIn: ["USA"]
+  },
+  {
+    name: "Abelisaurus",
+    image: "abelisaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 80, end: 70 },
+    pronunciation: "ah-BELL-ih-SORE-us",
+    meaning: "'Abel's lizard'",
+    diet: "carnivorous",
+    length: 7.4, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Achelousaurus",
+    image: "achelousaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 83.5, end: 70.6 },
+    pronunciation: "ah-KELL-oo-oh-SORE-us",
+    meaning: "'Achelous's lizard'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Achillobator",
+    image: "achillobator.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 98, end: 83 },
+    pronunciation: "ah-KILL-oh-BAY-tor",
+    meaning: "'Achilles hero'",
+    diet: "carnivorous",
+    length: 5, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Aegyptosaurus",
+    image: "aegyptosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 95, end: 89 },
+    pronunciation: "ee-JIP-toe-SORE-us",
+    meaning: "'Egyptian lizard'",
+    diet: "herbivorous",
+    length: 15, // in meters
+    foundIn: ["Egypt", "Niger"]
+  },
+  {
+    name: "Alamosaurus",
+    image: "alamosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "AL-ah-moe-SORE-us",
+    meaning: "'Ojo Alamo lizard'",
+    diet: "herbivorous",
+    length: 21, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Albertaceratops",
+    image: "albertaceratops.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 83.5, end: 70.6 },
+    pronunciation: "al-BER-tah-SAIR-ah-tops",
+    meaning: "'Alberta horned face'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Albertosaurus",
+    image: "albertosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "al-BER-toe-SORE-us",
+    meaning: "'Alberta lizard'",
+    diet: "carnivorous",
+    length: 9, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Alectrosaurus",
+    image: "alectrosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 83, end: 70 },
+    pronunciation: "ah-LEK-troh-SORE-us",
+    meaning: "'unmarried lizard'",
+    diet: "carnivorous",
+    length: 5, // in meters
+    foundIn: ["China", "Mongolia"]
+  },
+  {
+    name: "Alioramus",
+    image: "alioramus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "AL-ee-oh-RAY-mus",
+    meaning: "'other branch'",
+    diet: "carnivorous",
+    length: 6, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Alvarezsaurus",
+    image: "alvarezsaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 86.3, end: 83.6 },
+    pronunciation: "al-VAR-ehz-SORE-us",
+    meaning: "'Álvarez's lizard'",
+    diet: "carnivorous",
+    length: 2, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Ampelosaurus",
+    image: "ampelosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "AM-pel-oh-SORE-us",
+    meaning: "'vineyard lizard'",
+    diet: "herbivorous",
+    length: 15, // in meters
+    foundIn: ["France"]
+  },
+  {
+    name: "Anchiceratops",
+    image: "anchiceratops.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 72, end: 71 },
+    pronunciation: "AN-key-SAIR-ah-tops",
+    meaning: "'near horned face'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["Canada"]
+  },
+  {
+    name: "Ankylosaurus",
+    image: "ankylosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 68, end: 66 },
+    pronunciation: "an-KY-loh-SORE-us",
+    meaning: "'fused lizard'",
+    diet: "herbivorous",
+    length: 8, // in meters
+    foundIn: ["USA", "Canada"]
+  },
+  {
+    name: "Anserimimus",
+    image: "anserimimus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "AN-ser-ih-MY-mus",
+    meaning: "'goose mimic'",
+    diet: "omnivorous",
+    length: 3, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Antarctosaurus",
+    image: "antarctosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 83.6, end: 66 },
+    pronunciation: "an-TARK-toh-SORE-us",
+    meaning: "'southern lizard'",
+    diet: "herbivorous",
+    length: 17, // in meters
+    foundIn: ["Argentina", "Brazil", "Uruguay"]
+  },
+  {
+    name: "Aralosaurus",
+    image: "aralosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "ah-RAH-loh-SORE-us",
+    meaning: "'Aral lizard'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["Kazakhstan"]
+  },
+  {
+    name: "Archaeornithomimus",
+    image: "archaeornithomimus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 93, end: 89 },
+    pronunciation: "AR-kee-or-NITH-oh-MY-mus",
+    meaning: "'ancient bird mimic'",
+    diet: "omnivorous",
+    length: 3.3, // in meters
+    foundIn: ["China", "Mongolia"]
+  },
+  {
+    name: "Argentinosaurus",
+    image: "argentinosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 96, end: 92 },
+    pronunciation: "ar-JEN-tee-noh-SORE-us",
+    meaning: "'Argentina lizard'",
+    diet: "herbivorous",
+    length: 30, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Arrhinoceratops",
+    image: "arrhinoceratops.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 72, end: 68 },
+    pronunciation: "a-RYE-no-SEH-rah-tops",
+    meaning: "'no nose-horned face'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["Canada"]
+  },
+  {
+    name: "Atrociraptor",
+    image: "atrociraptor.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 68, end: 66 },
+    pronunciation: "ah-TROH-see-RAP-tor",
+    meaning: "'savage thief'",
+    diet: "carnivorous",
+    length: 2, // in meters
+    foundIn: ["Canada"]
+  },
+  {
+    name: "Aucasaurus",
+    image: "aucasaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "AW-kah-SORE-us",
+    meaning: "'Auca lizard'",
+    diet: "carnivorous",
+    length: 5.5, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Avaceratops",
+    image: "avaceratops.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 75, end: 71 },
+    pronunciation: "AY-vah-SEH-rah-tops",
+    meaning: "'Ava's horned face'",
+    diet: "herbivorous",
+    length: 2.5, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Avimimus",
+    image: "avimimus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "AY-vee-MY-mus",
+    meaning: "'bird mimic'",
+    diet: "omnivorous",
+    length: 1.5, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Bactrosaurus",
+    image: "bactrosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 97.5, end: 85.8 },
+    pronunciation: "BAK-troh-SORE-us",
+    meaning: "'club lizard'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["China", "Mongolia"]
+  },
+  {
+    name: "Bagaceratops",
+    image: "bagaceratops.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "BAH-gah-SEH-rah-tops",
+    meaning: "'small horned face'",
+    diet: "herbivorous",
+    length: 1, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Bambiraptor",
+    image: "bambiraptor.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 75, end: 72 },
+    pronunciation: "BAM-bee-RAP-tor",
+    meaning: "'Bambi thief'",
+    diet: "carnivorous",
+    length: 1, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Borogovia",
+    image: "borogovia.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "BOR-oh-GOH-vee-ah",
+    meaning: "named after the 'borogoves' from Lewis Carroll's poem 'Jabberwocky'",
+    diet: "carnivorous",
+    length: 2, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Brachylophosaurus",
+    image: "brachylophosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 81, end: 76 },
+    pronunciation: "BRAK-ee-LOH-foh-SORE-us",
+    meaning: "'short-crested lizard'",
+    diet: "herbivorous",
+    length: 9, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Buitreraptor",
+    image: "buitreraptor.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 94, end: 89 },
+    pronunciation: "BWEE-tree-RAP-tor",
+    meaning: "'Buitr&eacute; thief'",
+    diet: "carnivorous",
+    length: 1.5, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Carcharodontosaurus",
+    image: "carcharodontosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 100, end: 93 },
+    pronunciation: "kar-KAR-oh-DON-toh-SORE-us",
+    meaning: "'shark-toothed lizard'",
+    diet: "carnivorous",
+    length: 13.5, // in meters
+    foundIn: ["Morocco", "Egypt"]
+  },
+  {
+    name: "Carnotaurus",
+    image: "carnotaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 72, end: 69.9 },
+    pronunciation: "KAR-noh-TAW-rus",
+    meaning: "'meat-eating bull'",
+    diet: "carnivorous",
+    length: 8, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Centrosaurus",
+    image: "centrosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.5, end: 75.5 },
+    pronunciation: "SEN-troh-SORE-us",
+    meaning: "'pointed lizard'",
+    diet: "herbivorous",
+    length: 5.5, // in meters
+    foundIn: ["Canada"]
+  },
+  {
+    name: "Chasmosaurus",
+    image: "chasmosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.5, end: 75.5 },
+    pronunciation: "KAZ-mo-SORE-us",
+    meaning: "'opening lizard'",
+    diet: "herbivorous",
+    length: 4.8, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Chirostenotes",
+    image: "chirostenotes.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.5, end: 75 },
+    pronunciation: "KY-roh-STEN-oh-teez",
+    meaning: "'narrow-handed'",
+    diet: "omnivorous",
+    length: 2, // in meters
+    foundIn: ["Canada"]
+  },
+  {
+    name: "Citipati",
+    image: "citipati.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 75, end: 71 },
+    pronunciation: "chee-TEE-pah-tee",
+    meaning: "'funeral pyre lord'",
+    diet: "omnivorous",
+    length: 3, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Conchoraptor",
+    image: "conchoraptor.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "KON-koh-RAP-tor",
+    meaning: "'conch thief'",
+    diet: "omnivorous",
+    length: 1.5, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Corythosaurus",
+    image: "corythosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 77, end: 75.7 },
+    pronunciation: "ko-RITH-oh-SORE-us",
+    meaning: "'helmet lizard'",
+    diet: "herbivorous",
+    length: 9, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Daspletosaurus",
+    image: "daspletosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 77, end: 74 },
+    pronunciation: "das-PLEE-toh-SORE-us",
+    meaning: "'frightful lizard'",
+    diet: "carnivorous",
+    length: 9, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Deinocheirus",
+    image: "deinocheirus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "DYE-no-KYE-rus",
+    meaning: "'terrible hand'",
+    diet: "omnivorous",
+    length: 11, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Deltadromeus",
+    image: "deltadromeus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 95, end: 93 },
+    pronunciation: "DEL-ta-DROH-mee-us",
+    meaning: "'delta runner'",
+    diet: "carnivorous",
+    length: 8, // in meters
+    foundIn: ["Morocco", "Egypt"]
+  },
+  {
+    name: "Dracorex",
+    image: "dracorex.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 66, end: 65 },
+    pronunciation: "DRAY-ko-REX",
+    meaning: "'dragon king'",
+    diet: "herbivorous",
+    length: 3, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Dreadnoughtus",
+    image: "dreadnoughtus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 77, end: 75 },
+    pronunciation: "dred-NAW-tus",
+    meaning: "'fears nothing'",
+    diet: "herbivorous",
+    length: 26, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Dromaeosaurus",
+    image: "dromaeosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.5, end: 74.8 },
+    pronunciation: "dro-MAY-oh-SORE-us",
+    meaning: "'running lizard'",
+    diet: "carnivorous",
+    length: 2, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Dromiceiomimus",
+    image: "dromiceiomimus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.5, end: 74.8 },
+    pronunciation: "dro-MEE-see-oh-MY-mus",
+    meaning: "'emu mimic'",
+    diet: "omnivorous",
+    length: 3.5, // in meters
+    foundIn: ["Canada"]
+  },
+  {
+    name: "Dryptosaurus",
+    image: "dryptosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 67, end: 66 },
+    pronunciation: "DRIP-toh-SORE-us",
+    meaning: "'tearing lizard'",
+    diet: "carnivorous",
+    length: 7.5, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Edmontonia",
+    image: "edmontonia.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.5, end: 69 },
+    pronunciation: "ed-mon-TOH-nee-ah",
+    meaning: "'from Edmonton'",
+    diet: "herbivorous",
+    length: 6.6, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Edmontosaurus",
+    image: "edmontosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 73, end: 66 },
+    pronunciation: "ed-MON-toh-SORE-us",
+    meaning: "'Edmonton lizard'",
+    diet: "herbivorous",
+    length: 12, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Einiosaurus",
+    image: "einiosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 74, end: 70 },
+    pronunciation: "EYE-nee-oh-SORE-us",
+    meaning: "'buffalo lizard'",
+    diet: "herbivorous",
+    length: 4.5, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Eolambia",
+    image: "eolambia.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 96, end: 89 },
+    pronunciation: "EE-oh-LAM-bee-ah",
+    meaning: "'dawn lambeosaurine'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Erlikosaurus",
+    image: "erlikosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 90, end: 85 },
+    pronunciation: "ER-lee-koh-SORE-us",
+    meaning: "'Erlik's lizard'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Euoplocephalus",
+    image: "euoplocephalus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.5, end: 67 },
+    pronunciation: "yoo-oh-ploh-SEF-ah-lus",
+    meaning: "'well-armored head'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["Canada"]
+  },
+  {
+    name: "Gallimimus",
+    image: "gallimimus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "GAL-ih-MY-mus",
+    meaning: "'chicken mimic'",
+    diet: "omnivorous",
+    length: 6, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Garudimimus",
+    image: "garudimimus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 90, end: 85 },
+    pronunciation: "gah-ROO-dee-MY-mus",
+    meaning: "'Garuda mimic'",
+    diet: "omnivorous",
+    length: 4, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Gasparinisaura",
+    image: "gasparinisaura.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 83.6, end: 70.6 },
+    pronunciation: "gas-par-EE-nee-SORE-ah",
+    meaning: "'Gasparini's lizard'",
+    diet: "herbivorous",
+    length: 1.5, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Gigantoraptor",
+    image: "gigantoraptor.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "jy-GAN-toh-RAP-tor",
+    meaning: "'giant thief'",
+    diet: "omnivorous",
+    length: 8, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Gilmoreosaurus",
+    image: "gilmoreosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "GIL-more-ee-oh-SORE-us",
+    meaning: "'Gilmore's lizard'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["China", "Mongolia"]
+  },
+  {
+    name: "Gorgosaurus",
+    image: "gorgosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.5, end: 75 },
+    pronunciation: "GOR-go-SORE-us",
+    meaning: "'dreadful lizard'",
+    diet: "carnivorous",
+    length: 8, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Goyocephale",
+    image: "goyocephale.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "GOH-yoh-SEF-ah-lee",
+    meaning: "'decorated head'",
+    diet: "herbivorous",
+    length: 2, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Graciliceratops",
+    image: "graciliceratops.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "gra-SIL-ee-SEH-rah-tops",
+    meaning: "'graceful horned face'",
+    diet: "herbivorous",
+    length: 1.5, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Gryposaurus",
+    image: "gryposaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 83.5, end: 75.5 },
+    pronunciation: "GRIP-oh-SORE-us",
+    meaning: "'hooked-nose lizard'",
+    diet: "herbivorous",
+    length: 9, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Hadrosaurus",
+    image: "hadrosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 80, end: 75 },
+    pronunciation: "HAD-roh-SORE-us",
+    meaning: "'bulky lizard'",
+    diet: "herbivorous",
+    length: 9, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Heyuannia",
+    image: "heyuannia.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "hay-YOO-ahn-ee-ah",
+    meaning: "'from Heyuan'",
+    diet: "omnivorous",
+    length: 1.5, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Homalocephale",
+    image: "homalocephale.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "ho-MAL-oh-SEF-ah-lee",
+    meaning: "'even head'",
+    diet: "herbivorous",
+    length: 3, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Hypacrosaurus",
+    image: "hypacrosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76, end: 67 },
+    pronunciation: "hy-PAK-roh-SORE-us",
+    meaning: "'near the highest lizard'",
+    diet: "herbivorous",
+    length: 9, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Indosuchus",
+    image: "indosuchus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "IN-doh-SOO-kus",
+    meaning: "'Indian crocodile'",
+    diet: "carnivorous",
+    length: 7, // in meters
+    foundIn: ["India"]
+  },
+  {
+    name: "Isisaurus",
+    image: "isisaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "EYE-see-SORE-us",
+    meaning: "'Indian Statistical Institute lizard'",
+    diet: "herbivorous",
+    length: 18, // in meters
+    foundIn: ["India"]
+  },
+  {
+    name: "Jaxartosaurus",
+    image: "jaxartosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "jak-SAR-toh-SORE-us",
+    meaning: "'Jaxartes lizard'",
+    diet: "herbivorous",
+    length: 5, // in meters
+    foundIn: ["Kazakhstan", "China"]
+  },
+  {
+    name: "Khaan",
+    image: "khaan.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "khan",
+    meaning: "'lord'",
+    diet: "omnivorous",
+    length: 1.8, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Kritosaurus",
+    image: "kritosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 74, end: 70 },
+    pronunciation: "KRIT-oh-SORE-us",
+    meaning: "'noble lizard'",
+    diet: "herbivorous",
+    length: 9, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Lambeosaurus",
+    image: "lambeosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.5, end: 75.5 },
+    pronunciation: "LAM-bee-oh-SORE-us",
+    meaning: "'Lambe's lizard'",
+    diet: "herbivorous",
+    length: 9.4, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Leptoceratops",
+    image: "leptoceratops.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 68, end: 66 },
+    pronunciation: "LEP-toh-SEH-rah-tops",
+    meaning: "'slender horned face'",
+    diet: "herbivorous",
+    length: 2, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Lophorhothon",
+    image: "lophorhothon.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "LOH-foh-ROH-thon",
+    meaning: "'crested nose'",
+    diet: "herbivorous",
+    length: 4.5, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Magyarosaurus",
+    image: "magyarosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "MAG-yar-oh-SORE-us",
+    meaning: "'Magyar lizard'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["Romania"]
+  },
+  {
+    name: "Maiasaura",
+    image: "maiasaura.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.7, end: 75.6 },
+    pronunciation: "MY-ah-SORE-ah",
+    meaning: "'good mother lizard'",
+    diet: "herbivorous",
+    length: 9, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Majungasaurus",
+    image: "majungasaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "ma-JUNG-ah-SORE-us",
+    meaning: "'Majunga lizard'",
+    diet: "carnivorous",
+    length: 7, // in meters
+    foundIn: ["Madagascar"]
+  },
+  {
+    name: "Mapusaurus",
+    image: "mapusaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 100, end: 94 },
+    pronunciation: "MAH-poo-SORE-us",
+    meaning: "'earth lizard'",
+    diet: "carnivorous",
+    length: 12.6, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Masiakasaurus",
+    image: "masiakasaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 70, end: 66 },
+    pronunciation: "mah-SHEE-ah-kah-SORE-us",
+    meaning: "'vicious lizard'",
+    diet: "carnivorous",
+    length: 2, // in meters
+    foundIn: ["Madagascar"]
+  },
+  {
+    name: "Maxakalisaurus",
+    image: "maxakalisaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 80, end: 70 },
+    pronunciation: "mah-SHAH-kah-lee-SORE-us",
+    meaning: "'Maxakali lizard'",
+    diet: "herbivorous",
+    length: 13, // in meters
+    foundIn: ["Brazil"]
+  },
+  {
+    name: "Microceratus",
+    image: "microceratus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 90, end: 70 },
+    pronunciation: "MY-kroh-SEH-rah-tus",
+    meaning: "'small horned'",
+    diet: "herbivorous",
+    length: 0.6, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Micropachycephalosaurus",
+    image: "micropachycephalosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "MY-kroh-PAK-ee-SEF-ah-loh-SORE-us",
+    meaning: "'small thick-headed lizard'",
+    diet: "herbivorous",
+    length: 1, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Mononykus",
+    image: "mononykus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "MOH-noh-NYE-kus",
+    meaning: "'one claw'",
+    diet: "insectivorous",
+    length: 1, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Nanshiungosaurus",
+    image: "nanshiungosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "nan-she-UNG-oh-SORE-us",
+    meaning: "'Nanshiung lizard'",
+    diet: "herbivorous",
+    length: 4, // in meters
+    foundIn: ["China"]
+  },
+  {
+    name: "Nedoceratops",
+    image: "nedoceratops.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 68, end: 66 },
+    pronunciation: "NEE-doh-SEH-rah-tops",
+    meaning: "'insufficient horned face'",
+    diet: "herbivorous",
+    length: 6, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Nemegtosaurus",
+    image: "nemegtosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "neh-MEG-toh-SORE-us",
+    meaning: "'Nemegt lizard'",
+    diet: "herbivorous",
+    length: 12, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Neuquensaurus",
+    image: "neuquensaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "new-KEN-SORE-us",
+    meaning: "'Neuquén lizard'",
+    diet: "herbivorous",
+    length: 7, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Nipponosaurus",
+    image: "nipponosaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "nee-POH-noh-SORE-us",
+    meaning: "'Japan lizard'",
+    diet: "herbivorous",
+    length: 8, // in meters
+    foundIn: ["Japan"]
+  },
+  {
+    name: "Noasaurus",
+    image: "noasaurus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "NOH-ah-SORE-us",
+    meaning: "'Northwestern Argentina lizard'",
+    diet: "carnivorous",
+    length: 1.5, // in meters
+    foundIn: ["Argentina"]
+  },
+  {
+    name: "Nomingia",
+    image: "nomingia.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "noh-MIN-jee-ah",
+    meaning: "'from Nomingiin Gobi'",
+    diet: "omnivorous",
+    length: 2, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Nothronychus",
+    image: "nothronychus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 93, end: 89 },
+    pronunciation: "noh-THROH-nih-kus",
+    meaning: "'slothful claw'",
+    diet: "herbivorous",
+    length: 4.5, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Opisthocoelicaudia",
+    image: "opisthocoelicaudia.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "oh-PIS-thoh-SEEL-ee-KAW-dee-ah",
+    meaning: "'backward hollow tail'",
+    diet: "herbivorous",
+    length: 11, // in meters
+    foundIn: ["Mongolia"]
+  },
+  {
+    name: "Ornithomimus",
+    image: "ornithomimus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.5, end: 66 },
+    pronunciation: "or-NITH-oh-MY-mus",
+    meaning: "'bird mimic'",
+    diet: "omnivorous",
+    length: 3.5, // in meters
+    foundIn: ["Canada", "USA"]
+  },
+  {
+    name: "Orodromeus",
+    image: "orodromeus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 76.5, end: 75.5 },
+    pronunciation: "or-oh-DROH-mee-us",
+    meaning: "'mountain runner'",
+    diet: "herbivorous",
+    length: 2.5, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Oryctodromeus",
+    image: "oryctodromeus.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 95, end: 94 },
+    pronunciation: "or-IK-toh-DROH-mee-us",
+    meaning: "'digging runner'",
+    diet: "herbivorous",
+    length: 2.1, // in meters
+    foundIn: ["USA"]
+  },
+  {
+    name: "Oviraptor",
+    image: "oviraptor.png",
+    period: "Cretaceous",
+    fullPeriod: "Late Cretaceous",
+    yearsMya: { start: 85, end: 70 },
+    pronunciation: "OH-vee-RAP-tor",
+    meaning: "'egg thief'",
+    diet: "omnivorous",
+    length: 1.5, // in meters
+    foundIn: ["Mongolia"]
   }
 ];
 
