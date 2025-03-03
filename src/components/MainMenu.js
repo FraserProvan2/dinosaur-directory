@@ -1,6 +1,4 @@
-
 import React from "react";
-import "../styles/main-menu.scss";
 
 function MainMenu({ startQuiz }) {
   return (

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../styles/quiz.scss";
 
 function Quiz({ questions, onQuit }) {
   const [currentIndex, setCurrentIndex] = useState(0);
