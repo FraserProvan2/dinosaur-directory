@@ -10,28 +10,28 @@ function Quiz({ questions, onQuit }) {
   const currentQuestion = questions[currentIndex];
 
   const handleAnswer = (answer) => {
-    if (selectedAnswer !== null) return; // Prevent multiple clicks
+    if (selectedAnswer !== null) return;
 
     setSelectedAnswer(answer);
     setShowFeedback(true);
-    setAttempts((prev) => prev + 1); // Update attempts immediately
+    setAttempts((prev) => prev + 1);
 
     if (answer === currentQuestion.correct) {
-      setScore((prev) => prev + 1); // Update score immediately
+      setScore((prev) => prev + 1);
     }
+  };
 
-    setTimeout(() => {
-      setShowFeedback(false);
-      setSelectedAnswer(null);
-      setCurrentIndex((prev) => prev + 1);
-    }, 2000);
+  const handleNext = () => {
+    setShowFeedback(false);
+    setSelectedAnswer(null);
+    setCurrentIndex((prev) => prev + 1);
   };
 
   if (currentIndex >= questions.length) {
     return (
       <div className="quiz">
         <h2>Quiz Complete!</h2>
-        <p>Score: {score} / {questions.length} ({((score / questions.length) * 100).toFixed(1)}%)</p>
+        <p>Score: {score} / {attempts} ({attempts > 0 ? ((score / attempts) * 100).toFixed(1) : 0}%)</p>
         <button onClick={onQuit}>Back to Menu</button>
       </div>
     );
@@ -42,7 +42,7 @@ function Quiz({ questions, onQuit }) {
       <h2>{currentQuestion.dinosaur.name}</h2>
       <img 
         className="dino-image"
-        src={require(`../images/${currentQuestion.dinosaur.image}`)}
+        src={`./images/dinosaurs/${currentQuestion.dinosaur.image}`}
         alt={currentQuestion.dinosaur.name}
       />
       <div className="options">
@@ -51,6 +51,7 @@ function Quiz({ questions, onQuit }) {
             key={option} 
             className={`option ${showFeedback ? (option === currentQuestion.correct ? "correct" : (option === selectedAnswer ? "incorrect" : "")) : ""}`}
             onClick={() => handleAnswer(option)}
+            disabled={selectedAnswer !== null}
           >
             {option}
           </button>
@@ -61,6 +62,9 @@ function Quiz({ questions, onQuit }) {
           {selectedAnswer === currentQuestion.correct ? "Correct! 🎉" : "Incorrect! ❌"}
         </div>
       )}
+      <button className="next-btn" onClick={handleNext} disabled={!showFeedback}>
+        Next Question
+      </button>
       <div className="score">Score: {score} / {attempts} ({attempts > 0 ? ((score / attempts) * 100).toFixed(1) : 0}%)</div>
     </div>
   );
