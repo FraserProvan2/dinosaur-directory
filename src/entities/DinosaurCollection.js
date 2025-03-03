@@ -1,4 +1,4 @@
-import dinosaurs from "../dinosaur-data/dinosaurs.json";
+import dinosaurs from "../data/dinosaurs.json";
 
 class DinosaurCollection {
   constructor() {

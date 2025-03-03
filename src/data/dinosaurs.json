@@ -9,7 +9,8 @@
     "meaning": "'Chinde lizard'",
     "diet": "carnivorous",
     "lengthMeters": 4.0,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Coelophysis",
@@ -21,7 +22,8 @@
     "meaning": "'hollow form'",
     "diet": "carnivorous",
     "lengthMeters": 2.0,
-    "foundIn": ["South Africa", "USA", "Zimbabwe"]
+    "foundIn": ["South Africa", "USA", "Zimbabwe"],
+    "difficulty": 1
   },
   {
     "name": "Coloradisaurus",
@@ -33,7 +35,8 @@
     "meaning": "'[Los] Colorados lizard'",
     "diet": "omnivorous",
     "lengthMeters": 4.0,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Eoraptor",
@@ -45,7 +48,8 @@
     "meaning": "'dawn thief'",
     "diet": "omnivorous",
     "lengthMeters": 1.0,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Guaibasaurus",
@@ -57,7 +61,8 @@
     "meaning": "'Guaíba lizard'",
     "diet": "omnivorous",
     "lengthMeters": 2.0,
-    "foundIn": ["Brazil"]
+    "foundIn": ["Brazil"],
+    "difficulty": 1
   },
   {
     "name": "Herrerasaurus",
@@ -69,7 +74,8 @@
     "meaning": "'Herrera's lizard'",
     "diet": "carnivorous",
     "lengthMeters": 3.0,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Liliensternus",
@@ -81,7 +87,8 @@
     "meaning": "'von Lilienstern's lizard'",
     "diet": "carnivorous",
     "lengthMeters": 5.2,
-    "foundIn": ["Germany"]
+    "foundIn": ["Germany"],
+    "difficulty": 1
   },
   {
     "name": "Lycorhinus",
@@ -93,7 +100,8 @@
     "meaning": "'wolf snout'",
     "diet": "herbivorous",
     "lengthMeters": 1.2,
-    "foundIn": ["South Africa"]
+    "foundIn": ["South Africa"],
+    "difficulty": 1
   },
   {
     "name": "Melanorosaurus",
@@ -105,7 +113,8 @@
     "meaning": "'Black Mountain lizard'",
     "diet": "herbivorous",
     "lengthMeters": 8.0,
-    "foundIn": ["South Africa"]
+    "foundIn": ["South Africa"],
+    "difficulty": 1
   },
   {
     "name": "Mussaurus",
@@ -117,7 +126,8 @@
     "meaning": "'mouse lizard'",
     "diet": "herbivorous",
     "lengthMeters": 3.0,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Plateosaurus",
@@ -129,7 +139,8 @@
     "meaning": "'flat lizard'",
     "diet": "herbivorous",
     "lengthMeters": 8.0,
-    "foundIn": ["Germany", "Switzerland", "France", "Greenland"]
+    "foundIn": ["Germany", "Switzerland", "France", "Greenland"],
+    "difficulty": 1
   },
   {
     "name": "Procompsognathus",
@@ -141,7 +152,8 @@
     "meaning": "'before elegant jaw'",
     "diet": "carnivorous",
     "lengthMeters": 1.2,
-    "foundIn": ["Germany"]
+    "foundIn": ["Germany"],
+    "difficulty": 1
   },
   {
     "name": "Riojasaurus",
@@ -153,7 +165,8 @@
     "meaning": "'Rioja lizard'",
     "diet": "herbivorous",
     "lengthMeters": 10.0,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Staurikosaurus",
@@ -165,7 +178,8 @@
     "meaning": "'Southern Cross lizard'",
     "diet": "carnivorous",
     "lengthMeters": 2.0,
-    "foundIn": ["Brazil"]
+    "foundIn": ["Brazil"],
+    "difficulty": 1
   },
   {
     "name": "Thecodontosaurus",
@@ -177,7 +191,8 @@
     "meaning": "'socket-tooth lizard'",
     "diet": "herbivorous",
     "lengthMeters": 2.0,
-    "foundIn": ["United Kingdom"]
+    "foundIn": ["United Kingdom"],
+    "difficulty": 1
   },
   {
     "name": "Aardonyx",
@@ -189,7 +204,8 @@
     "meaning": "'earth claw'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["South Africa"]
+    "foundIn": ["South Africa"],
+    "difficulty": 1
   },
   {
     "name": "Ammosaurus",
@@ -201,7 +217,8 @@
     "meaning": "'sand lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Anchisaurus",
@@ -213,7 +230,8 @@
     "meaning": "'near lizard'",
     "diet": "herbivorous",
     "lengthMeters": 2,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Barapasaurus",
@@ -225,7 +243,8 @@
     "meaning": "'big legged lizard'",
     "diet": "herbivorous",
     "lengthMeters": 14,
-    "foundIn": ["India"]
+    "foundIn": ["India"],
+    "difficulty": 1
   },
   {
     "name": "Cryolophosaurus",
@@ -237,7 +256,8 @@
     "meaning": "'cold crest lizard'",
     "diet": "carnivorous",
     "lengthMeters": 6.5,
-    "foundIn": ["Antarctica"]
+    "foundIn": ["Antarctica"],
+    "difficulty": 1
   },
   {
     "name": "Dilophosaurus",
@@ -249,7 +269,8 @@
     "meaning": "'two-crested lizard'",
     "diet": "carnivorous",
     "lengthMeters": 6,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 0
   },
   {
     "name": "Heterodontosaurus",
@@ -261,7 +282,8 @@
     "meaning": "'different-toothed lizard'",
     "diet": "herbivorous",
     "lengthMeters": 1,
-    "foundIn": ["South Africa"]
+    "foundIn": ["South Africa"],
+    "difficulty": 1
   },
   {
     "name": "Jingshanosaurus",
@@ -273,7 +295,8 @@
     "meaning": "'Jingshan lizard'",
     "diet": "herbivorous",
     "lengthMeters": 5,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Kotasaurus",
@@ -285,7 +308,8 @@
     "meaning": "'Kota lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["India"]
+    "foundIn": ["India"],
+    "difficulty": 1
   },
   {
     "name": "Lesothosaurus",
@@ -297,7 +321,8 @@
     "meaning": "'Lesotho lizard'",
     "diet": "herbivorous",
     "lengthMeters": 1,
-    "foundIn": ["Lesotho", "South Africa"]
+    "foundIn": ["Lesotho", "South Africa"],
+    "difficulty": 1
   },
   {
     "name": "Lophostropheus",
@@ -309,7 +334,8 @@
     "meaning": "'crested vertebrae'",
     "diet": "carnivorous",
     "lengthMeters": 3,
-    "foundIn": ["France"]
+    "foundIn": ["France"],
+    "difficulty": 1
   },
   {
     "name": "Lufengosaurus",
@@ -321,7 +347,8 @@
     "meaning": "'Lufeng lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Massospondylus",
@@ -333,7 +360,8 @@
     "meaning": "'longer vertebrae'",
     "diet": "herbivorous",
     "lengthMeters": 4,
-    "foundIn": ["South Africa", "Zimbabwe"]
+    "foundIn": ["South Africa", "Zimbabwe"],
+    "difficulty": 1
   },
   {
     "name": "Pantydraco",
@@ -345,7 +373,8 @@
     "meaning": "'Pant-y-ffynnon dragon'",
     "diet": "herbivorous",
     "lengthMeters": 3,
-    "foundIn": ["Wales"]
+    "foundIn": ["Wales"],
+    "difficulty": 1
   },
   {
     "name": "Sarcosaurus",
@@ -357,7 +386,8 @@
     "meaning": "'flesh lizard'",
     "diet": "carnivorous",
     "lengthMeters": 5,
-    "foundIn": ["United Kingdom"]
+    "foundIn": ["United Kingdom"],
+    "difficulty": 1
   },
   {
     "name": "Scelidosaurus",
@@ -369,7 +399,8 @@
     "meaning": "'limb lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Scutellosaurus",
@@ -381,7 +412,8 @@
     "meaning": "'little shielded lizard'",
     "diet": "herbivorous",
     "lengthMeters": 1.2,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Vulcanodon",
@@ -393,7 +425,8 @@
     "meaning": "'volcano tooth'",
     "diet": "herbivorous",
     "lengthMeters": 6.5,
-    "foundIn": ["Zimbabwe"]
+    "foundIn": ["Zimbabwe"],
+    "difficulty": 1
   },
   {
     "name": "Yimenosaurus",
@@ -405,7 +438,8 @@
     "meaning": "'Yimen lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Yunnanosaurus",
@@ -417,7 +451,8 @@
     "meaning": "'Yunnan lizard'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Amygdalodon",
@@ -429,7 +464,8 @@
     "meaning": "'almond tooth'",
     "diet": "herbivorous",
     "lengthMeters": 12,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Bellusaurus",
@@ -441,7 +477,8 @@
     "meaning": "'beautiful lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4.8,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Brachytrachelopan",
@@ -453,7 +490,8 @@
     "meaning": "'short-necked Pan'",
     "diet": "herbivorous",
     "lengthMeters": 10,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Cetiosauriscus",
@@ -465,7 +503,8 @@
     "meaning": "'whale lizard-like'",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Cetiosaurus",
@@ -477,7 +516,8 @@
     "meaning": "'whale lizard'",
     "diet": "herbivorous",
     "lengthMeters": 16,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Datousaurus",
@@ -489,7 +529,8 @@
     "meaning": "'Datou lizard'",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Emausaurus",
@@ -501,7 +542,8 @@
     "meaning": "'Ernst Moritz Arndt University lizard'",
     "diet": "herbivorous",
     "lengthMeters": 2.5,
-    "foundIn": ["Germany"]
+    "foundIn": ["Germany"],
+    "difficulty": 1
   },
   {
     "name": "Eustreptospondylus",
@@ -513,7 +555,8 @@
     "meaning": "'well-curved vertebra'",
     "diet": "carnivorous",
     "lengthMeters": 5,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Gasosaurus",
@@ -525,7 +568,8 @@
     "meaning": "'Gas lizard'",
     "diet": "carnivorous",
     "lengthMeters": 4,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Huayangosaurus",
@@ -537,7 +581,8 @@
     "meaning": "'Huayang lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4.5,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Lapparentosaurus",
@@ -549,7 +594,8 @@
     "meaning": "'Lapparent's lizard'",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["Madagascar"]
+    "foundIn": ["Madagascar"],
+    "difficulty": 1
   },
   {
     "name": "Megalosaurus",
@@ -561,7 +607,8 @@
     "meaning": "'great lizard'",
     "diet": "carnivorous",
     "lengthMeters": 9,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Monolophosaurus",
@@ -573,7 +620,8 @@
     "meaning": "'single-crested lizard'",
     "diet": "carnivorous",
     "lengthMeters": 5.5,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Nqwebasaurus",
@@ -585,7 +633,8 @@
     "meaning": "'Nqweba lizard'",
     "diet": "omnivorous",
     "lengthMeters": 1,
-    "foundIn": ["South Africa"]
+    "foundIn": ["South Africa"],
+    "difficulty": 1
   },
   {
     "name": "Omeisaurus",
@@ -597,7 +646,8 @@
     "meaning": "'Omei lizard'",
     "diet": "herbivorous",
     "lengthMeters": 20,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Patagosaurus",
@@ -609,7 +659,8 @@
     "meaning": "'Patagonia lizard'",
     "diet": "herbivorous",
     "lengthMeters": 18,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Podokesaurus",
@@ -621,7 +672,8 @@
     "meaning": "'swift-footed lizard'",
     "diet": "carnivorous",
     "lengthMeters": 1,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Poekilopleuron",
@@ -633,7 +685,8 @@
     "meaning": "'varied ribs'",
     "diet": "carnivorous",
     "lengthMeters": 9,
-    "foundIn": ["France"]
+    "foundIn": ["France"],
+    "difficulty": 1
   },
   {
     "name": "Proceratosaurus",
@@ -645,7 +698,8 @@
     "meaning": "'before Ceratosaurus'",
     "diet": "carnivorous",
     "lengthMeters": 3,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Rhoetosaurus",
@@ -657,7 +711,8 @@
     "meaning": "'Rhoetos lizard'",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["Australia"]
+    "foundIn": ["Australia"],
+    "difficulty": 1
   },
   {
     "name": "Segisaurus",
@@ -669,7 +724,8 @@
     "meaning": "'Segi Canyon lizard'",
     "diet": "carnivorous",
     "lengthMeters": 1,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Shunosaurus",
@@ -681,7 +737,8 @@
     "meaning": "'Shu lizard'",
     "diet": "herbivorous",
     "lengthMeters": 11,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Sinraptor",
@@ -693,7 +750,8 @@
     "meaning": "'Chinese thief'",
     "diet": "carnivorous",
     "lengthMeters": 7.6,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Yandusaurus",
@@ -705,7 +763,8 @@
     "meaning": "'Yandu lizard'",
     "diet": "herbivorous",
     "lengthMeters": 3,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Yinlong",
@@ -717,7 +776,8 @@
     "meaning": "'hidden dragon'",
     "diet": "herbivorous",
     "lengthMeters": 1.2,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Yuanmousaurus",
@@ -729,7 +789,8 @@
     "meaning": "'Yuanmou lizard'",
     "diet": "herbivorous",
     "lengthMeters": 17,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Agilisaurus",
@@ -741,7 +802,8 @@
     "meaning": "'agile lizard'",
     "diet": "herbivorous",
     "lengthMeters": 1.2,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Allosaurus",
@@ -753,7 +815,8 @@
     "meaning": "'different lizard'",
     "diet": "carnivorous",
     "lengthMeters": 12,
-    "foundIn": ["USA", "Portugal"]
+    "foundIn": ["USA", "Portugal"],
+    "difficulty": 0
   },
   {
     "name": "Anchiornis",
@@ -765,7 +828,8 @@
     "meaning": "'near bird'",
     "diet": "carnivorous",
     "lengthMeters": 0.35,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Apatosaurus",
@@ -777,7 +841,8 @@
     "meaning": "'deceptive lizard'",
     "diet": "herbivorous",
     "lengthMeters": 21,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 0
   },
   {
     "name": "Archaeopteryx",
@@ -789,7 +854,8 @@
     "meaning": "'ancient wing'",
     "diet": "carnivorous",
     "lengthMeters": 0.5,
-    "foundIn": ["Germany"]
+    "foundIn": ["Germany"],
+    "difficulty": 1
   },
   {
     "name": "Barosaurus",
@@ -801,7 +867,8 @@
     "meaning": "'heavy lizard'",
     "diet": "herbivorous",
     "lengthMeters": 26,
-    "foundIn": ["USA", "Tanzania"]
+    "foundIn": ["USA", "Tanzania"],
+    "difficulty": 1
   },
   {
     "name": "Brachiosaurus",
@@ -813,7 +880,8 @@
     "meaning": "'arm lizard'",
     "diet": "herbivorous",
     "lengthMeters": 25,
-    "foundIn": ["USA", "Algeria", "Portugal"]
+    "foundIn": ["USA", "Algeria", "Portugal"],
+    "difficulty": 0
   },
   {
     "name": "Camarasaurus",
@@ -825,7 +893,8 @@
     "meaning": "'chambered lizard'",
     "diet": "herbivorous",
     "lengthMeters": 18,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Camptosaurus",
@@ -837,7 +906,8 @@
     "meaning": "'bent lizard'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["USA", "England"]
+    "foundIn": ["USA", "England"],
+    "difficulty": 1
   },
   {
     "name": "Ceratosaurus",
@@ -849,7 +919,8 @@
     "meaning": "'horned lizard'",
     "diet": "carnivorous",
     "lengthMeters": 6,
-    "foundIn": ["USA", "Portugal", "Tanzania"]
+    "foundIn": ["USA", "Portugal", "Tanzania"],
+    "difficulty": 1
   },
   {
     "name": "Chaoyangsaurus",
@@ -861,7 +932,8 @@
     "meaning": "'Chaoyang lizard'",
     "diet": "herbivorous",
     "lengthMeters": 1,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Chinshakiangosaurus",
@@ -873,7 +945,8 @@
     "meaning": "'Chinshakiang lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Chungkingosaurus",
@@ -885,7 +958,8 @@
     "meaning": "'Chongqing lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Coelurus",
@@ -897,7 +971,8 @@
     "meaning": "'hollow tail'",
     "diet": "carnivorous",
     "lengthMeters": 2,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Compsognathus",
@@ -909,7 +984,8 @@
     "meaning": "'elegant jaw'",
     "diet": "carnivorous",
     "lengthMeters": 1,
-    "foundIn": ["Germany", "France"]
+    "foundIn": ["Germany", "France"],
+    "difficulty": 0
   },
   {
     "name": "Dacentrurus",
@@ -921,7 +997,8 @@
     "meaning": "'tail full of points'",
     "diet": "herbivorous",
     "lengthMeters": 8,
-    "foundIn": ["England", "France", "Spain"]
+    "foundIn": ["England", "France", "Spain"],
+    "difficulty": 1
   },
   {
     "name": "Dicraeosaurus",
@@ -933,7 +1010,8 @@
     "meaning": "'bifurcated lizard'",
     "diet": "herbivorous",
     "lengthMeters": 12,
-    "foundIn": ["Tanzania"]
+    "foundIn": ["Tanzania"],
+    "difficulty": 1
   },
   {
     "name": "Diplodocus",
@@ -945,7 +1023,8 @@
     "meaning": "'double beam'",
     "diet": "herbivorous",
     "lengthMeters": 27,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 0
   },
   {
     "name": "Dryosaurus",
@@ -957,7 +1036,8 @@
     "meaning": "'tree lizard'",
     "diet": "herbivorous",
     "lengthMeters": 3,
-    "foundIn": ["USA", "Tanzania"]
+    "foundIn": ["USA", "Tanzania"],
+    "difficulty": 1
   },
   {
     "name": "Dubreuillosaurus",
@@ -969,7 +1049,8 @@
     "meaning": "'Dubreuil's lizard'",
     "diet": "carnivorous",
     "lengthMeters": 5,
-    "foundIn": ["France"]
+    "foundIn": ["France"],
+    "difficulty": 1
   },
   {
     "name": "Elaphrosaurus",
@@ -981,7 +1062,8 @@
     "meaning": "'lightweight lizard'",
     "diet": "carnivorous",
     "lengthMeters": 6.2,
-    "foundIn": ["Tanzania"]
+    "foundIn": ["Tanzania"],
+    "difficulty": 1
   },
   {
     "name": "Euhelopus",
@@ -993,7 +1075,8 @@
     "meaning": "'good marsh foot'",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Europasaurus",
@@ -1005,7 +1088,8 @@
     "meaning": "'European lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["Germany"]
+    "foundIn": ["Germany"],
+    "difficulty": 1
   },
   {
     "name": "Gargoyleosaurus",
@@ -1017,7 +1101,8 @@
     "meaning": "'gargoyle lizard'",
     "diet": "herbivorous",
     "lengthMeters": 3,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Giraffatitan",
@@ -1029,7 +1114,8 @@
     "meaning": "'giant giraffe'",
     "diet": "herbivorous",
     "lengthMeters": 22,
-    "foundIn": ["Tanzania"]
+    "foundIn": ["Tanzania"],
+    "difficulty": 1
   },
   {
     "name": "Guanlong",
@@ -1041,7 +1127,8 @@
     "meaning": "'crowned dragon'",
     "diet": "carnivorous",
     "lengthMeters": 3,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Haplocanthosaurus",
@@ -1053,7 +1140,8 @@
     "meaning": "'simple spined lizard'",
     "diet": "herbivorous",
     "lengthMeters": 14,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Hesperosaurus",
@@ -1065,7 +1153,8 @@
     "meaning": "'western lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Janenschia",
@@ -1077,7 +1166,8 @@
     "meaning": "'Janensch's lizard'",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["Tanzania"]
+    "foundIn": ["Tanzania"],
+    "difficulty": 1
   },
   {
     "name": "Juravenator",
@@ -1089,7 +1179,8 @@
     "meaning": "'Jurassic hunter'",
     "diet": "carnivorous",
     "lengthMeters": 0.75,
-    "foundIn": ["Germany"]
+    "foundIn": ["Germany"],
+    "difficulty": 1
   },
   {
     "name": "Kentrosaurus",
@@ -1101,7 +1192,8 @@
     "meaning": "'pointed lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4.5,
-    "foundIn": ["Tanzania"]
+    "foundIn": ["Tanzania"],
+    "difficulty": 1
   },
   {
     "name": "Mamenchisaurus",
@@ -1113,7 +1205,8 @@
     "meaning": "'Mamenxi lizard'",
     "diet": "herbivorous",
     "lengthMeters": 22,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Marshosaurus",
@@ -1125,7 +1218,8 @@
     "meaning": "'Marsh's lizard'",
     "diet": "carnivorous",
     "lengthMeters": 4.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Metriacanthosaurus",
@@ -1137,7 +1231,8 @@
     "meaning": "'moderate-spined lizard'",
     "diet": "carnivorous",
     "lengthMeters": 8,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Ornitholestes",
@@ -1149,7 +1244,8 @@
     "meaning": "'bird robber'",
     "diet": "carnivorous",
     "lengthMeters": 2,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Othnielia",
@@ -1161,7 +1257,8 @@
     "meaning": "'Othniel's lizard'",
     "diet": "herbivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Piatnitzkysaurus",
@@ -1173,7 +1270,8 @@
     "meaning": "'Piatnitzky's lizard'",
     "diet": "carnivorous",
     "lengthMeters": 5,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Saurophaganax",
@@ -1185,7 +1283,8 @@
     "meaning": "'lizard-eating master'",
     "diet": "carnivorous",
     "lengthMeters": 10.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Stegosaurus",
@@ -1197,7 +1296,8 @@
     "meaning": "'roofed lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 0
   },
   {
     "name": "Torvosaurus",
@@ -1209,7 +1309,8 @@
     "meaning": "'savage lizard'",
     "diet": "carnivorous",
     "lengthMeters": 10,
-    "foundIn": ["USA", "Portugal"]
+    "foundIn": ["USA", "Portugal"],
+    "difficulty": 1
   },
   {
     "name": "Tuojiangosaurus",
@@ -1221,7 +1322,8 @@
     "meaning": "'Tuo River lizard'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Yangchuanosaurus",
@@ -1233,7 +1335,8 @@
     "meaning": "'Yangchuan lizard'",
     "diet": "carnivorous",
     "lengthMeters": 10,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Yingshanosaurus",
@@ -1245,7 +1348,8 @@
     "meaning": "'Yingshan lizard'",
     "diet": "herbivorous",
     "lengthMeters": 5,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Acrocanthosaurus",
@@ -1257,7 +1361,8 @@
     "meaning": "'high-spined lizard'",
     "diet": "carnivorous",
     "lengthMeters": 11.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Afrovenator",
@@ -1269,7 +1374,8 @@
     "meaning": "'African hunter'",
     "diet": "carnivorous",
     "lengthMeters": 8,
-    "foundIn": ["Niger"]
+    "foundIn": ["Niger"],
+    "difficulty": 1
   },
   {
     "name": "Amargasaurus",
@@ -1281,7 +1387,8 @@
     "meaning": "'La Amarga lizard'",
     "diet": "herbivorous",
     "lengthMeters": 10,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Aragosaurus",
@@ -1293,7 +1400,8 @@
     "meaning": "'Aragon lizard'",
     "diet": "herbivorous",
     "lengthMeters": 18,
-    "foundIn": ["Spain"]
+    "foundIn": ["Spain"],
+    "difficulty": 1
   },
   {
     "name": "Archaeoceratops",
@@ -1305,7 +1413,8 @@
     "meaning": "'ancient horned face'",
     "diet": "herbivorous",
     "lengthMeters": 1,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Atlascopcosaurus",
@@ -1317,7 +1426,8 @@
     "meaning": "'Atlas Copco lizard'",
     "diet": "herbivorous",
     "lengthMeters": 2,
-    "foundIn": ["Australia"]
+    "foundIn": ["Australia"],
+    "difficulty": 1
   },
   {
     "name": "Austrosaurus",
@@ -1329,7 +1439,8 @@
     "meaning": "'southern lizard'",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["Australia"]
+    "foundIn": ["Australia"],
+    "difficulty": 1
   },
   {
     "name": "Baryonyx",
@@ -1341,7 +1452,8 @@
     "meaning": "'heavy claw'",
     "diet": "carnivorous",
     "lengthMeters": 9.5,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Becklespinax",
@@ -1353,7 +1465,8 @@
     "meaning": "'Beckles' spine'",
     "diet": "carnivorous",
     "lengthMeters": 6,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Beipiaosaurus",
@@ -1365,7 +1478,8 @@
     "meaning": "'Beipiao lizard'",
     "diet": "herbivorous",
     "lengthMeters": 2.2,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Caudipteryx",
@@ -1377,7 +1491,8 @@
     "meaning": "'tail feather'",
     "diet": "omnivorous",
     "lengthMeters": 1,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Cedarpelta",
@@ -1389,7 +1504,8 @@
     "meaning": "'Cedar (Mountain) shield'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Chubutisaurus",
@@ -1401,7 +1517,8 @@
     "meaning": "'Chubut lizard'",
     "diet": "herbivorous",
     "lengthMeters": 18,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Concavenator",
@@ -1413,7 +1530,8 @@
     "meaning": "'Cuenca hunter'",
     "diet": "carnivorous",
     "lengthMeters": 6,
-    "foundIn": ["Spain"]
+    "foundIn": ["Spain"],
+    "difficulty": 1
   },
   {
     "name": "Confuciusornis",
@@ -1425,7 +1543,8 @@
     "meaning": "'Confucius bird'",
     "diet": "omnivorous",
     "lengthMeters": 0.5,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Deinonychus",
@@ -1437,7 +1556,8 @@
     "meaning": "'terrible claw'",
     "diet": "carnivorous",
     "lengthMeters": 3,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Eotyrannus",
@@ -1449,7 +1569,8 @@
     "meaning": "'dawn tyrant'",
     "diet": "carnivorous",
     "lengthMeters": 4,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Equijubus",
@@ -1461,7 +1582,8 @@
     "meaning": "'horse mane'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Erketu",
@@ -1473,7 +1595,8 @@
     "meaning": "named after Erketü, a Mongolian deity",
     "diet": "herbivorous",
     "lengthMeters": 13,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Fukuiraptor",
@@ -1485,7 +1608,8 @@
     "meaning": "'Fukui thief'",
     "diet": "carnivorous",
     "lengthMeters": 4.2,
-    "foundIn": ["Japan"]
+    "foundIn": ["Japan"],
+    "difficulty": 1
   },
   {
     "name": "Fukuisaurus",
@@ -1497,7 +1621,8 @@
     "meaning": "'Fukui lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4.5,
-    "foundIn": ["Japan"]
+    "foundIn": ["Japan"],
+    "difficulty": 1
   },
   {
     "name": "Gastonia",
@@ -1509,7 +1634,8 @@
     "meaning": "named after Robert Gaston",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Giganotosaurus",
@@ -1521,7 +1647,8 @@
     "meaning": "'giant southern lizard'",
     "diet": "carnivorous",
     "lengthMeters": 13,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Gobisaurus",
@@ -1533,7 +1660,8 @@
     "meaning": "'Gobi Desert lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["China", "Mongolia"]
+    "foundIn": ["China", "Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Harpymimus",
@@ -1545,7 +1673,8 @@
     "meaning": "'Harpy mimic'",
     "diet": "omnivorous",
     "lengthMeters": 2,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Hylaeosaurus",
@@ -1557,7 +1686,8 @@
     "meaning": "'woodland lizard'",
     "diet": "herbivorous",
     "lengthMeters": 5,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Hypsilophodon",
@@ -1569,7 +1699,8 @@
     "meaning": "'high-crested tooth'",
     "diet": "herbivorous",
     "lengthMeters": 2.3,
-    "foundIn": ["England", "Spain"]
+    "foundIn": ["England", "Spain"],
+    "difficulty": 1
   },
   {
     "name": "Iguanodon",
@@ -1581,7 +1712,8 @@
     "meaning": "'iguana tooth'",
     "diet": "herbivorous",
     "lengthMeters": 10,
-    "foundIn": ["Belgium", "England", "Germany", "Spain", "USA"]
+    "foundIn": ["Belgium", "England", "Germany", "Spain", "USA"],
+    "difficulty": 0
   },
   {
     "name": "Irritator",
@@ -1593,7 +1725,8 @@
     "meaning": "named for the irritation of paleontologists due to fossil tampering",
     "diet": "carnivorous",
     "lengthMeters": 8,
-    "foundIn": ["Brazil"]
+    "foundIn": ["Brazil"],
+    "difficulty": 1
   },
   {
     "name": "Jinzhousaurus",
@@ -1605,7 +1738,8 @@
     "meaning": "'Jinzhou lizard'",
     "diet": "herbivorous",
     "lengthMeters": 5,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Jobaria",
@@ -1617,7 +1751,8 @@
     "meaning": "named after the local mythical creature 'Jobar'",
     "diet": "herbivorous",
     "lengthMeters": 18,
-    "foundIn": ["Niger"]
+    "foundIn": ["Niger"],
+    "difficulty": 1
   },
   {
     "name": "Leaellynasaura",
@@ -1629,7 +1764,8 @@
     "meaning": "named after Leaellyn Rich, daughter of paleontologists Tom and Patricia Rich",
     "diet": "herbivorous",
     "lengthMeters": 2,
-    "foundIn": ["Australia"]
+    "foundIn": ["Australia"],
+    "difficulty": 1
   },
   {
     "name": "Liaoceratops",
@@ -1641,7 +1777,8 @@
     "meaning": "'Liao horned face'",
     "diet": "herbivorous",
     "lengthMeters": 1,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Ligabuesaurus",
@@ -1653,7 +1790,8 @@
     "meaning": "named after Italian explorer Giancarlo Ligabue",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Lurdusaurus",
@@ -1665,7 +1803,8 @@
     "meaning": "'heavy lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["Niger"]
+    "foundIn": ["Niger"],
+    "difficulty": 1
   },
   {
     "name": "Malawisaurus",
@@ -1677,7 +1816,8 @@
     "meaning": "'Malawi lizard'",
     "diet": "herbivorous",
     "lengthMeters": 16,
-    "foundIn": ["Malawi"]
+    "foundIn": ["Malawi"],
+    "difficulty": 1
   },
   {
     "name": "Microraptor",
@@ -1689,7 +1829,8 @@
     "meaning": "'small thief'",
     "diet": "carnivorous",
     "lengthMeters": 0.77,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Minmi",
@@ -1701,7 +1842,8 @@
     "meaning": "named after Minmi Crossing, Australia",
     "diet": "herbivorous",
     "lengthMeters": 3,
-    "foundIn": ["Australia"]
+    "foundIn": ["Australia"],
+    "difficulty": 1
   },
   {
     "name": "Muttaburrasaurus",
@@ -1713,7 +1855,8 @@
     "meaning": "'Muttaburra lizard'",
     "diet": "herbivorous",
     "lengthMeters": 8,
-    "foundIn": ["Australia"]
+    "foundIn": ["Australia"],
+    "difficulty": 1
   },
   {
     "name": "Neovenator",
@@ -1725,7 +1868,8 @@
     "meaning": "'new hunter'",
     "diet": "carnivorous",
     "lengthMeters": 7.6,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Nigersaurus",
@@ -1737,7 +1881,8 @@
     "meaning": "'Niger lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["Niger"]
+    "foundIn": ["Niger"],
+    "difficulty": 1
   },
   {
     "name": "Nodosaurus",
@@ -1749,7 +1894,8 @@
     "meaning": "'knobbed lizard'",
     "diet": "herbivorous",
     "lengthMeters": 5.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Ouranosaurus",
@@ -1761,7 +1907,8 @@
     "meaning": "'brave lizard'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["Niger"]
+    "foundIn": ["Niger"],
+    "difficulty": 1
   },
   {
     "name": "Patagotitan",
@@ -1773,7 +1920,8 @@
     "meaning": "'Patagonian titan'",
     "diet": "herbivorous",
     "lengthMeters": 37,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Pelecanimimus",
@@ -1785,7 +1933,8 @@
     "meaning": "'pelican mimic'",
     "diet": "omnivorous",
     "lengthMeters": 2.5,
-    "foundIn": ["Spain"]
+    "foundIn": ["Spain"],
+    "difficulty": 1
   },
   {
     "name": "Pelorosaurus",
@@ -1797,7 +1946,8 @@
     "meaning": "'monstrous lizard'",
     "diet": "herbivorous",
     "lengthMeters": 16,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Polacanthus",
@@ -1809,7 +1959,8 @@
     "meaning": "'many spines'",
     "diet": "herbivorous",
     "lengthMeters": 5,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Probactrosaurus",
@@ -1821,7 +1972,8 @@
     "meaning": "'before Bactrosaurus'",
     "diet": "herbivorous",
     "lengthMeters": 5.5,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Protarchaeopteryx",
@@ -1833,7 +1985,8 @@
     "meaning": "'before Archaeopteryx'",
     "diet": "omnivorous",
     "lengthMeters": 1,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Psittacosaurus",
@@ -1845,7 +1998,8 @@
     "meaning": "'parrot lizard'",
     "diet": "herbivorous",
     "lengthMeters": 2,
-    "foundIn": ["China", "Mongolia", "Russia"]
+    "foundIn": ["China", "Mongolia", "Russia"],
+    "difficulty": 1
   },
   {
     "name": "Rebbachisaurus",
@@ -1857,7 +2011,8 @@
     "meaning": "'Rebbach lizard'",
     "diet": "herbivorous",
     "lengthMeters": 14,
-    "foundIn": ["Morocco", "Niger"]
+    "foundIn": ["Morocco", "Niger"],
+    "difficulty": 1
   },
   {
     "name": "Sauropelta",
@@ -1869,7 +2024,8 @@
     "meaning": "'lizard shield'",
     "diet": "herbivorous",
     "lengthMeters": 5.2,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Shamosaurus",
@@ -1881,7 +2037,8 @@
     "meaning": "'Gobi Desert lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Shanag",
@@ -1893,7 +2050,8 @@
     "meaning": "named after the 'shanag' dancers of Tibetan culture",
     "diet": "carnivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Silvisaurus",
@@ -1905,7 +2063,8 @@
     "meaning": "'forest lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Sinocalliopteryx",
@@ -1917,7 +2076,8 @@
     "meaning": "'Chinese beautiful feather'",
     "diet": "carnivorous",
     "lengthMeters": 2.37,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Sinornithosaurus",
@@ -1929,7 +2089,8 @@
     "meaning": "'Chinese bird lizard'",
     "diet": "carnivorous",
     "lengthMeters": 1.2,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Sinosauropteryx",
@@ -1941,7 +2102,8 @@
     "meaning": "'Chinese reptilian wing'",
     "diet": "carnivorous",
     "lengthMeters": 1.07,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Sinovenator",
@@ -1953,7 +2115,8 @@
     "meaning": "'Chinese hunter'",
     "diet": "carnivorous",
     "lengthMeters": 0.9,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Stenopelix",
@@ -1965,7 +2128,8 @@
     "meaning": "'narrow pelvis'",
     "diet": "herbivorous",
     "lengthMeters": 1,
-    "foundIn": ["Germany"]
+    "foundIn": ["Germany"],
+    "difficulty": 1
   },
   {
     "name": "Suchomimus",
@@ -1977,7 +2141,8 @@
     "meaning": "'crocodile mimic'",
     "diet": "carnivorous",
     "lengthMeters": 11,
-    "foundIn": ["Niger"]
+    "foundIn": ["Niger"],
+    "difficulty": 1
   },
   {
     "name": "Supersaurus",
@@ -1989,7 +2154,8 @@
     "meaning": "'super lizard'",
     "diet": "herbivorous",
     "lengthMeters": 33,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Tenontosaurus",
@@ -2001,7 +2167,8 @@
     "meaning": "'sinew lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Tyrannotitan",
@@ -2013,7 +2180,8 @@
     "meaning": "'tyrant titan'",
     "diet": "carnivorous",
     "lengthMeters": 12,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Utahraptor",
@@ -2025,7 +2193,8 @@
     "meaning": "'Utah thief'",
     "diet": "carnivorous",
     "lengthMeters": 5.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Valdosaurus",
@@ -2037,7 +2206,8 @@
     "meaning": "'Weald lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4,
-    "foundIn": ["England"]
+    "foundIn": ["England"],
+    "difficulty": 1
   },
   {
     "name": "Yutyrannus",
@@ -2049,7 +2219,8 @@
     "meaning": "'feathered tyrant'",
     "diet": "carnivorous",
     "lengthMeters": 9,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 0
   },
   {
     "name": "Zephyrosaurus",
@@ -2061,7 +2232,8 @@
     "meaning": "'west wind lizard'",
     "diet": "herbivorous",
     "lengthMeters": 1.8,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Abelisaurus",
@@ -2073,7 +2245,8 @@
     "meaning": "'Abel's lizard'",
     "diet": "carnivorous",
     "lengthMeters": 7.4,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Achelousaurus",
@@ -2085,7 +2258,8 @@
     "meaning": "'Achelous's lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Achillobator",
@@ -2097,7 +2271,8 @@
     "meaning": "'Achilles hero'",
     "diet": "carnivorous",
     "lengthMeters": 5,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Aegyptosaurus",
@@ -2109,7 +2284,8 @@
     "meaning": "'Egyptian lizard'",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["Egypt", "Niger"]
+    "foundIn": ["Egypt", "Niger"],
+    "difficulty": 1
   },
   {
     "name": "Alamosaurus",
@@ -2121,7 +2297,8 @@
     "meaning": "'Ojo Alamo lizard'",
     "diet": "herbivorous",
     "lengthMeters": 21,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Albertaceratops",
@@ -2133,7 +2310,8 @@
     "meaning": "'Alberta horned face'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Albertosaurus",
@@ -2145,7 +2323,8 @@
     "meaning": "'Alberta lizard'",
     "diet": "carnivorous",
     "lengthMeters": 9,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Alectrosaurus",
@@ -2157,7 +2336,8 @@
     "meaning": "'unmarried lizard'",
     "diet": "carnivorous",
     "lengthMeters": 5,
-    "foundIn": ["China", "Mongolia"]
+    "foundIn": ["China", "Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Alioramus",
@@ -2169,7 +2349,8 @@
     "meaning": "'other branch'",
     "diet": "carnivorous",
     "lengthMeters": 6,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Alvarezsaurus",
@@ -2181,7 +2362,8 @@
     "meaning": "'Álvarez's lizard'",
     "diet": "carnivorous",
     "lengthMeters": 2,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Ampelosaurus",
@@ -2193,7 +2375,8 @@
     "meaning": "'vineyard lizard'",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["France"]
+    "foundIn": ["France"],
+    "difficulty": 1
   },
   {
     "name": "Anchiceratops",
@@ -2205,7 +2388,8 @@
     "meaning": "'near horned face'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["Canada"]
+    "foundIn": ["Canada"],
+    "difficulty": 1
   },
   {
     "name": "Ankylosaurus",
@@ -2217,7 +2401,8 @@
     "meaning": "'fused lizard'",
     "diet": "herbivorous",
     "lengthMeters": 8,
-    "foundIn": ["USA", "Canada"]
+    "foundIn": ["USA", "Canada"],
+    "difficulty": 0
   },
   {
     "name": "Anserimimus",
@@ -2229,7 +2414,8 @@
     "meaning": "'goose mimic'",
     "diet": "omnivorous",
     "lengthMeters": 3,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Antarctosaurus",
@@ -2241,7 +2427,8 @@
     "meaning": "'southern lizard'",
     "diet": "herbivorous",
     "lengthMeters": 17,
-    "foundIn": ["Argentina", "Brazil", "Uruguay"]
+    "foundIn": ["Argentina", "Brazil", "Uruguay"],
+    "difficulty": 1
   },
   {
     "name": "Aralosaurus",
@@ -2253,7 +2440,8 @@
     "meaning": "'Aral lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["Kazakhstan"]
+    "foundIn": ["Kazakhstan"],
+    "difficulty": 1
   },
   {
     "name": "Archaeornithomimus",
@@ -2265,7 +2453,8 @@
     "meaning": "'ancient bird mimic'",
     "diet": "omnivorous",
     "lengthMeters": 3.3,
-    "foundIn": ["China", "Mongolia"]
+    "foundIn": ["China", "Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Argentinosaurus",
@@ -2277,7 +2466,8 @@
     "meaning": "'Argentina lizard'",
     "diet": "herbivorous",
     "lengthMeters": 30,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Arrhinoceratops",
@@ -2289,7 +2479,8 @@
     "meaning": "'no nose-horned face'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["Canada"]
+    "foundIn": ["Canada"],
+    "difficulty": 1
   },
   {
     "name": "Atrociraptor",
@@ -2301,7 +2492,8 @@
     "meaning": "'savage thief'",
     "diet": "carnivorous",
     "lengthMeters": 2,
-    "foundIn": ["Canada"]
+    "foundIn": ["Canada"],
+    "difficulty": 1
   },
   {
     "name": "Aucasaurus",
@@ -2313,7 +2505,8 @@
     "meaning": "'Auca lizard'",
     "diet": "carnivorous",
     "lengthMeters": 5.5,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Avaceratops",
@@ -2325,7 +2518,8 @@
     "meaning": "'Ava's horned face'",
     "diet": "herbivorous",
     "lengthMeters": 2.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Avimimus",
@@ -2337,7 +2531,8 @@
     "meaning": "'bird mimic'",
     "diet": "omnivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Bactrosaurus",
@@ -2349,7 +2544,8 @@
     "meaning": "'club lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["China", "Mongolia"]
+    "foundIn": ["China", "Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Bagaceratops",
@@ -2361,7 +2557,8 @@
     "meaning": "'small horned face'",
     "diet": "herbivorous",
     "lengthMeters": 1,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Bambiraptor",
@@ -2373,7 +2570,8 @@
     "meaning": "'Bambi thief'",
     "diet": "carnivorous",
     "lengthMeters": 1,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Borogovia",
@@ -2385,7 +2583,8 @@
     "meaning": "named after the 'borogoves' from Lewis Carroll's poem 'Jabberwocky'",
     "diet": "carnivorous",
     "lengthMeters": 2,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Brachylophosaurus",
@@ -2397,7 +2596,8 @@
     "meaning": "'short-crested lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Buitreraptor",
@@ -2409,7 +2609,8 @@
     "meaning": "'Buitr&eacute; thief'",
     "diet": "carnivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Carcharodontosaurus",
@@ -2421,7 +2622,8 @@
     "meaning": "'shark-toothed lizard'",
     "diet": "carnivorous",
     "lengthMeters": 13.5,
-    "foundIn": ["Morocco", "Egypt"]
+    "foundIn": ["Morocco", "Egypt"],
+    "difficulty": 1
   },
   {
     "name": "Carnotaurus",
@@ -2433,7 +2635,8 @@
     "meaning": "'meat-eating bull'",
     "diet": "carnivorous",
     "lengthMeters": 8,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 0
   },
   {
     "name": "Centrosaurus",
@@ -2445,7 +2648,8 @@
     "meaning": "'pointed lizard'",
     "diet": "herbivorous",
     "lengthMeters": 5.5,
-    "foundIn": ["Canada"]
+    "foundIn": ["Canada"],
+    "difficulty": 1
   },
   {
     "name": "Chasmosaurus",
@@ -2457,7 +2661,8 @@
     "meaning": "'opening lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4.8,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Chirostenotes",
@@ -2469,7 +2674,8 @@
     "meaning": "'narrow-handed'",
     "diet": "omnivorous",
     "lengthMeters": 2,
-    "foundIn": ["Canada"]
+    "foundIn": ["Canada"],
+    "difficulty": 1
   },
   {
     "name": "Citipati",
@@ -2481,7 +2687,8 @@
     "meaning": "'funeral pyre lord'",
     "diet": "omnivorous",
     "lengthMeters": 3,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Conchoraptor",
@@ -2493,7 +2700,8 @@
     "meaning": "'conch thief'",
     "diet": "omnivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Corythosaurus",
@@ -2505,7 +2713,8 @@
     "meaning": "'helmet lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Daspletosaurus",
@@ -2517,7 +2726,8 @@
     "meaning": "'frightful lizard'",
     "diet": "carnivorous",
     "lengthMeters": 9,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Deinocheirus",
@@ -2529,7 +2739,8 @@
     "meaning": "'terrible hand'",
     "diet": "omnivorous",
     "lengthMeters": 11,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Deltadromeus",
@@ -2541,7 +2752,8 @@
     "meaning": "'delta runner'",
     "diet": "carnivorous",
     "lengthMeters": 8,
-    "foundIn": ["Morocco", "Egypt"]
+    "foundIn": ["Morocco", "Egypt"],
+    "difficulty": 1
   },
   {
     "name": "Dracorex",
@@ -2553,7 +2765,8 @@
     "meaning": "'dragon king'",
     "diet": "herbivorous",
     "lengthMeters": 3,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Dreadnoughtus",
@@ -2565,7 +2778,8 @@
     "meaning": "'fears nothing'",
     "diet": "herbivorous",
     "lengthMeters": 26,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Dromaeosaurus",
@@ -2577,7 +2791,8 @@
     "meaning": "'running lizard'",
     "diet": "carnivorous",
     "lengthMeters": 2,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Dromiceiomimus",
@@ -2589,7 +2804,8 @@
     "meaning": "'emu mimic'",
     "diet": "omnivorous",
     "lengthMeters": 3.5,
-    "foundIn": ["Canada"]
+    "foundIn": ["Canada"],
+    "difficulty": 1
   },
   {
     "name": "Dryptosaurus",
@@ -2601,7 +2817,8 @@
     "meaning": "'tearing lizard'",
     "diet": "carnivorous",
     "lengthMeters": 7.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Edmontonia",
@@ -2613,7 +2830,8 @@
     "meaning": "'from Edmonton'",
     "diet": "herbivorous",
     "lengthMeters": 6.6,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Edmontosaurus",
@@ -2625,7 +2843,8 @@
     "meaning": "'Edmonton lizard'",
     "diet": "herbivorous",
     "lengthMeters": 12,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Einiosaurus",
@@ -2637,7 +2856,8 @@
     "meaning": "'buffalo lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Eolambia",
@@ -2649,7 +2869,8 @@
     "meaning": "'dawn lambeosaurine'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Erlikosaurus",
@@ -2661,7 +2882,8 @@
     "meaning": "'Erlik's lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Euoplocephalus",
@@ -2673,7 +2895,8 @@
     "meaning": "'well-armored head'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["Canada"]
+    "foundIn": ["Canada"],
+    "difficulty": 1
   },
   {
     "name": "Gallimimus",
@@ -2685,7 +2908,8 @@
     "meaning": "'chicken mimic'",
     "diet": "omnivorous",
     "lengthMeters": 6,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Garudimimus",
@@ -2697,7 +2921,8 @@
     "meaning": "'Garuda mimic'",
     "diet": "omnivorous",
     "lengthMeters": 4,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Gasparinisaura",
@@ -2709,7 +2934,8 @@
     "meaning": "'Gasparini's lizard'",
     "diet": "herbivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Gigantoraptor",
@@ -2721,7 +2947,8 @@
     "meaning": "'giant thief'",
     "diet": "omnivorous",
     "lengthMeters": 8,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Gilmoreosaurus",
@@ -2733,7 +2960,8 @@
     "meaning": "'Gilmore's lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["China", "Mongolia"]
+    "foundIn": ["China", "Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Gorgosaurus",
@@ -2745,7 +2973,8 @@
     "meaning": "'dreadful lizard'",
     "diet": "carnivorous",
     "lengthMeters": 8,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Goyocephale",
@@ -2757,7 +2986,8 @@
     "meaning": "'decorated head'",
     "diet": "herbivorous",
     "lengthMeters": 2,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Graciliceratops",
@@ -2769,7 +2999,8 @@
     "meaning": "'graceful horned face'",
     "diet": "herbivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Gryposaurus",
@@ -2781,7 +3012,8 @@
     "meaning": "'hooked-nose lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Hadrosaurus",
@@ -2793,7 +3025,8 @@
     "meaning": "'bulky lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Heyuannia",
@@ -2805,7 +3038,8 @@
     "meaning": "'from Heyuan'",
     "diet": "omnivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Homalocephale",
@@ -2817,7 +3051,8 @@
     "meaning": "'even head'",
     "diet": "herbivorous",
     "lengthMeters": 3,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Hypacrosaurus",
@@ -2829,7 +3064,8 @@
     "meaning": "'near the highest lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Indosuchus",
@@ -2841,7 +3077,8 @@
     "meaning": "'Indian crocodile'",
     "diet": "carnivorous",
     "lengthMeters": 7,
-    "foundIn": ["India"]
+    "foundIn": ["India"],
+    "difficulty": 1
   },
   {
     "name": "Isisaurus",
@@ -2853,7 +3090,8 @@
     "meaning": "'Indian Statistical Institute lizard'",
     "diet": "herbivorous",
     "lengthMeters": 18,
-    "foundIn": ["India"]
+    "foundIn": ["India"],
+    "difficulty": 1
   },
   {
     "name": "Jaxartosaurus",
@@ -2865,7 +3103,8 @@
     "meaning": "'Jaxartes lizard'",
     "diet": "herbivorous",
     "lengthMeters": 5,
-    "foundIn": ["Kazakhstan", "China"]
+    "foundIn": ["Kazakhstan", "China"],
+    "difficulty": 1
   },
   {
     "name": "Khaan",
@@ -2877,7 +3116,8 @@
     "meaning": "'lord'",
     "diet": "omnivorous",
     "lengthMeters": 1.8,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Kritosaurus",
@@ -2889,7 +3129,8 @@
     "meaning": "'noble lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Lambeosaurus",
@@ -2901,7 +3142,8 @@
     "meaning": "'Lambe's lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9.4,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Leptoceratops",
@@ -2913,7 +3155,8 @@
     "meaning": "'slender horned face'",
     "diet": "herbivorous",
     "lengthMeters": 2,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Lophorhothon",
@@ -2925,7 +3168,8 @@
     "meaning": "'crested nose'",
     "diet": "herbivorous",
     "lengthMeters": 4.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Magyarosaurus",
@@ -2937,7 +3181,8 @@
     "meaning": "'Magyar lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["Romania"]
+    "foundIn": ["Romania"],
+    "difficulty": 1
   },
   {
     "name": "Maiasaura",
@@ -2949,7 +3194,8 @@
     "meaning": "'good mother lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Majungasaurus",
@@ -2961,7 +3207,8 @@
     "meaning": "'Majunga lizard'",
     "diet": "carnivorous",
     "lengthMeters": 7,
-    "foundIn": ["Madagascar"]
+    "foundIn": ["Madagascar"],
+    "difficulty": 1
   },
   {
     "name": "Mapusaurus",
@@ -2973,7 +3220,8 @@
     "meaning": "'earth lizard'",
     "diet": "carnivorous",
     "lengthMeters": 12.6,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Masiakasaurus",
@@ -2985,7 +3233,8 @@
     "meaning": "'vicious lizard'",
     "diet": "carnivorous",
     "lengthMeters": 2,
-    "foundIn": ["Madagascar"]
+    "foundIn": ["Madagascar"],
+    "difficulty": 1
   },
   {
     "name": "Maxakalisaurus",
@@ -2997,7 +3246,8 @@
     "meaning": "'Maxakali lizard'",
     "diet": "herbivorous",
     "lengthMeters": 13,
-    "foundIn": ["Brazil"]
+    "foundIn": ["Brazil"],
+    "difficulty": 1
   },
   {
     "name": "Microceratus",
@@ -3009,7 +3259,8 @@
     "meaning": "'small horned'",
     "diet": "herbivorous",
     "lengthMeters": 0.6,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Micropachycephalosaurus",
@@ -3021,7 +3272,8 @@
     "meaning": "'small thick-headed lizard'",
     "diet": "herbivorous",
     "lengthMeters": 1,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 0
   },
   {
     "name": "Mononykus",
@@ -3033,7 +3285,8 @@
     "meaning": "'one claw'",
     "diet": "insectivorous",
     "lengthMeters": 1,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Nanshiungosaurus",
@@ -3045,7 +3298,8 @@
     "meaning": "'Nanshiung lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Nedoceratops",
@@ -3057,7 +3311,8 @@
     "meaning": "'insufficient horned face'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Nemegtosaurus",
@@ -3069,7 +3324,8 @@
     "meaning": "'Nemegt lizard'",
     "diet": "herbivorous",
     "lengthMeters": 12,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Neuquensaurus",
@@ -3081,7 +3337,8 @@
     "meaning": "'Neuquén lizard'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Nipponosaurus",
@@ -3093,7 +3350,8 @@
     "meaning": "'Japan lizard'",
     "diet": "herbivorous",
     "lengthMeters": 8,
-    "foundIn": ["Japan"]
+    "foundIn": ["Japan"],
+    "difficulty": 1
   },
   {
     "name": "Noasaurus",
@@ -3105,7 +3363,8 @@
     "meaning": "'Northwestern Argentina lizard'",
     "diet": "carnivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Nomingia",
@@ -3117,7 +3376,8 @@
     "meaning": "'from Nomingiin Gobi'",
     "diet": "omnivorous",
     "lengthMeters": 2,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Nothronychus",
@@ -3129,7 +3389,8 @@
     "meaning": "'slothful claw'",
     "diet": "herbivorous",
     "lengthMeters": 4.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Opisthocoelicaudia",
@@ -3141,7 +3402,8 @@
     "meaning": "'backward hollow tail'",
     "diet": "herbivorous",
     "lengthMeters": 11,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Ornithomimus",
@@ -3153,7 +3415,8 @@
     "meaning": "'bird mimic'",
     "diet": "omnivorous",
     "lengthMeters": 3.5,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Orodromeus",
@@ -3165,7 +3428,8 @@
     "meaning": "'mountain runner'",
     "diet": "herbivorous",
     "lengthMeters": 2.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Oryctodromeus",
@@ -3177,7 +3441,8 @@
     "meaning": "'digging runner'",
     "diet": "herbivorous",
     "lengthMeters": 2.1,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Oviraptor",
@@ -3189,7 +3454,8 @@
     "meaning": "'egg thief'",
     "diet": "omnivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Pachycephalosaurus",
@@ -3201,7 +3467,8 @@
     "meaning": "'thick-headed lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Pachyrhinosaurus",
@@ -3213,7 +3480,8 @@
     "meaning": "'thick-nosed lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Panoplosaurus",
@@ -3225,7 +3493,8 @@
     "meaning": "'fully armored lizard'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["Canada"]
+    "foundIn": ["Canada"],
+    "difficulty": 1
   },
   {
     "name": "Paralititan",
@@ -3237,7 +3506,8 @@
     "meaning": "'tidal giant'",
     "diet": "herbivorous",
     "lengthMeters": 26,
-    "foundIn": ["Egypt"]
+    "foundIn": ["Egypt"],
+    "difficulty": 1
   },
   {
     "name": "Parasaurolophus",
@@ -3249,7 +3519,8 @@
     "meaning": "'near crested lizard'",
     "diet": "herbivorous",
     "lengthMeters": 10,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 0
   },
   {
     "name": "Parksosaurus",
@@ -3261,7 +3532,8 @@
     "meaning": "'Parks' lizard'",
     "diet": "herbivorous",
     "lengthMeters": 2.5,
-    "foundIn": ["Canada"]
+    "foundIn": ["Canada"],
+    "difficulty": 1
   },
   {
     "name": "Pentaceratops",
@@ -3273,7 +3545,8 @@
     "meaning": "'five-horned face'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Pinacosaurus",
@@ -3285,7 +3558,8 @@
     "meaning": "'plank lizard'",
     "diet": "herbivorous",
     "lengthMeters": 5,
-    "foundIn": ["China", "Mongolia"]
+    "foundIn": ["China", "Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Prenocephale",
@@ -3297,7 +3571,8 @@
     "meaning": "'sloping head'",
     "diet": "herbivorous",
     "lengthMeters": 2.5,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Prosaurolophus",
@@ -3309,7 +3584,8 @@
     "meaning": "'before Saurolophus'",
     "diet": "herbivorous",
     "lengthMeters": 8.5,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Protoceratops",
@@ -3321,7 +3597,8 @@
     "meaning": "'first horned face'",
     "diet": "herbivorous",
     "lengthMeters": 1.8,
-    "foundIn": ["China", "Mongolia"]
+    "foundIn": ["China", "Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Protohadros",
@@ -3333,7 +3610,8 @@
     "meaning": "'first Hadrosaur'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Puertasaurus",
@@ -3345,7 +3623,8 @@
     "meaning": "'Puerta's lizard'",
     "diet": "herbivorous",
     "lengthMeters": 30,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Pyroraptor",
@@ -3357,7 +3636,8 @@
     "meaning": "'fire thief'",
     "diet": "carnivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["France"]
+    "foundIn": ["France"],
+    "difficulty": 1
   },
   {
     "name": "Quaesitosaurus",
@@ -3369,7 +3649,8 @@
     "meaning": "'extraordinary lizard'",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Rajasaurus",
@@ -3381,7 +3662,8 @@
     "meaning": "'king lizard'",
     "diet": "carnivorous",
     "lengthMeters": 9,
-    "foundIn": ["India"]
+    "foundIn": ["India"],
+    "difficulty": 1
   },
   {
     "name": "Rhabdodon",
@@ -3393,7 +3675,8 @@
     "meaning": "'fluted tooth'",
     "diet": "herbivorous",
     "lengthMeters": 4,
-    "foundIn": ["France", "Spain"]
+    "foundIn": ["France", "Spain"],
+    "difficulty": 1
   },
   {
     "name": "Rinchenia",
@@ -3405,7 +3688,8 @@
     "meaning": "'Rinchen's lizard'",
     "diet": "omnivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Rugops",
@@ -3417,7 +3701,8 @@
     "meaning": "'wrinkle face'",
     "diet": "carnivorous",
     "lengthMeters": 6,
-    "foundIn": ["Niger"]
+    "foundIn": ["Niger"],
+    "difficulty": 1
   },
   {
     "name": "Saichania",
@@ -3429,7 +3714,8 @@
     "meaning": "'beautiful one'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Saltasaurus",
@@ -3441,7 +3727,8 @@
     "meaning": "'Salta lizard'",
     "diet": "herbivorous",
     "lengthMeters": 12,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Saurolophus",
@@ -3453,7 +3740,8 @@
     "meaning": "'lizard crest'",
     "diet": "herbivorous",
     "lengthMeters": 9.5,
-    "foundIn": ["Mongolia", "USA"]
+    "foundIn": ["Mongolia", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Saurornithoides",
@@ -3465,7 +3753,8 @@
     "meaning": "'lizard bird form'",
     "diet": "carnivorous",
     "lengthMeters": 2,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Secernosaurus",
@@ -3477,7 +3766,8 @@
     "meaning": "'separated lizard'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Segnosaurus",
@@ -3489,7 +3779,8 @@
     "meaning": "'slow lizard'",
     "diet": "herbivorous",
     "lengthMeters": 6.5,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Shantungosaurus",
@@ -3501,7 +3792,8 @@
     "meaning": "'Shandong lizard'",
     "diet": "herbivorous",
     "lengthMeters": 16.6,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Shuvuuia",
@@ -3513,7 +3805,8 @@
     "meaning": "'bird'",
     "diet": "carnivorous",
     "lengthMeters": 0.6,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Sonidosaurus",
@@ -3525,7 +3818,8 @@
     "meaning": "'Sonid lizard'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Spinosaurus",
@@ -3537,7 +3831,8 @@
     "meaning": "'spine lizard'",
     "diet": "carnivorous",
     "lengthMeters": 15,
-    "foundIn": ["Egypt", "Morocco"]
+    "foundIn": ["Egypt", "Morocco"],
+    "difficulty": 0
   },
   {
     "name": "Stegoceras",
@@ -3549,7 +3844,8 @@
     "meaning": "'roofed horn'",
     "diet": "herbivorous",
     "lengthMeters": 2.5,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Stenonychosaurus",
@@ -3561,7 +3857,8 @@
     "meaning": "'narrow claw lizard'",
     "diet": "carnivorous",
     "lengthMeters": 2.5,
-    "foundIn": ["Canada"]
+    "foundIn": ["Canada"],
+    "difficulty": 1
   },
   {
     "name": "Struthiomimus",
@@ -3573,7 +3870,8 @@
     "meaning": "'ostrich mimic'",
     "diet": "omnivorous",
     "lengthMeters": 4.3,
-    "foundIn": ["Canada", "USA"]
+    "foundIn": ["Canada", "USA"],
+    "difficulty": 1
   },
   {
     "name": "Struthiosaurus",
@@ -3585,7 +3883,8 @@
     "meaning": "'ostrich lizard'",
     "diet": "herbivorous",
     "lengthMeters": 2.2,
-    "foundIn": ["Austria", "France", "Romania"]
+    "foundIn": ["Austria", "France", "Romania"],
+    "difficulty": 1
   },
   {
     "name": "Stygimoloch",
@@ -3597,7 +3896,8 @@
     "meaning": "'demon from the river Styx'",
     "diet": "herbivorous",
     "lengthMeters": 3,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Styracosaurus",
@@ -3609,7 +3909,8 @@
     "meaning": "'spiked lizard'",
     "diet": "herbivorous",
     "lengthMeters": 5.5,
-    "foundIn": ["Canada"]
+    "foundIn": ["Canada"],
+    "difficulty": 0
   },
   {
     "name": "Talarurus",
@@ -3621,7 +3922,8 @@
     "meaning": "'basket tail'",
     "diet": "herbivorous",
     "lengthMeters": 6,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Tanius",
@@ -3633,7 +3935,8 @@
     "meaning": "'Tan's lizard'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Tarbosaurus",
@@ -3645,7 +3948,8 @@
     "meaning": "'alarming lizard'",
     "diet": "carnivorous",
     "lengthMeters": 10,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Tarchia",
@@ -3657,7 +3961,8 @@
     "meaning": "'brainy one'",
     "diet": "herbivorous",
     "lengthMeters": 8,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Telmatosaurus",
@@ -3669,7 +3974,8 @@
     "meaning": "'marsh lizard'",
     "diet": "herbivorous",
     "lengthMeters": 5,
-    "foundIn": ["Romania"]
+    "foundIn": ["Romania"],
+    "difficulty": 1
   },
   {
     "name": "Therizinosaurus",
@@ -3681,7 +3987,8 @@
     "meaning": "'scythe lizard'",
     "diet": "herbivorous",
     "lengthMeters": 10,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Thescelosaurus",
@@ -3693,7 +4000,8 @@
     "meaning": "'marvelous lizard'",
     "diet": "herbivorous",
     "lengthMeters": 3.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Torosaurus",
@@ -3705,7 +4013,8 @@
     "meaning": "'perforated lizard'",
     "diet": "herbivorous",
     "lengthMeters": 8,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   },
   {
     "name": "Triceratops",
@@ -3717,7 +4026,8 @@
     "meaning": "'three-horned face'",
     "diet": "herbivorous",
     "lengthMeters": 9,
-    "foundIn": ["USA", "Canada"]
+    "foundIn": ["USA", "Canada"],
+    "difficulty": 0
   },
   {
     "name": "Troodon",
@@ -3729,7 +4039,8 @@
     "meaning": "'wounding tooth'",
     "diet": "omnivorous",
     "lengthMeters": 2.4,
-    "foundIn": ["USA", "Canada"]
+    "foundIn": ["USA", "Canada"],
+    "difficulty": 1
   },
   {
     "name": "Tsagantegia",
@@ -3741,7 +4052,8 @@
     "meaning": "'from Tsagan-Teg'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Tsintaosaurus",
@@ -3753,7 +4065,8 @@
     "meaning": "'Qingdao lizard'",
     "diet": "herbivorous",
     "lengthMeters": 10,
-    "foundIn": ["China"]
+    "foundIn": ["China"],
+    "difficulty": 1
   },
   {
     "name": "Tylocephale",
@@ -3765,7 +4078,8 @@
     "meaning": "'swollen head'",
     "diet": "herbivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Tyrannosaurus",
@@ -3777,7 +4091,8 @@
     "meaning": "'tyrant lizard'",
     "diet": "carnivorous",
     "lengthMeters": 12,
-    "foundIn": ["USA", "Canada"]
+    "foundIn": ["USA", "Canada"],
+    "difficulty": 0
   },
   {
     "name": "Udanoceratops",
@@ -3789,7 +4104,8 @@
     "meaning": "'Udan's horned face'",
     "diet": "herbivorous",
     "lengthMeters": 4,
-    "foundIn": ["Mongolia"]
+    "foundIn": ["Mongolia"],
+    "difficulty": 1
   },
   {
     "name": "Unenlagia",
@@ -3801,7 +4117,8 @@
     "meaning": "'half-bird'",
     "diet": "carnivorous",
     "lengthMeters": 2,
-    "foundIn": ["Argentina"]
+    "foundIn": ["Argentina"],
+    "difficulty": 1
   },
   {
     "name": "Urbacodon",
@@ -3813,7 +4130,8 @@
     "meaning": "'URBAC tooth'",
     "diet": "carnivorous",
     "lengthMeters": 1.5,
-    "foundIn": ["Uzbekistan"]
+    "foundIn": ["Uzbekistan"],
+    "difficulty": 1
   },
   {
     "name": "Velociraptor",
@@ -3825,7 +4143,8 @@
     "meaning": "'swift thief'",
     "diet": "carnivorous",
     "lengthMeters": 2,
-    "foundIn": ["Mongolia", "China"]
+    "foundIn": ["Mongolia", "China"],
+    "difficulty": 0
   },
   {
     "name": "Zalmoxes",
@@ -3837,7 +4156,8 @@
     "meaning": "'Zalmoxis'",
     "diet": "herbivorous",
     "lengthMeters": 2.5,
-    "foundIn": ["Romania", "Austria"]
+    "foundIn": ["Romania", "Austria"],
+    "difficulty": 1
   },
   {
     "name": "Zuniceratops",
@@ -3849,6 +4169,7 @@
     "meaning": "'Zuni horned face'",
     "diet": "herbivorous",
     "lengthMeters": 3.5,
-    "foundIn": ["USA"]
+    "foundIn": ["USA"],
+    "difficulty": 1
   }
 ]
