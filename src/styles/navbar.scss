@@ -1,0 +1,25 @@
+.custom-toggler {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.custom-toggler:focus {
+  box-shadow: none;
+}
+
+.custom-toggler {
+  border: none !important;
+  background: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+}
