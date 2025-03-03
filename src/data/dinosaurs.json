@@ -3273,7 +3273,7 @@
     "diet": "herbivorous",
     "lengthMeters": 1,
     "foundIn": ["China"],
-    "difficulty": 0
+    "difficulty": 1
   },
   {
     "name": "Mononykus",
