@@ -10,7 +10,7 @@ function App() {
   
   const startQuiz = (mode) => {
     setQuizMode(mode);
-    setQuestions(generateQuestions(dinosaurs, mode)); // "normal" or "hard"
+    setQuestions(generateQuestions(dinosaurs, mode));
   };
 
   return (
