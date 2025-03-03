@@ -3,7 +3,7 @@ import QuizGame from "../components/QuizGame";
 
 function Quiz() {
   return (
-    <div className="container mt-5">
+    <div className="container quiz-margin-top">
       <QuizGame />
     </div>
   );

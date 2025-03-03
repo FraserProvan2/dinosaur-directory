@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Home from "./pages/Home";
-import DinoDex from "./pages/DinoDex";
+import AtoZ from "./pages/A-Z";
 import Quiz from "./pages/Quiz";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dinodex" element={<DinoDex />} />
+        <Route path="/a-z" element={<AtoZ />} />
         <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </Router>

@@ -1,12 +1,12 @@
 import React from "react";
 
-function DinoDex() {
+function AtoZ() {
   return (
     <div className="container mt-5">
-      <h1>DinoDex</h1>
+      <h1>A-Z</h1>
       <p>Search and filter through dinosaurs here.</p>
     </div>
   );
 }
 
-export default DinoDex;
+export default AtoZ;

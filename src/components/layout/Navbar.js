@@ -42,10 +42,10 @@ function Navbar() {
             <li className="nav-item">
               <Link
                 className="nav-link"
-                to="/dinodex"
-                onClick={(e) => handleNavClick(e, "/dinodex")}
+                to="/a-z"
+                onClick={(e) => handleNavClick(e, "/a-z")}
               >
-                DinoDex
+                A-Z
               </Link>
             </li>
             <li className="nav-item">
