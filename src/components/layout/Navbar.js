@@ -18,11 +18,16 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <Link
-          className="navbar-brand"
+          className="navbar-brand d-flex align-items-center"
           to="/"
           onClick={(e) => handleNavClick(e, "/")}
         >
-          DinoWebApp
+          <img
+            src="/images/logo/logo-circle.png"
+            alt="Dino Logo"
+            className="navbar-logo"
+          />
+          <span className="ms-2">DinoWebApp</span>
         </Link>
 
         <button
