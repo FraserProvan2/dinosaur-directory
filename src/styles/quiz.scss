@@ -59,7 +59,7 @@ h2 {
   transition: all 0.3s;
 
   &:hover {
-    background: lighten($color-background, 10%);
+    background: darken($color-background, 10%);
   }
 
   &.correct {

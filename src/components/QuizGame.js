@@ -40,7 +40,7 @@ function QuizGame() {
     }
     const randomDino =
       filteredDinos[Math.floor(Math.random() * filteredDinos.length)];
-    let options = getOptions(randomDino);
+    let options = getOptions(randomDino, difficulty);
     setCurrentDino(randomDino);
     setChoices(options);
     setSelected(null);
@@ -48,33 +48,55 @@ function QuizGame() {
     setShowNext(false);
   };
 
-  const getOptions = (dino) => {
+  const getOptions = (dino, difficulty) => {
     if (!dino) return [];
-    let periods = ["Triassic", "Jurassic", "Cretaceous"];
-    if (difficulty === "hard") {
-      periods = [
-        "Late Triassic",
-        "Early Jurassic",
-        "Mid Jurassic",
-        "Late Jurassic",
-        "Early Cretaceous",
-        "Late Cretaceous",
-      ];
+
+    const fullPeriods = [
+      "Late Triassic",
+      "Early Jurassic",
+      "Mid Jurassic",
+      "Late Jurassic",
+      "Early Cretaceous",
+      "Late Cretaceous",
+    ];
+    const groupedPeriods = ["Triassic", "Jurassic", "Cretaceous"];
+
+    if (difficulty !== "hard") {
+      return groupedPeriods; // Easy/Medium mode
     }
-    const correctAnswer = difficulty === "hard" ? dino.fullPeriod : dino.period;
-    const incorrectChoices = periods
-      .filter((p) => p !== correctAnswer)
-      .slice(0, difficulty === "hard" ? 3 : 2);
-    return [correctAnswer, ...incorrectChoices].sort(
-      (a, b) => periods.indexOf(a) - periods.indexOf(b)
+
+    const correctAnswer = dino.fullPeriod;
+    const correctIndex = fullPeriods.indexOf(correctAnswer);
+    if (correctIndex === -1) return fullPeriods.slice(0, 4); // Fallback
+
+    let choices = new Set([correctAnswer]);
+
+    if (correctIndex > 0) choices.add(fullPeriods[correctIndex - 1]); // Before
+    if (correctIndex < fullPeriods.length - 1)
+      choices.add(fullPeriods[correctIndex + 1]); // After
+
+    for (let i = 2; choices.size < 4; i++) {
+      if (correctIndex - i >= 0) choices.add(fullPeriods[correctIndex - i]);
+      if (correctIndex + i < fullPeriods.length)
+        choices.add(fullPeriods[correctIndex + i]);
+    }
+
+    while (choices.size > 4) {
+      let removable = [...choices].filter((p) => p !== correctAnswer);
+      choices.delete(removable[Math.floor(Math.random() * removable.length)]);
+    }
+
+    return Array.from(choices).sort(
+      (a, b) => fullPeriods.indexOf(a) - fullPeriods.indexOf(b)
     );
   };
 
   const handleAnswer = (choice) => {
     setSelected(choice);
     const isCorrect =
-      choice ===
-      (difficulty === "hard" ? currentDino.fullPeriod : currentDino.period);
+      difficulty === "hard"
+        ? choice === currentDino.fullPeriod
+        : choice === currentDino.period;
     setCorrect(
       isCorrect
         ? choice
@@ -156,7 +178,9 @@ function QuizGame() {
           </p>
           <div className="quiz-header">
             <h2>{currentDino.name}</h2>
-            <p className="pronunciation text-muted text-sm">({currentDino.pronunciation})</p>
+            <p className="pronunciation text-muted text-sm">
+              ({currentDino.pronunciation})
+            </p>
           </div>
           <motion.img
             src={`/images/dinosaurs/${currentDino.name.toLowerCase()}.png`}
@@ -166,7 +190,7 @@ function QuizGame() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           />
-          <p class="mt-3">
+          <p className="mt-3">
             Which time period did the {currentDino.name} live in?
           </p>
           <div className="options">
