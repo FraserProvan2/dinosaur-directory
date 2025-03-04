@@ -127,19 +127,19 @@ function QuizGame() {
         <div className="difficulty-select">
           <h2>Select Difficulty</h2>
           <button
-            className="btn btn-light mx-1"
+            className="btn btn-start-game btn-primary mx-1"
             onClick={() => startGame("easy")}
           >
             Easy
           </button>
           <button
-            className="btn btn-light mx-1"
+            className="btn btn-start-game btn-light mx-1"
             onClick={() => startGame("medium")}
           >
             Medium
           </button>
           <button
-            className="btn btn-light mx-1"
+            className="btn btn-start-game btn-light mx-1"
             onClick={() => startGame("hard")}
           >
             Hard
@@ -156,7 +156,7 @@ function QuizGame() {
           </p>
           <div className="quiz-header">
             <h2>{currentDino.name}</h2>
-            <p className="pronunciation">({currentDino.pronunciation})</p>
+            <p className="pronunciation text-muted text-sm">({currentDino.pronunciation})</p>
           </div>
           <motion.img
             src={`/images/dinosaurs/${currentDino.name.toLowerCase()}.png`}
@@ -166,7 +166,7 @@ function QuizGame() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           />
-          <p class="mt-2">
+          <p class="mt-3">
             Which time period did the {currentDino.name} live in?
           </p>
           <div className="options">

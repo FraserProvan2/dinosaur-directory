@@ -10,10 +10,11 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background: #222;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  color: white;
+}
+
+.btn-start-game {
+  width: 100px;
 }
 
 .quiz-header {
@@ -40,7 +41,6 @@ h2 {
 
 .pronunciation {
   font-size: 16px;
-  color: #bbb;
 }
 
 .options {
@@ -51,8 +51,6 @@ h2 {
 }
 
 .option-btn {
-  background: #444;
-  color: white;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -61,16 +59,18 @@ h2 {
   transition: all 0.3s;
 
   &:hover {
-    background: #666;
+    background: lighten($color-background, 10%);
   }
 
   &.correct {
     background: #28a745;
+    color: black;
   }
 
   &.incorrect {
     background: #dc3545;
     animation: shake 0.3s;
+    color: black;
   }
 }
 
@@ -82,15 +82,13 @@ h2 {
 .next-btn {
   padding: 10px 15px;
   font-size: 16px;
-  background: #007bff;
-  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
 
   &:hover {
-    background: #0056b3;
+    // background: #0056b3;
   }
 }
 
