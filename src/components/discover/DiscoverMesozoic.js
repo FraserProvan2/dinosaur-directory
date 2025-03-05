@@ -204,29 +204,32 @@ function DiscoverMesozoic() {
         </div>
         {!isInfoCollapsed && (
           <div className="right-panel">
-            <button
-              className="toggle-btn"
-              onClick={() => setIsInfoCollapsed(true)}
-            >
-              X
-            </button>
             {selectedCountry ? (
               <>
-                <h3>
+                <div className="in-period-title">
                   Dinosaurs in {selectedCountry} ({selectedPeriod})
-                </h3>
+                </div>
                 <ul className="dino-list">
                   {dinosInCountry.map((dino) => (
+                    
                     <li key={dino.name} className="dino-item">
+                      <div className="dino-icon-container">
                       <img
                         src={"images/dinosaurs/" + dino.image}
                         alt={dino.name}
                         className="dino-icon"
                       />
+                      </div>
                       {dino.name}
                     </li>
                   ))}
                 </ul>
+                <button
+              className="toggle-btn btn btn-light px-2 mb-3"
+              onClick={() => setIsInfoCollapsed(true)}
+            >
+              ➦ Close
+            </button>
               </>
             ) : (
               <p className="info-text">Select a country to see dinosaurs</p>
