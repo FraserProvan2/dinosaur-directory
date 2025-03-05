@@ -72,10 +72,6 @@ h2 {
     animation: shake 0.3s;
     color: black;
   }
-
-  // @media only screen and (max-width: 600px) {
-  //   padding: 7px;
-  // }
 }
 
 .feedback {
@@ -90,10 +86,6 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
-
-  &:hover {
-    // background: #0056b3;
-  }
 }
 
 @keyframes shake {

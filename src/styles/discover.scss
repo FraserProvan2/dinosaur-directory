@@ -1,0 +1,97 @@
+// page layout
+.home-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 93vh;
+}
+
+.content-container {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 66.67%;
+  transition: width 0.3s ease-in-out;
+
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.left-panel.expanded {
+  width: 100%;
+}
+
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #28a745;
+  color: white;
+  padding: 20px;
+  width: 33.33%;
+
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+// slider / title
+.title {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.period-slider {
+  width: 80%;
+  margin: 10px auto;
+  display: block;
+}
+
+// globe
+.globe-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    height: 45vh;
+  }
+}
+
+.flag-label {
+  color: white;
+  padding: 4px 6px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+// info panel
+.dino-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.period-text {
+  text-align: center;
+  margin-top: 10px;
+}

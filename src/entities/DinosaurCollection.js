@@ -5,26 +5,28 @@ class DinosaurCollection {
     this.dinosaurs = dinosaurs;
   }
 
-  getSortedByName() {
-    return [...this.dinosaurs].sort((a, b) => a.name.localeCompare(b.name));
+  getAllDinosaurs() {
+    return [...this.dinosaurs]; // Return all dinosaurs
   }
 
-  getByPeriod(period) {
-    return this.dinosaurs.filter(
-      (dino) => dino.period.toLowerCase() === period.toLowerCase()
-    );
-  }
+  getAllCountries() {
+    const countryMap = {}; // Store unique countries with their periods
 
-  getByDiet(diet) {
-    return this.dinosaurs.filter(
-      (dino) => dino.diet.toLowerCase() === diet.toLowerCase()
-    );
-  }
+    this.dinosaurs.forEach((dino) => {
+      dino.foundIn.forEach((country) => {
+        if (!countryMap[country]) {
+          countryMap[country] = new Set();
+        }
+        countryMap[country].add(dino.fullPeriod);
+      });
+    });
 
-  getRandomDinosaur() {
-    const randomIndex = Math.floor(Math.random() * this.dinosaurs.length);
-    return this.dinosaurs[randomIndex];
+    // Convert Sets to arrays and return
+    return Object.entries(countryMap).reduce((acc, [country, periods]) => {
+      acc[country] = Array.from(periods);
+      return acc;
+    }, {});
   }
 }
 
-export default DinosaurCollection;
+export default new DinosaurCollection();
