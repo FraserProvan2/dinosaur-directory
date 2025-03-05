@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { useState, useEffect, useRef } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
 import * as THREE from "three";
 import DinosaurCollection from "../entities/DinosaurCollection";
@@ -31,10 +31,47 @@ const latLonToSphereCoords = (lat, lon, radius = 2.6) => {
   );
 };
 
+function CountryMarker({ country, position, onCountryClick }) {
+  const { camera } = useThree();
+  const markerRef = useRef();
+  const labelRef = useRef();
+  const lightDirection = new THREE.Vector3(0.5, 1, 0).normalize();
+
+  useFrame(() => {
+    if (markerRef.current && labelRef.current && camera) {
+      const normal = position.clone().normalize();
+      const toCamera = new THREE.Vector3().subVectors(camera.position, position).normalize();
+
+      const isLit = normal.dot(lightDirection) > 0; 
+      const isFacingCamera = normal.dot(toCamera) > 0.1; // FIXED: Only show in front
+
+      const isVisible = isLit && isFacingCamera;
+
+      markerRef.current.visible = isVisible;
+      labelRef.current.style.display = isVisible ? "block" : "none";
+    }
+  });
+
+  return (
+    <group ref={markerRef} position={position} onClick={() => onCountryClick(country)}>
+      <mesh>
+        <sphereGeometry args={[0.12, 32, 32]} />
+        <meshStandardMaterial color="yellow" emissive="orange" emissiveIntensity={0.6} />
+      </mesh>
+      <Html position={[0, 0.25, 0]}>
+        <div ref={labelRef} className="flag-label clickable" onClick={() => onCountryClick(country)}>
+          {country}
+        </div>
+      </Html>
+    </group>
+  );
+}
+
 function Globe({ selectedPeriod, onCountryClick, availableLocations }) {
   return (
-    <Canvas className="globe-canvas">
+    <Canvas className="globe-canvas" camera={{ position: [0, 0, 5] }}>
       <ambientLight intensity={0.8} />
+      <directionalLight position={[5, 3, 2]} intensity={0.9} />
       <OrbitControls enablePan={false} />
       <mesh>
         <sphereGeometry args={[2.5, 64, 64]} />
@@ -43,17 +80,7 @@ function Globe({ selectedPeriod, onCountryClick, availableLocations }) {
       {availableLocations.map((country) => {
         if (!countryLatLonMap[country]) return null;
         const position = latLonToSphereCoords(...countryLatLonMap[country]);
-        return (
-          <mesh key={country} position={position}>
-            <sphereGeometry args={[0.1, 16, 16]} />
-            <meshStandardMaterial color="yellow" emissive="orange" emissiveIntensity={0.5} />
-            <Html position={[0, 0.3, 0]}>
-              <div className="flag-label clickable" onClick={() => onCountryClick(country)}>
-                {country}
-              </div>
-            </Html>
-          </mesh>
-        );
+        return <CountryMarker key={country} country={country} position={position} onCountryClick={onCountryClick} />;
       })}
     </Canvas>
   );
@@ -64,21 +91,31 @@ function Home() {
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [isInfoCollapsed, setIsInfoCollapsed] = useState(false);
-  const allDinosaurs = DinosaurCollection.getAllDinosaurs();
+  const allDinosaurs = useRef(DinosaurCollection.getAllDinosaurs());
+  const [availableLocations, setAvailableLocations] = useState([]);
 
-  const availableLocations = allDinosaurs.reduce((acc, dino) => {
-    if (dino.fullPeriod === selectedPeriod) {
-      dino.foundIn.forEach((location) => {
-        if (!acc.includes(location)) {
-          acc.push(location);
+  useEffect(() => {
+    setAvailableLocations(
+      allDinosaurs.current.reduce((acc, dino) => {
+        if (dino.fullPeriod === selectedPeriod) {
+          dino.foundIn.forEach((location) => {
+            if (!acc.includes(location)) {
+              acc.push(location);
+            }
+          });
         }
-      });
-    }
-    return acc;
-  }, []);
+        return acc;
+      }, [])
+    );
+  }, [selectedPeriod]);
+
+  useEffect(() => {
+    setIsInfoCollapsed(true);
+    setSelectedCountry(null);
+  }, [selectedPeriod]);
 
   const dinosInCountry = selectedCountry
-    ? allDinosaurs.filter((dino) => dino.foundIn.includes(selectedCountry) && dino.fullPeriod === selectedPeriod)
+    ? allDinosaurs.current.filter((dino) => dino.foundIn.includes(selectedCountry) && dino.fullPeriod === selectedPeriod)
     : [];
 
   return (
