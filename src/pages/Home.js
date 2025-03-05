@@ -4,6 +4,8 @@ import { OrbitControls, Html } from "@react-three/drei";
 import * as THREE from "three";
 import DinosaurCollection from "../entities/DinosaurCollection";
 
+const PRIMARY_COLOR = "#AA0000";
+
 const periodTextures = {
   "Late Triassic": "/images/textures/late_triassic.jpg",
   "Early Jurassic": "/images/textures/early_jurassic.jpg",
@@ -14,14 +16,46 @@ const periodTextures = {
 };
 
 const countryLatLonMap = {
-  USA: [38, -97], Canada: [56, -106], England: [52, -1], France: [46, 2],
-  Germany: [51, 10], China: [35, 104], Mongolia: [46, 105], Argentina: [-34, -64],
-  Brazil: [-14, -51], Morocco: [31, -7], "South Africa": [-30, 25],
-  Australia: [-25, 133], India: [20, 78], Russia: [60, 100], Portugal: [39, -8],
-  Spain: [40, -3], Mexico: [23, -102]
+  USA: [38, -97],
+  Canada: [56, -106],
+  England: [52, -1],
+  France: [46, 2],
+  Germany: [51, 10],
+  China: [35, 104],
+  Mongolia: [46, 105],
+  Argentina: [-34, -64],
+  Brazil: [-14, -51],
+  Morocco: [31, -7],
+  "South Africa": [-30, 25],
+  Australia: [-25, 133],
+  India: [20, 78],
+  Russia: [60, 100],
+  Portugal: [39, -8],
+  Spain: [40, -3],
+  Mexico: [23, -102],
+  Egypt: [26, 30],
+  Niger: [17, 9],
+  Romania: [46, 25],
+  Austria: [47, 13],
+  Belgium: [50, 4],
+  Switzerland: [47, 8],
+  Tanzania: [-6, 35],
+  Madagascar: [-18, 46],
+  Kazakhstan: [48, 67],
+  Uzbekistan: [41, 64],
+  Uruguay: [-33, -56],
+  Japan: [36, 138],
+  Wales: [52, -3],
+  Greenland: [72, -40],
+  Lesotho: [-29, 28],
+  Antarctica: [-82, 135],
+  Malawi: [-13, 34],
+  Zimbabwe: [-19, 29],
+  Algeria: [28, 3],
 };
 
-const latLonToSphereCoords = (lat, lon, radius = 2.6) => {
+
+const latLonToSphereCoords = (lat, lon, radius = 2.5) => {
   const phi = (90 - lat) * (Math.PI / 180);
   const theta = (lon + 180) * (Math.PI / 180);
   return new THREE.Vector3(
@@ -40,26 +74,38 @@ function CountryMarker({ country, position, onCountryClick }) {
   useFrame(() => {
     if (markerRef.current && labelRef.current && camera) {
       const normal = position.clone().normalize();
-      const toCamera = new THREE.Vector3().subVectors(camera.position, position).normalize();
-
-      const isLit = normal.dot(lightDirection) > 0; 
-      const isFacingCamera = normal.dot(toCamera) > 0.1; // FIXED: Only show in front
+      const toCamera = new THREE.Vector3()
+        .subVectors(camera.position, position)
+        .normalize();
+      const isLit = normal.dot(lightDirection) > 0;
+      const isFacingCamera = normal.dot(toCamera) > 0.1;
 
       const isVisible = isLit && isFacingCamera;
-
       markerRef.current.visible = isVisible;
       labelRef.current.style.display = isVisible ? "block" : "none";
     }
   });
 
   return (
-    <group ref={markerRef} position={position} onClick={() => onCountryClick(country)}>
+    <group
+      ref={markerRef}
+      position={position}
+      onClick={() => onCountryClick(country)}
+    >
       <mesh>
-        <sphereGeometry args={[0.12, 32, 32]} />
-        <meshStandardMaterial color="yellow" emissive="orange" emissiveIntensity={0.6} />
+        <sphereGeometry args={[0.05, 32, 32]} />{" "}
+        <meshStandardMaterial
+          color={PRIMARY_COLOR}
+          emissive={PRIMARY_COLOR}
+          emissiveIntensity={0.7}
+        />
       </mesh>
-      <Html position={[0, 0.25, 0]}>
-        <div ref={labelRef} className="flag-label clickable" onClick={() => onCountryClick(country)}>
+      <Html position={[0, 0.2, 0]}>
+        <div
+          ref={labelRef}
+          className="flag-label clickable"
+          onClick={() => onCountryClick(country)}
+        >
           {country}
         </div>
       </Html>
@@ -70,17 +116,26 @@ function CountryMarker({ country, position, onCountryClick }) {
 function Globe({ selectedPeriod, onCountryClick, availableLocations }) {
   return (
     <Canvas className="globe-canvas" camera={{ position: [0, 0, 5] }}>
-      <ambientLight intensity={0.8} />
-      <directionalLight position={[5, 3, 2]} intensity={0.9} />
+      <ambientLight intensity={3} />
+      <directionalLight position={[10, 3, 2]} intensity={0.9} />
       <OrbitControls enablePan={false} />
       <mesh>
         <sphereGeometry args={[2.5, 64, 64]} />
-        <meshStandardMaterial map={new THREE.TextureLoader().load(periodTextures[selectedPeriod])} />
+        <meshStandardMaterial
+          map={new THREE.TextureLoader().load(periodTextures[selectedPeriod])}
+        />
       </mesh>
       {availableLocations.map((country) => {
         if (!countryLatLonMap[country]) return null;
         const position = latLonToSphereCoords(...countryLatLonMap[country]);
-        return <CountryMarker key={country} country={country} position={position} onCountryClick={onCountryClick} />;
+        return (
+          <CountryMarker
+            key={country}
+            country={country}
+            position={position}
+            onCountryClick={onCountryClick}
+          />
+        );
       })}
     </Canvas>
   );
@@ -115,7 +170,11 @@ function Home() {
   }, [selectedPeriod]);
 
   const dinosInCountry = selectedCountry
-    ? allDinosaurs.current.filter((dino) => dino.foundIn.includes(selectedCountry) && dino.fullPeriod === selectedPeriod)
+    ? allDinosaurs.current.filter(
+        (dino) =>
+          dino.foundIn.includes(selectedCountry) &&
+          dino.fullPeriod === selectedPeriod
+      )
     : [];
 
   return (
@@ -134,22 +193,37 @@ function Home() {
       <div className="content-container">
         <div className={`left-panel ${isInfoCollapsed ? "expanded" : ""}`}>
           <div className="globe-container">
-            <Globe selectedPeriod={selectedPeriod} onCountryClick={(country) => {
-              setSelectedCountry(country);
-              setIsInfoCollapsed(false);
-            }} availableLocations={availableLocations} />
+            <Globe
+              selectedPeriod={selectedPeriod}
+              onCountryClick={(country) => {
+                setSelectedCountry(country);
+                setIsInfoCollapsed(false);
+              }}
+              availableLocations={availableLocations}
+            />
           </div>
         </div>
         {!isInfoCollapsed && (
           <div className="right-panel">
-            <button className="toggle-btn" onClick={() => setIsInfoCollapsed(true)}>Collapse Info</button>
+            <button
+              className="toggle-btn"
+              onClick={() => setIsInfoCollapsed(true)}
+            >
+              Collapse Info
+            </button>
             {selectedCountry ? (
               <>
-                <h3>Dinosaurs in {selectedCountry} ({selectedPeriod})</h3>
+                <h3>
+                  Dinosaurs in {selectedCountry} ({selectedPeriod})
+                </h3>
                 <ul className="dino-list">
                   {dinosInCountry.map((dino) => (
                     <li key={dino.name} className="dino-item">
-                      <img src={dino.image} alt={dino.name} className="dino-icon" />
+                      <img
+                        src={"images/dinosaurs/" + dino.image}
+                        alt={dino.name}
+                        className="dino-icon"
+                      />
                       {dino.name}
                     </li>
                   ))}
