@@ -16,3 +16,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.dynamic-margin-top {
+  margin-top: 3rem !important;
+  @media only screen and (max-width: 600px) {
+    margin-top: 0.5rem !important;
+  }
+}

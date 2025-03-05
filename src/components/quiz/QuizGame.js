@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import dinosaurs from "../data/dinosaurs.json";
+import dinosaurs from "../../data/dinosaurs.json";
 import { motion } from "framer-motion";
 
 function QuizGame() {
@@ -147,7 +147,7 @@ function QuizGame() {
     <div className="quiz-container">
       {!difficulty ? (
         <div className="difficulty-select">
-          <h2>Select Difficulty</h2>
+          <div className="mb-2">Select Difficulty</div>
           <button
             className="btn btn-start-game btn-primary mx-1"
             onClick={() => startGame("easy")}
