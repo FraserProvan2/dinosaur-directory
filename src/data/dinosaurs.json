@@ -1,5 +1,18 @@
 [
   {
+    "name": "Demo",
+    "image": "spinosaurus.png",
+    "period": "Triassic",
+    "fullPeriod": "Late Triassic",
+    "yearsMya": { "start": 227, "end": 210 },
+    "pronunciation": "demo",
+    "meaning": "'Demo'",
+    "diet": "carnivorous",
+    "lengthMeters": 4.0,
+    "foundIn": ["USA", "Canada", "England", "France", "Germany", "China", "Mongolia", "Argentina", "Brazil", "Morocco", "South Africa", "Australia", "India", "Russia", "Portugal", "Spain", "Mexico", "Egypt", "Niger", "Romania", "Austria", "Belgium", "Switzerland", "Tanzania", "Madagascar", "Kazakhstan", "Uzbekistan", "Uruguay", "Japan", "Wales", "Greenland", "Lesotho", "Antarctica", "Malawi", "Zimbabwe", "Algeria"],
+    "difficulty": 1
+  },
+  {
     "name": "Chindesaurus",
     "image": "chindesaurus.png",
     "period": "Triassic",
@@ -9,7 +22,7 @@
     "meaning": "'Chinde lizard'",
     "diet": "carnivorous",
     "lengthMeters": 4.0,
-    "foundIn": ["USA"],
+    "foundIn": ["USA", "Canada", "England", "France", "Germany", "China", "Mongolia", "Argentina", "Brazil", "Morocco", "South Africa", "Australia", "India", "Russia", "Portugal", "Spain", "Mexico", "Egypt", "Niger", "Romania", "Austria", "Belgium", "Switzerland", "Tanzania", "Madagascar", "Kazakhstan", "Uzbekistan", "Uruguay", "Japan", "Wales", "Greenland", "Lesotho", "Antarctica", "Malawi", "Zimbabwe", "Algeria"],
     "difficulty": 1
   },
   {
@@ -230,7 +243,7 @@
     "meaning": "'near lizard'",
     "diet": "herbivorous",
     "lengthMeters": 2,
-    "foundIn": ["USA"],
+    "foundIn": ["USA", "Germany"],
     "difficulty": 1
   },
   {
@@ -1361,7 +1374,7 @@
     "meaning": "'high-spined lizard'",
     "diet": "carnivorous",
     "lengthMeters": 11.5,
-    "foundIn": ["USA"],
+    "foundIn": ["USA", "France"],
     "difficulty": 1
   },
   {
@@ -4039,7 +4052,7 @@
     "meaning": "'wounding tooth'",
     "diet": "omnivorous",
     "lengthMeters": 2.4,
-    "foundIn": ["USA", "Canada"],
+    "foundIn": ["USA", "Canada", "England"],
     "difficulty": 1
   },
   {
@@ -4169,7 +4182,7 @@
     "meaning": "'Zuni horned face'",
     "diet": "herbivorous",
     "lengthMeters": 3.5,
-    "foundIn": ["USA"],
+    "foundIn": ["USA", "Germany"],
     "difficulty": 1
   }
 ]
