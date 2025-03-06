@@ -8,7 +8,7 @@ import CountriesPosition from "../../data/countries-positions.json";
 const PRIMARY_COLOR = "#AA0000";
 
 const periodTextures = {
-  "Late Triassic": "/images/textures/modern.jpg",
+  "Late Triassic": "/images/textures/late_triassic.jpg",
   "Early Jurassic": "/images/textures/early_jurassic.jpg",
   "Mid Jurassic": "/images/textures/mid_jurassic.jpg",
   "Late Jurassic": "/images/textures/late_jurassic.jpg",
@@ -25,7 +25,6 @@ const latLonToSphereCoords = (lat, lon, radius = 2.5) => {
     radius * Math.sin(phi) * Math.sin(theta)
   );
 };
-
 
 function CountryMarker({ country, position, onCountryClick }) {
   const { camera } = useThree();
