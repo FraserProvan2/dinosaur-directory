@@ -1,4 +1,5 @@
 import dinosaurs from "../data/dinosaurs.json";
+import BaseCountriesPositions from "../data/base-countries-positions.json";
 
 class DinosaurCollection {
   constructor() {
@@ -6,26 +7,30 @@ class DinosaurCollection {
   }
 
   getAllDinosaurs() {
-    return [...this.dinosaurs]; // Return all dinosaurs
+    return [...this.dinosaurs];
   }
 
-  getAllCountries() {
-    const countryMap = {}; // Store unique countries with their periods
+  getAllBaseCountriesCords() {
+    const countryMap = {};
 
     this.dinosaurs.forEach((dino) => {
+      const period = dino.fullPeriod;
+
+      if (!countryMap[period]) {
+        countryMap[period] = {};
+      }
+
       dino.foundIn.forEach((country) => {
-        if (!countryMap[country]) {
-          countryMap[country] = new Set();
+        if (!BaseCountriesPositions[country]) {
+          console.error(`Missing base coordinates for: ${country}`);
+          return;
         }
-        countryMap[country].add(dino.fullPeriod);
+
+        countryMap[dino.fullPeriod][country] = BaseCountriesPositions[country];
       });
     });
 
-    // Convert Sets to arrays and return
-    return Object.entries(countryMap).reduce((acc, [country, periods]) => {
-      acc[country] = Array.from(periods);
-      return acc;
-    }, {});
+    return countryMap;
   }
 }
 

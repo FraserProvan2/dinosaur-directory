@@ -1744,8 +1744,8 @@
   {
     "name": "Jobaria",
     "image": "jobaria.png",
-    "period": "Jurassic",
-    "fullPeriod": "Middle Jurassic",
+    "period": "Cretaceous",
+    "fullPeriod": "Early Cretaceous",
     "yearsMya": { "start": 164, "end": 161 },
     "pronunciation": "joh-BAR-ee-uh",
     "meaning": "named after the local mythical creature 'Jobar'",

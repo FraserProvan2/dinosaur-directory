@@ -5,8 +5,8 @@ import * as THREE from "three";
 import DinosaurCollection from "../../entities/DinosaurCollection";
 import CountriesPosition from "../../data/countries-positions.json";
 
-const DEV_MODE = true; // Toggle Developer Mode
-const PRIMARY_COLOR = DEV_MODE ? "#800080" : "#AA0000"; // Purple for DEV mode, Red otherwise
+const DEV_MODE = false;
+const PRIMARY_COLOR = DEV_MODE ? "#800080" : "#AA0000";
 
 const periodTextures = {
   "Late Triassic": "/images/textures/late_triassic.jpg",
@@ -33,13 +33,13 @@ function CountryMarker({ country, initialPosition, onClick }) {
   const labelRef = useRef();
   const isDragging = useRef(false);
   const [currentPosition, setCurrentPosition] = useState(
-    initialPosition || new THREE.Vector3(0, 0, 2.5) // ✅ Default position
+    initialPosition || new THREE.Vector3(0, 0, 2.5)
   );
 
   useFrame(({ raycaster, mouse }) => {
     if (!markerRef.current || !labelRef.current || !currentPosition) return;
 
-    const normal = currentPosition.clone().normalize(); // ✅ Prevents undefined error
+    const normal = currentPosition.clone().normalize();
     const toCamera = new THREE.Vector3().subVectors(camera.position, currentPosition).normalize();
     const isFacingCamera = normal.dot(toCamera) > 0.1;
 
@@ -54,7 +54,7 @@ function CountryMarker({ country, initialPosition, onClick }) {
         const lat = 90 - Math.acos(newPos.y / 2.5) * (180 / Math.PI);
         const lon = -Math.atan2(newPos.z, newPos.x) * (180 / Math.PI);
         setCurrentPosition(latLonToSphereCoords(lat, lon));
-        console.log(`"${country}": [${lat.toFixed(4)}, ${lon.toFixed(4)}]`); // Logs coords for JSON file
+        console.log(`"${country}": [${lat.toFixed(4)}, ${lon.toFixed(4)}]`);
       }
     }
   });
@@ -64,12 +64,12 @@ function CountryMarker({ country, initialPosition, onClick }) {
       <mesh
         onPointerDown={(event) => {
           if (DEV_MODE) isDragging.current = true;
-          event.stopPropagation(); // Prevent unwanted globe movement
+          event.stopPropagation();
         }}
         onPointerUp={(event) => {
           isDragging.current = false;
           event.stopPropagation();
-          onClick(country); // Opens sidebar when clicked (unless in DEV mode)
+          onClick(country);
         }}
       >
         <sphereGeometry args={[0.05, 32, 32]} />
