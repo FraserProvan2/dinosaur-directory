@@ -7,7 +7,7 @@ function Home() {
         <img src="/images/logo/logo.png" alt="Dino Logo" />
       </div>
 
-      <div className="globe-container">
+      <div>
         <h1>DinoWebApp</h1>
       </div>
     </div>

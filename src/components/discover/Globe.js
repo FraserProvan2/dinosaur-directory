@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useMemo } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Html, Stars } from "@react-three/drei";
 import * as THREE from "three";
@@ -40,7 +40,6 @@ function CountryMarker({ country, initialPosition, PRIMARY_COLOR, onClick }) {
       .subVectors(camera.position, worldPosition)
       .normalize();
 
-    // Labels only appear when the marker is facing the camera
     const isFacingCamera = normal.dot(toCamera) > 0.1;
     markerRef.current.visible = isFacingCamera;
     labelRef.current.style.display = isFacingCamera ? "block" : "none";
@@ -48,7 +47,7 @@ function CountryMarker({ country, initialPosition, PRIMARY_COLOR, onClick }) {
 
   return (
     <group ref={markerRef} position={currentPosition}>
-      <mesh>
+      <mesh onClick={() => onClick(country)}>
         <sphereGeometry args={[0.05, 32, 32]} />
         <meshStandardMaterial
           color={PRIMARY_COLOR}
@@ -61,6 +60,7 @@ function CountryMarker({ country, initialPosition, PRIMARY_COLOR, onClick }) {
           ref={labelRef}
           className="flag-label"
           onClick={() => onClick(country)}
+          style={{ cursor: "pointer" }}
         >
           {country}
         </div>
@@ -75,14 +75,21 @@ function RotatingGlobe({
   onCountryClick,
   PRIMARY_COLOR,
   isSpinning,
+  globeSpeed = 0.0003,
+  cloudSpeed = 0.0001,
+  textures,
 }) {
   const countryLatLonMap = CountriesPosition[selectedPeriod] || {};
   const globeRef = useRef();
   const pivotRef = useRef();
+  const cloudsRef = useRef();
 
   useFrame(() => {
     if (pivotRef.current && isSpinning) {
-      pivotRef.current.rotation.y += 0.0003;
+      pivotRef.current.rotation.y += globeSpeed;
+    }
+    if (cloudsRef.current) {
+      cloudsRef.current.rotation.y += cloudSpeed;
     }
   });
 
@@ -91,10 +98,9 @@ function RotatingGlobe({
       <group ref={globeRef} position={[0, 0, 0]}>
         <mesh>
           <sphereGeometry args={[2.5, 64, 64]} />
-          <meshStandardMaterial
-            map={new THREE.TextureLoader().load(periodTextures[selectedPeriod])}
-          />
+          <meshStandardMaterial map={textures[selectedPeriod]} />
         </mesh>
+
         {availableLocations.map((country) => {
           if (!countryLatLonMap[country]) return null;
           const position = latLonToSphereCoords(...countryLatLonMap[country]);
@@ -109,6 +115,15 @@ function RotatingGlobe({
           );
         })}
       </group>
+
+      <mesh ref={cloudsRef} position={[0, 0, 0]}>
+        <sphereGeometry args={[2.55, 64, 64]} />
+        <meshStandardMaterial
+          map={textures["clouds"]}
+          transparent={true}
+          opacity={0.8}
+        />
+      </mesh>
     </group>
   );
 }
@@ -120,6 +135,20 @@ function Globe({
   PRIMARY_COLOR,
 }) {
   const [isSpinning, setIsSpinning] = useState(true);
+
+  // Preload all textures once on initial load
+  const textures = useMemo(() => {
+    const loader = new THREE.TextureLoader();
+    const loadedTextures = {};
+
+    Object.keys(periodTextures).forEach((period) => {
+      loadedTextures[period] = loader.load(periodTextures[period]);
+    });
+
+    loadedTextures["clouds"] = loader.load("/images/textures/clouds.png");
+
+    return loadedTextures;
+  }, []);
 
   return (
     <div className="globe-container">
@@ -151,6 +180,8 @@ function Globe({
             onCountryClick={onCountryClick}
             PRIMARY_COLOR={PRIMARY_COLOR}
             isSpinning={isSpinning}
+            cloudSpeed={0.00006}
+            textures={textures}
           />
         </Canvas>
 
