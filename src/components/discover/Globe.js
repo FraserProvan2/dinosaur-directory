@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Html } from "@react-three/drei";
+import { OrbitControls, Html, Stars } from "@react-three/drei";
 import * as THREE from "three";
 import CountriesPosition from "../../data/countries-positions.json";
 
@@ -23,59 +23,32 @@ const latLonToSphereCoords = (lat, lon, radius = 2.5) => {
   );
 };
 
-function CountryMarker({
-  country,
-  initialPosition,
-  DEV_MODE,
-  PRIMARY_COLOR,
-  onClick,
-}) {
+function CountryMarker({ country, initialPosition, PRIMARY_COLOR, onClick }) {
   const { camera } = useThree();
   const markerRef = useRef();
   const labelRef = useRef();
-  const isDragging = useRef(false);
-  const [currentPosition, setCurrentPosition] = useState(
-    initialPosition || new THREE.Vector3(0, 0, 2.5)
-  );
+  const [currentPosition] = useState(initialPosition);
 
-  useFrame(({ raycaster, mouse }) => {
-    if (!markerRef.current || !labelRef.current || !currentPosition) return;
+  useFrame(() => {
+    if (!markerRef.current || !labelRef.current) return;
 
-    const normal = currentPosition.clone().normalize();
+    const worldPosition = new THREE.Vector3();
+    markerRef.current.getWorldPosition(worldPosition);
+
+    const normal = worldPosition.clone().normalize();
     const toCamera = new THREE.Vector3()
-      .subVectors(camera.position, currentPosition)
+      .subVectors(camera.position, worldPosition)
       .normalize();
-    const isFacingCamera = normal.dot(toCamera) > 0.1;
 
+    // Labels only appear when the marker is facing the camera
+    const isFacingCamera = normal.dot(toCamera) > 0.1;
     markerRef.current.visible = isFacingCamera;
     labelRef.current.style.display = isFacingCamera ? "block" : "none";
-
-    if (isDragging.current) {
-      raycaster.setFromCamera(mouse, camera);
-      const intersection = raycaster.intersectObject(markerRef.current);
-      if (intersection.length > 0) {
-        const newPos = intersection[0].point;
-        const lat = 90 - Math.acos(newPos.y / 2.5) * (180 / Math.PI);
-        const lon = -Math.atan2(newPos.z, newPos.x) * (180 / Math.PI);
-        setCurrentPosition(latLonToSphereCoords(lat, lon));
-        console.log(`"${country}": [${lat.toFixed(4)}, ${lon.toFixed(4)}]`);
-      }
-    }
   });
 
   return (
     <group ref={markerRef} position={currentPosition}>
-      <mesh
-        onPointerDown={(event) => {
-          if (DEV_MODE) isDragging.current = true;
-          event.stopPropagation();
-        }}
-        onPointerUp={(event) => {
-          isDragging.current = false;
-          event.stopPropagation();
-          onClick(country);
-        }}
-      >
+      <mesh>
         <sphereGeometry args={[0.05, 32, 32]} />
         <meshStandardMaterial
           color={PRIMARY_COLOR}
@@ -86,7 +59,7 @@ function CountryMarker({
       <Html position={[0, 0.2, 0]}>
         <div
           ref={labelRef}
-          className="flag-label clickable"
+          className="flag-label"
           onClick={() => onClick(country)}
         >
           {country}
@@ -96,41 +69,99 @@ function CountryMarker({
   );
 }
 
+function RotatingGlobe({
+  selectedPeriod,
+  availableLocations,
+  onCountryClick,
+  PRIMARY_COLOR,
+  isSpinning,
+}) {
+  const countryLatLonMap = CountriesPosition[selectedPeriod] || {};
+  const globeRef = useRef();
+  const pivotRef = useRef();
+
+  useFrame(() => {
+    if (pivotRef.current && isSpinning) {
+      pivotRef.current.rotation.y += 0.0003;
+    }
+  });
+
+  return (
+    <group ref={pivotRef}>
+      <group ref={globeRef} position={[0, 0, 0]}>
+        <mesh>
+          <sphereGeometry args={[2.5, 64, 64]} />
+          <meshStandardMaterial
+            map={new THREE.TextureLoader().load(periodTextures[selectedPeriod])}
+          />
+        </mesh>
+        {availableLocations.map((country) => {
+          if (!countryLatLonMap[country]) return null;
+          const position = latLonToSphereCoords(...countryLatLonMap[country]);
+          return (
+            <CountryMarker
+              key={country}
+              country={country}
+              initialPosition={position}
+              PRIMARY_COLOR={PRIMARY_COLOR}
+              onClick={onCountryClick}
+            />
+          );
+        })}
+      </group>
+    </group>
+  );
+}
+
 function Globe({
   selectedPeriod,
   availableLocations,
   onCountryClick,
-  DEV_MODE,
   PRIMARY_COLOR,
 }) {
-  const countryLatLonMap = CountriesPosition[selectedPeriod] || {};
+  const [isSpinning, setIsSpinning] = useState(true);
 
   return (
-    <Canvas className="globe-canvas" camera={{ position: [0, 0, 5] }}>
-      <ambientLight intensity={3} />
-      <directionalLight position={[10, 3, 2]} intensity={0.9} />
-      <OrbitControls enablePan={false} />
-      <mesh>
-        <sphereGeometry args={[2.5, 64, 64]} />
-        <meshStandardMaterial
-          map={new THREE.TextureLoader().load(periodTextures[selectedPeriod])}
-        />
-      </mesh>
-      {availableLocations.map((country) => {
-        if (!countryLatLonMap[country]) return null;
-        const position = latLonToSphereCoords(...countryLatLonMap[country]);
-        return (
-          <CountryMarker
-            key={country}
-            country={country}
-            initialPosition={position}
-            DEV_MODE={DEV_MODE}
-            PRIMARY_COLOR={PRIMARY_COLOR}
-            onClick={onCountryClick}
+    <div className="globe-container">
+      <div className="globe-wrapper">
+        <Canvas
+          className="globe-canvas"
+          camera={{ position: [0, 0, 7], fov: 45 }}
+        >
+          <ambientLight intensity={2.5} />
+          <directionalLight position={[10, 3, 2]} intensity={0.8} />
+          <OrbitControls
+            enableZoom={true}
+            minDistance={4}
+            maxDistance={8}
+            enablePan={false}
           />
-        );
-      })}
-    </Canvas>
+          <Stars
+            radius={50}
+            depth={50}
+            count={2000}
+            factor={4}
+            saturation={0}
+            fade
+          />
+
+          <RotatingGlobe
+            selectedPeriod={selectedPeriod}
+            availableLocations={availableLocations}
+            onCountryClick={onCountryClick}
+            PRIMARY_COLOR={PRIMARY_COLOR}
+            isSpinning={isSpinning}
+          />
+        </Canvas>
+
+        <button
+          onClick={() => setIsSpinning(!isSpinning)}
+          className="globe-pause-btn"
+        >
+          {isSpinning ? "⏸" : "▶"}
+        </button>
+      </div>
+    </div>
   );
 }
 

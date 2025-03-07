@@ -2,8 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Globe from "./Globe";
 import DinosaurCollection from "../../entities/DinosaurCollection";
 
-const DEV_MODE = false;
-const PRIMARY_COLOR = DEV_MODE ? "#800080" : "#AA0000";
+const PRIMARY_COLOR = "#AA0000";
 const periods = [
   "Late Triassic",
   "Early Jurassic",
@@ -14,7 +13,6 @@ const periods = [
 ];
 
 function MesozoicEras() {
-
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -45,10 +43,8 @@ function MesozoicEras() {
     : [];
 
   const handleCountryClick = (country) => {
-    if (!DEV_MODE) {
-      setSelectedCountry(country);
-      setIsSidebarOpen(true);
-    }
+    setSelectedCountry(country);
+    setIsSidebarOpen(true);
   };
 
   const closeSidebar = () => {
@@ -75,12 +71,11 @@ function MesozoicEras() {
               selectedPeriod={selectedPeriod}
               availableLocations={availableLocations}
               onCountryClick={handleCountryClick}
-              DEV_MODE={DEV_MODE}
               PRIMARY_COLOR={PRIMARY_COLOR}
             />
           </div>
         </div>
-        {!DEV_MODE && isSidebarOpen && selectedCountry && (
+        {isSidebarOpen && selectedCountry && (
           <div className="right-panel">
             <div className="in-period-title">
               Dinosaurs in {selectedCountry} ({selectedPeriod})
