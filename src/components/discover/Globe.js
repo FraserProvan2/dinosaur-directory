@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
 import * as THREE from "three";
@@ -13,6 +13,7 @@ const periodTextures = {
   "Late Cretaceous": "/images/textures/late_cretaceous.jpg",
 };
 
+// Converts lat/lon to 3D sphere coordinates
 const latLonToSphereCoords = (lat, lon, radius = 2.5) => {
   const phi = (90 - lat) * (Math.PI / 180);
   const theta = -lon * (Math.PI / 180);
@@ -23,20 +24,16 @@ const latLonToSphereCoords = (lat, lon, radius = 2.5) => {
   );
 };
 
-function CountryMarker({
-  country,
-  initialPosition,
-  DEV_MODE,
-  PRIMARY_COLOR,
-  onClick,
-}) {
+function CountryMarker({ country, initialPosition, DEV_MODE, PRIMARY_COLOR, onClick }) {
   const { camera } = useThree();
   const markerRef = useRef();
   const labelRef = useRef();
   const isDragging = useRef(false);
-  const [currentPosition, setCurrentPosition] = useState(
-    initialPosition || new THREE.Vector3(0, 0, 2.5)
-  );
+  const [currentPosition, setCurrentPosition] = useState(initialPosition);
+
+  useEffect(() => {
+    setCurrentPosition(initialPosition); // Ensure it resets correctly when period changes
+  }, [initialPosition]);
 
   useFrame(({ raycaster, mouse }) => {
     if (!markerRef.current || !labelRef.current || !currentPosition) return;
@@ -96,17 +93,27 @@ function CountryMarker({
   );
 }
 
-function Globe({
-  selectedPeriod,
-  availableLocations,
-  onCountryClick,
-  DEV_MODE,
-  PRIMARY_COLOR,
-}) {
-  const countryLatLonMap = CountriesPosition[selectedPeriod] || {};
+function Globe({ selectedPeriod, availableLocations, onCountryClick, DEV_MODE, PRIMARY_COLOR }) {
+  const [currentData, setCurrentData] = useState({});
+  const [uniqueKey, setUniqueKey] = useState(0);
+
+  useEffect(() => {
+    console.log(`🔄 Fetching new data for: ${selectedPeriod}`);
+    if (CountriesPosition[selectedPeriod]) {
+      setCurrentData({ ...CountriesPosition[selectedPeriod] });
+      setUniqueKey((prev) => prev + 1); // Force re-render
+    } else {
+      console.warn(`⚠️ No data found for period: ${selectedPeriod}`);
+      setCurrentData({});
+    }
+  }, [selectedPeriod]);
+
+  useEffect(() => {
+    console.log("📌 Updated Country Data:", currentData);
+  }, [currentData]);
 
   return (
-    <Canvas className="globe-canvas" camera={{ position: [0, 0, 5] }}>
+    <Canvas key={uniqueKey} className="globe-canvas" camera={{ position: [0, 0, 5] }}>
       <ambientLight intensity={3} />
       <directionalLight position={[10, 3, 2]} intensity={0.9} />
       <OrbitControls enablePan={false} />
@@ -117,11 +124,12 @@ function Globe({
         />
       </mesh>
       {availableLocations.map((country) => {
-        if (!countryLatLonMap[country]) return null;
-        const position = latLonToSphereCoords(...countryLatLonMap[country]);
+        if (!currentData[country]) return null;
+        const position = latLonToSphereCoords(...currentData[country]);
+
         return (
           <CountryMarker
-            key={country}
+            key={`${selectedPeriod}-${country}`} // Ensures each marker resets properly
             country={country}
             initialPosition={position}
             DEV_MODE={DEV_MODE}
