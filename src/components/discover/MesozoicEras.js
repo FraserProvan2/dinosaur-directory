@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Globe from "./Globe";
 import DinosaurCollection from "../../entities/DinosaurCollection";
 
-const DEV_MODE = false;
+const DEV_MODE = true;
 const PRIMARY_COLOR = DEV_MODE ? "#800080" : "#AA0000";
 const periods = [
   "Late Triassic",
