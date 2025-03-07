@@ -5,7 +5,8 @@ import * as THREE from "three";
 import DinosaurCollection from "../../entities/DinosaurCollection";
 import CountriesPosition from "../../data/countries-positions.json";
 
-const PRIMARY_COLOR = "#AA0000";
+const DEV_MODE = true; // Toggle Developer Mode
+const PRIMARY_COLOR = DEV_MODE ? "#800080" : "#AA0000"; // Purple for DEV mode, Red otherwise
 
 const periodTextures = {
   "Late Triassic": "/images/textures/late_triassic.jpg",
@@ -17,8 +18,8 @@ const periodTextures = {
 };
 
 const latLonToSphereCoords = (lat, lon, radius = 2.5) => {
-  const phi = (90 - lat) * (Math.PI / 180); // Correctly map latitude to spherical coordinates
-  const theta = (-lon) * (Math.PI / 180);  // Negative longitude to align correctly with map
+  const phi = (90 - lat) * (Math.PI / 180);
+  const theta = (-lon) * (Math.PI / 180);
   return new THREE.Vector3(
     radius * Math.sin(phi) * Math.cos(theta),
     radius * Math.cos(phi),
@@ -26,34 +27,56 @@ const latLonToSphereCoords = (lat, lon, radius = 2.5) => {
   );
 };
 
-function CountryMarker({ country, position, onCountryClick }) {
+function CountryMarker({ country, initialPosition, onClick }) {
   const { camera } = useThree();
   const markerRef = useRef();
   const labelRef = useRef();
-  const lightDirection = new THREE.Vector3(0.5, 1, 0).normalize();
+  const isDragging = useRef(false);
+  const [currentPosition, setCurrentPosition] = useState(
+    initialPosition || new THREE.Vector3(0, 0, 2.5) // ✅ Default position
+  );
 
-  useFrame(() => {
-    if (markerRef.current && labelRef.current && camera) {
-      const normal = position.clone().normalize();
-      const toCamera = new THREE.Vector3()
-        .subVectors(camera.position, position)
-        .normalize();
-      const isLit = normal.dot(lightDirection) > 0;
-      const isFacingCamera = normal.dot(toCamera) > 0.1;
-      const isVisible = isLit && isFacingCamera;
-      markerRef.current.visible = isVisible;
-      labelRef.current.style.display = isVisible ? "block" : "none";
+  useFrame(({ raycaster, mouse }) => {
+    if (!markerRef.current || !labelRef.current || !currentPosition) return;
+
+    const normal = currentPosition.clone().normalize(); // ✅ Prevents undefined error
+    const toCamera = new THREE.Vector3().subVectors(camera.position, currentPosition).normalize();
+    const isFacingCamera = normal.dot(toCamera) > 0.1;
+
+    markerRef.current.visible = isFacingCamera;
+    labelRef.current.style.display = isFacingCamera ? "block" : "none";
+
+    if (isDragging.current) {
+      raycaster.setFromCamera(mouse, camera);
+      const intersection = raycaster.intersectObject(markerRef.current);
+      if (intersection.length > 0) {
+        const newPos = intersection[0].point;
+        const lat = 90 - Math.acos(newPos.y / 2.5) * (180 / Math.PI);
+        const lon = -Math.atan2(newPos.z, newPos.x) * (180 / Math.PI);
+        setCurrentPosition(latLonToSphereCoords(lat, lon));
+        console.log(`"${country}": [${lat.toFixed(4)}, ${lon.toFixed(4)}]`); // Logs coords for JSON file
+      }
     }
   });
 
   return (
-    <group ref={markerRef} position={position} onClick={() => onCountryClick(country)}>
-      <mesh>
+    <group ref={markerRef} position={currentPosition}>
+      <mesh
+        onPointerDown={(event) => {
+          if (DEV_MODE) isDragging.current = true;
+          event.stopPropagation(); // Prevent unwanted globe movement
+        }}
+        onPointerUp={(event) => {
+          isDragging.current = false;
+          event.stopPropagation();
+          onClick(country); // Opens sidebar when clicked (unless in DEV mode)
+        }}
+      >
         <sphereGeometry args={[0.05, 32, 32]} />
         <meshStandardMaterial color={PRIMARY_COLOR} emissive={PRIMARY_COLOR} emissiveIntensity={0.7} />
       </mesh>
       <Html position={[0, 0.2, 0]}>
-        <div ref={labelRef} className="flag-label clickable" onClick={() => onCountryClick(country)}>
+        <div ref={labelRef} className="flag-label clickable" onClick={() => onClick(country)}>
           {country}
         </div>
       </Html>
@@ -61,7 +84,7 @@ function CountryMarker({ country, position, onCountryClick }) {
   );
 }
 
-function Globe({ selectedPeriod, onCountryClick, availableLocations }) {
+function Globe({ selectedPeriod, availableLocations, onCountryClick }) {
   const countryLatLonMap = CountriesPosition[selectedPeriod] || {};
 
   return (
@@ -77,7 +100,12 @@ function Globe({ selectedPeriod, onCountryClick, availableLocations }) {
         if (!countryLatLonMap[country]) return null;
         const position = latLonToSphereCoords(...countryLatLonMap[country]);
         return (
-          <CountryMarker key={country} country={country} position={position} onCountryClick={onCountryClick} />
+          <CountryMarker
+            key={country}
+            country={country}
+            initialPosition={position}
+            onClick={onCountryClick}
+          />
         );
       })}
     </Canvas>
@@ -88,7 +116,7 @@ function DiscoverMesozoic() {
   const periods = Object.keys(periodTextures);
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0]);
   const [selectedCountry, setSelectedCountry] = useState(null);
-  const [isInfoCollapsed, setIsInfoCollapsed] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const allDinosaurs = useRef(DinosaurCollection.getAllDinosaurs());
   const [availableLocations, setAvailableLocations] = useState([]);
 
@@ -107,18 +135,23 @@ function DiscoverMesozoic() {
     );
   }, [selectedPeriod]);
 
-  useEffect(() => {
-    setIsInfoCollapsed(true);
-    setSelectedCountry(null);
-  }, [selectedPeriod]);
-
   const dinosInCountry = selectedCountry
     ? allDinosaurs.current.filter(
-        (dino) =>
-          dino.foundIn.includes(selectedCountry) &&
-          dino.fullPeriod === selectedPeriod
+        (dino) => dino.foundIn.includes(selectedCountry) && dino.fullPeriod === selectedPeriod
       )
     : [];
+
+  const handleCountryClick = (country) => {
+    if (!DEV_MODE) {
+      setSelectedCountry(country);
+      setIsSidebarOpen(true);
+    }
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+    setSelectedCountry(null);
+  };
 
   return (
     <div className="home-container">
@@ -133,42 +166,29 @@ function DiscoverMesozoic() {
       />
       <p className="period-text text-center">{selectedPeriod}</p>
       <div className="content-container">
-        <div className={`left-panel ${isInfoCollapsed ? "expanded" : ""}`}>
+        <div className={`left-panel ${isSidebarOpen ? "" : "expanded"}`}>
           <div className="globe-container">
-            <Globe
-              selectedPeriod={selectedPeriod}
-              onCountryClick={(country) => {
-                setSelectedCountry(country);
-                setIsInfoCollapsed(false);
-              }}
-              availableLocations={availableLocations}
-            />
+            <Globe selectedPeriod={selectedPeriod} availableLocations={availableLocations} onCountryClick={handleCountryClick} />
           </div>
         </div>
-        {!isInfoCollapsed && (
+        {!DEV_MODE && isSidebarOpen && selectedCountry && (
           <div className="right-panel">
-            {selectedCountry ? (
-              <>
-                <div className="in-period-title">
-                  Dinosaurs in {selectedCountry} ({selectedPeriod})
-                </div>
-                <ul className="dino-list">
-                  {dinosInCountry.map((dino) => (
-                    <li key={dino.name} className="dino-item">
-                      <div className="dino-icon-container">
-                        <img src={"images/dinosaurs/" + dino.image} alt={dino.name} className="dino-icon" />
-                      </div>
-                      {dino.name}
-                    </li>
-                  ))}
-                </ul>
-                <button className="toggle-btn btn btn-light px-2 mb-3" onClick={() => setIsInfoCollapsed(true)}>
-                  ➦ Close
-                </button>
-              </>
-            ) : (
-              <p className="info-text">Select a country to see dinosaurs</p>
-            )}
+            <div className="in-period-title">
+              Dinosaurs in {selectedCountry} ({selectedPeriod})
+            </div>
+            <ul className="dino-list">
+              {dinosInCountry.map((dino) => (
+                <li key={dino.name} className="dino-item">
+                  <div className="dino-icon-container">
+                    <img src={"images/dinosaurs/" + dino.image} alt={dino.name} className="dino-icon" />
+                  </div>
+                  {dino.name}
+                </li>
+              ))}
+            </ul>
+            <button className="close-btn btn btn-light px-2 mb-3" onClick={closeSidebar}>
+              ➦ Close
+            </button>
           </div>
         )}
       </div>
