@@ -170,6 +170,13 @@ function RotatingGlobe({
     }
   }, [selectedPeriod]);
 
+  useEffect(() => {
+    if (pivotRef.current) {
+      const PIVOT_INCREASE = 0.4;
+      pivotRef.current.rotation.y = Math.PI + PIVOT_INCREASE * Math.PI;
+    }
+  }, []);
+
   useFrame(() => {
     if (pivotRef.current && isSpinning) {
       pivotRef.current.rotation.y += globeSpeed;
@@ -206,7 +213,6 @@ function RotatingGlobe({
     </group>
   );
 }
-
 function Globe({
   selectedPeriod,
   availableLocations,
