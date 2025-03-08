@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from "react";
+import React, { useState, useRef, useMemo, useEffect } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Html, Stars } from "@react-three/drei";
 import * as THREE from "three";
@@ -23,11 +23,15 @@ const latLonToSphereCoords = (lat, lon, radius = 2.5) => {
   );
 };
 
-function CountryMarker({ country, initialPosition, PRIMARY_COLOR, onClick }) {
+function CountryMarker({ country, latLon, PRIMARY_COLOR, onClick }) {
   const { camera } = useThree();
   const markerRef = useRef();
   const labelRef = useRef();
-  const [currentPosition] = useState(initialPosition);
+  const [position, setPosition] = useState(latLonToSphereCoords(...latLon));
+
+  useEffect(() => {
+    setPosition(latLonToSphereCoords(...latLon)); // Update position when latLon changes
+  }, [latLon]);
 
   useFrame(() => {
     if (!markerRef.current || !labelRef.current) return;
@@ -46,7 +50,7 @@ function CountryMarker({ country, initialPosition, PRIMARY_COLOR, onClick }) {
   });
 
   return (
-    <group ref={markerRef} position={currentPosition}>
+    <group ref={markerRef} position={position}>
       <mesh onClick={() => onClick(country)}>
         <sphereGeometry args={[0.05, 32, 32]} />
         <meshStandardMaterial
@@ -79,10 +83,17 @@ function RotatingGlobe({
   cloudSpeed = 0.0001,
   textures,
 }) {
-  const countryLatLonMap = CountriesPosition[selectedPeriod] || {};
-  const globeRef = useRef();
   const pivotRef = useRef();
   const cloudsRef = useRef();
+  const [currentData, setCurrentData] = useState({});
+  const [uniqueKey, setUniqueKey] = useState(0);
+
+  useEffect(() => {
+    if (CountriesPosition[selectedPeriod]) {
+      setCurrentData({ ...CountriesPosition[selectedPeriod] });
+      setUniqueKey((prev) => prev + 1); // Force re-render
+    }
+  }, [selectedPeriod]);
 
   useFrame(() => {
     if (pivotRef.current && isSpinning) {
@@ -95,27 +106,24 @@ function RotatingGlobe({
 
   return (
     <group ref={pivotRef}>
-      <group ref={globeRef} position={[0, 0, 0]}>
+      <group position={[0, 0, 0]}>
         <mesh>
           <sphereGeometry args={[2.5, 64, 64]} />
           <meshStandardMaterial map={textures[selectedPeriod]} />
         </mesh>
-
         {availableLocations.map((country) => {
-          if (!countryLatLonMap[country]) return null;
-          const position = latLonToSphereCoords(...countryLatLonMap[country]);
+          if (!currentData[country]) return null;
           return (
             <CountryMarker
-              key={country}
+              key={`${selectedPeriod}-${country}`}
               country={country}
-              initialPosition={position}
+              latLon={currentData[country]}
               PRIMARY_COLOR={PRIMARY_COLOR}
               onClick={onCountryClick}
             />
           );
         })}
       </group>
-
       <mesh ref={cloudsRef} position={[0, 0, 0]}>
         <sphereGeometry args={[2.55, 64, 64]} />
         <meshStandardMaterial
@@ -128,15 +136,9 @@ function RotatingGlobe({
   );
 }
 
-function Globe({
-  selectedPeriod,
-  availableLocations,
-  onCountryClick,
-  PRIMARY_COLOR,
-}) {
+function Globe({ selectedPeriod, availableLocations, onCountryClick, PRIMARY_COLOR }) {
   const [isSpinning, setIsSpinning] = useState(true);
 
-  // Preload all textures once on initial load
   const textures = useMemo(() => {
     const loader = new THREE.TextureLoader();
     const loadedTextures = {};
@@ -154,6 +156,7 @@ function Globe({
     <div className="globe-container">
       <div className="globe-wrapper">
         <Canvas
+          key={selectedPeriod} // Force re-render
           className="globe-canvas"
           camera={{ position: [0, 0, 7], fov: 45 }}
         >
@@ -173,7 +176,6 @@ function Globe({
             saturation={0}
             fade
           />
-
           <RotatingGlobe
             selectedPeriod={selectedPeriod}
             availableLocations={availableLocations}
@@ -184,7 +186,6 @@ function Globe({
             textures={textures}
           />
         </Canvas>
-
         <button
           onClick={() => setIsSpinning(!isSpinning)}
           className="globe-pause-btn"
