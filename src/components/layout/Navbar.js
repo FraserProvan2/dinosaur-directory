@@ -8,6 +8,10 @@ function Navbar() {
   const location = useLocation();
 
   const handleNavClick = (event, path) => {
+    if (location.pathname === "/discover") {
+      window.location.href = path;
+    }
+
     if (location.pathname === path) {
       window.location.reload();
       event.preventDefault();
@@ -44,7 +48,7 @@ function Navbar() {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-          <li className="nav-item">
+            <li className="nav-item">
               <Link
                 className="nav-link"
                 to="/discover"

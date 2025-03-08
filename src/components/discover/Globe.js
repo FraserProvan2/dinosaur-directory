@@ -6,10 +6,10 @@ import CountriesPosition from "../../data/countries-positions.json";
 
 // Globe Customisation
 const GLOBE_BRIGHTNESS = 0.8;
-const GLOBE_AMBIENT_LIGHT = 1;
+const GLOBE_AMBIENT_LIGHT = .5;
 const GLOBE_ROUGHNESS = 0.8;
 const GLOBE_METALNESS = 0.3;
-const GLOBE_OVERLAY = "#f0f0f0";
+const GLOBE_OVERLAY = "#d1d1d1";
 
 const periodTextures = {
   "Late Triassic": "/images/textures/late_triassic.jpg",
