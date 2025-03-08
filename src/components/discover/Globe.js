@@ -1,8 +1,15 @@
-import React, { useState, useRef, useMemo, useEffect } from "react";
+import React, { useState, useRef, useEffect, Suspense, useMemo } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Html, Stars } from "@react-three/drei";
+import { OrbitControls, Html, Stars, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 import CountriesPosition from "../../data/countries-positions.json";
+
+// Globe Customisation
+const GLOBE_BRIGHTNESS = 0.8;
+const GLOBE_AMBIENT_LIGHT = 1;
+const GLOBE_ROUGHNESS = 0.8;
+const GLOBE_METALNESS = 0.3;
+const GLOBE_OVERLAY = "#f0f0f0";
 
 const periodTextures = {
   "Late Triassic": "/images/textures/late_triassic.jpg",
@@ -30,7 +37,7 @@ function CountryMarker({ country, latLon, PRIMARY_COLOR, onClick }) {
   const [position, setPosition] = useState(latLonToSphereCoords(...latLon));
 
   useEffect(() => {
-    setPosition(latLonToSphereCoords(...latLon)); // Update position when latLon changes
+    setPosition(latLonToSphereCoords(...latLon));
   }, [latLon]);
 
   useFrame(() => {
@@ -73,6 +80,77 @@ function CountryMarker({ country, latLon, PRIMARY_COLOR, onClick }) {
   );
 }
 
+function TexturePreloader({ onLoadComplete }) {
+  const textureUrls = useMemo(() => {
+    const urls = Object.values(periodTextures);
+
+    urls.push("/images/textures/clouds.png");
+    return urls;
+  }, []);
+
+  useTexture(textureUrls, (textures) => {
+    textures.forEach((texture) => {
+      texture.minFilter = THREE.LinearFilter;
+      texture.generateMipmaps = false;
+    });
+
+    const textureMap = {};
+    textureUrls.forEach((url, index) => {
+      textureMap[url] = textures[index];
+    });
+
+    onLoadComplete(textureMap);
+  });
+
+  return null;
+}
+
+function GlobeSurface({ texture }) {
+  return (
+    <mesh>
+      <sphereGeometry args={[2.5, 64, 64]} />
+      <meshStandardMaterial
+        map={texture}
+        roughness={GLOBE_ROUGHNESS}
+        metalness={GLOBE_METALNESS}
+        envMapIntensity={0.5}
+        color={GLOBE_OVERLAY}
+      />
+    </mesh>
+  );
+}
+
+function CloudLayer({ texture, cloudSpeed }) {
+  const cloudRef = useRef();
+
+  useFrame(() => {
+    if (cloudRef.current) {
+      cloudRef.current.rotation.y += cloudSpeed;
+    }
+  });
+
+  return (
+    <mesh ref={cloudRef}>
+      <sphereGeometry args={[2.55, 64, 64]} />
+      <meshStandardMaterial
+        map={texture}
+        transparent={true}
+        opacity={0.8}
+        depthWrite={false}
+      />
+    </mesh>
+  );
+}
+
+function LoadingPlaceholder() {
+  return (
+    <mesh>
+      <sphereGeometry args={[2.5, 64, 64]} />
+      <meshStandardMaterial color="#436b8c" />
+    </mesh>
+  );
+}
+
 function RotatingGlobe({
   selectedPeriod,
   availableLocations,
@@ -81,17 +159,14 @@ function RotatingGlobe({
   isSpinning,
   globeSpeed = 0.0003,
   cloudSpeed = 0.0001,
-  textures,
+  loadedTextures,
 }) {
   const pivotRef = useRef();
-  const cloudsRef = useRef();
   const [currentData, setCurrentData] = useState({});
-  const [uniqueKey, setUniqueKey] = useState(0);
 
   useEffect(() => {
     if (CountriesPosition[selectedPeriod]) {
       setCurrentData({ ...CountriesPosition[selectedPeriod] });
-      setUniqueKey((prev) => prev + 1); // Force re-render
     }
   }, [selectedPeriod]);
 
@@ -99,23 +174,23 @@ function RotatingGlobe({
     if (pivotRef.current && isSpinning) {
       pivotRef.current.rotation.y += globeSpeed;
     }
-    if (cloudsRef.current) {
-      cloudsRef.current.rotation.y += cloudSpeed;
-    }
   });
+
+  const currentTexture = loadedTextures[periodTextures[selectedPeriod]];
+  const cloudTexture = loadedTextures["/images/textures/clouds.png"];
 
   return (
     <group ref={pivotRef}>
       <group position={[0, 0, 0]}>
-        <mesh>
-          <sphereGeometry args={[2.5, 64, 64]} />
-          <meshStandardMaterial map={textures[selectedPeriod]} />
-        </mesh>
+        {currentTexture && <GlobeSurface texture={currentTexture} />}
+
         {availableLocations.map((country) => {
           if (!currentData[country]) return null;
           return (
             <CountryMarker
-              key={`${selectedPeriod}-${country}`}
+              key={`${selectedPeriod}-${country}-${currentData[country].join(
+                "-"
+              )}`}
               country={country}
               latLon={currentData[country]}
               PRIMARY_COLOR={PRIMARY_COLOR}
@@ -124,71 +199,84 @@ function RotatingGlobe({
           );
         })}
       </group>
-      <mesh ref={cloudsRef} position={[0, 0, 0]}>
-        <sphereGeometry args={[2.55, 64, 64]} />
-        <meshStandardMaterial
-          map={textures["clouds"]}
-          transparent={true}
-          opacity={0.8}
-        />
-      </mesh>
+
+      {cloudTexture && (
+        <CloudLayer texture={cloudTexture} cloudSpeed={cloudSpeed} />
+      )}
     </group>
   );
 }
 
-function Globe({ selectedPeriod, availableLocations, onCountryClick, PRIMARY_COLOR }) {
+function Globe({
+  selectedPeriod,
+  availableLocations,
+  onCountryClick,
+  PRIMARY_COLOR,
+}) {
   const [isSpinning, setIsSpinning] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedTextures, setLoadedTextures] = useState(null);
 
-  const textures = useMemo(() => {
-    const loader = new THREE.TextureLoader();
-    const loadedTextures = {};
-
-    Object.keys(periodTextures).forEach((period) => {
-      loadedTextures[period] = loader.load(periodTextures[period]);
-    });
-
-    loadedTextures["clouds"] = loader.load("/images/textures/clouds.png");
-
-    return loadedTextures;
-  }, []);
+  const handleTexturesLoaded = (textureMap) => {
+    setLoadedTextures(textureMap);
+    setIsLoading(false);
+  };
 
   return (
     <div className="globe-container">
       <div className="globe-wrapper">
         <Canvas
-          key={selectedPeriod} // Force re-render
           className="globe-canvas"
           camera={{ position: [0, 0, 7], fov: 45 }}
+          onCreated={({ gl }) => {
+            gl.physicallyCorrectLights = true;
+            gl.outputColorSpace = THREE.SRGBColorSpace;
+            gl.powerPreference = "high-performance";
+          }}
         >
-          <ambientLight intensity={2.5} />
-          <directionalLight position={[10, 3, 2]} intensity={0.8} />
+          <ambientLight intensity={GLOBE_AMBIENT_LIGHT} />
+          <directionalLight
+            position={[10, 3, 2]}
+            intensity={GLOBE_BRIGHTNESS}
+          />
           <OrbitControls
             enableZoom={true}
             minDistance={4}
             maxDistance={8}
             enablePan={false}
+            enableDamping={true}
+            dampingFactor={0.1}
           />
           <Stars
             radius={50}
             depth={50}
-            count={2000}
+            count={1000}
             factor={4}
             saturation={0}
             fade
           />
-          <RotatingGlobe
-            selectedPeriod={selectedPeriod}
-            availableLocations={availableLocations}
-            onCountryClick={onCountryClick}
-            PRIMARY_COLOR={PRIMARY_COLOR}
-            isSpinning={isSpinning}
-            cloudSpeed={0.00006}
-            textures={textures}
-          />
+
+          <Suspense fallback={<LoadingPlaceholder />}>
+            <TexturePreloader onLoadComplete={handleTexturesLoaded} />
+
+            {loadedTextures && (
+              <RotatingGlobe
+                selectedPeriod={selectedPeriod}
+                availableLocations={availableLocations}
+                onCountryClick={onCountryClick}
+                PRIMARY_COLOR={PRIMARY_COLOR}
+                isSpinning={isSpinning}
+                cloudSpeed={0.00006}
+                loadedTextures={loadedTextures}
+              />
+            )}
+          </Suspense>
         </Canvas>
+
         <button
           onClick={() => setIsSpinning(!isSpinning)}
           className="globe-pause-btn"
+          disabled={isLoading}
         >
           {isSpinning ? "⏸" : "▶"}
         </button>
