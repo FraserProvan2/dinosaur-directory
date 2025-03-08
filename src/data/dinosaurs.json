@@ -321,7 +321,7 @@
     "meaning": "'Lesotho lizard'",
     "diet": "herbivorous",
     "lengthMeters": 1,
-    "foundIn": ["Lesotho", "South Africa"],
+    "foundIn": ["South Africa"],
     "difficulty": 1
   },
   {
@@ -373,7 +373,7 @@
     "meaning": "'Pant-y-ffynnon dragon'",
     "diet": "herbivorous",
     "lengthMeters": 3,
-    "foundIn": ["Wales"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -399,7 +399,7 @@
     "meaning": "'limb lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -503,7 +503,7 @@
     "meaning": "'whale lizard-like'",
     "diet": "herbivorous",
     "lengthMeters": 15,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -516,7 +516,7 @@
     "meaning": "'whale lizard'",
     "diet": "herbivorous",
     "lengthMeters": 16,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -555,7 +555,7 @@
     "meaning": "'well-curved vertebra'",
     "diet": "carnivorous",
     "lengthMeters": 5,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -607,7 +607,7 @@
     "meaning": "'great lizard'",
     "diet": "carnivorous",
     "lengthMeters": 9,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -698,7 +698,7 @@
     "meaning": "'before Ceratosaurus'",
     "diet": "carnivorous",
     "lengthMeters": 3,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -906,7 +906,7 @@
     "meaning": "'bent lizard'",
     "diet": "herbivorous",
     "lengthMeters": 7,
-    "foundIn": ["USA", "England"],
+    "foundIn": ["USA", "United Kingdom"],
     "difficulty": 1
   },
   {
@@ -997,7 +997,7 @@
     "meaning": "'tail full of points'",
     "diet": "herbivorous",
     "lengthMeters": 8,
-    "foundIn": ["England", "France", "Spain"],
+    "foundIn": ["United Kingdom", "France", "Spain"],
     "difficulty": 1
   },
   {
@@ -1231,7 +1231,7 @@
     "meaning": "'moderate-spined lizard'",
     "diet": "carnivorous",
     "lengthMeters": 8,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -1452,7 +1452,7 @@
     "meaning": "'heavy claw'",
     "diet": "carnivorous",
     "lengthMeters": 9.5,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -1465,7 +1465,7 @@
     "meaning": "'Beckles' spine'",
     "diet": "carnivorous",
     "lengthMeters": 6,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -1569,7 +1569,7 @@
     "meaning": "'dawn tyrant'",
     "diet": "carnivorous",
     "lengthMeters": 4,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -1686,7 +1686,7 @@
     "meaning": "'woodland lizard'",
     "diet": "herbivorous",
     "lengthMeters": 5,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -1699,7 +1699,7 @@
     "meaning": "'high-crested tooth'",
     "diet": "herbivorous",
     "lengthMeters": 2.3,
-    "foundIn": ["England", "Spain"],
+    "foundIn": ["United Kingdom", "Spain"],
     "difficulty": 1
   },
   {
@@ -1712,7 +1712,7 @@
     "meaning": "'iguana tooth'",
     "diet": "herbivorous",
     "lengthMeters": 10,
-    "foundIn": ["Belgium", "England", "Germany", "Spain", "USA"],
+    "foundIn": ["Belgium", "United Kingdom", "Germany", "Spain", "USA"],
     "difficulty": 0
   },
   {
@@ -1868,7 +1868,7 @@
     "meaning": "'new hunter'",
     "diet": "carnivorous",
     "lengthMeters": 7.6,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -1946,7 +1946,7 @@
     "meaning": "'monstrous lizard'",
     "diet": "herbivorous",
     "lengthMeters": 16,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -1959,7 +1959,7 @@
     "meaning": "'many spines'",
     "diet": "herbivorous",
     "lengthMeters": 5,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
@@ -2206,7 +2206,7 @@
     "meaning": "'Weald lizard'",
     "diet": "herbivorous",
     "lengthMeters": 4,
-    "foundIn": ["England"],
+    "foundIn": ["United Kingdom"],
     "difficulty": 1
   },
   {
