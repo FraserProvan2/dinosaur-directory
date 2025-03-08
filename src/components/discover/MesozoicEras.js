@@ -1,16 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Globe from "./Globe";
 import DinosaurCollection from "../../entities/DinosaurCollection";
+import fullPeriods from "../../data/full-periods.json";
 
 const PRIMARY_COLOR = "#AA0000";
-const periods = [
-  "Late Triassic",
-  "Early Jurassic",
-  "Mid Jurassic",
-  "Late Jurassic",
-  "Early Cretaceous",
-  "Late Cretaceous",
-];
+const periods = Object.keys(fullPeriods);
 
 function MesozoicEras() {
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0]);
@@ -63,7 +57,10 @@ function MesozoicEras() {
         onChange={(e) => setSelectedPeriod(periods[e.target.value])}
         className="period-slider"
       />
-      <p className="period-text text-center">{selectedPeriod}</p>
+      <div className="period-text-container text-center">
+        <p className="period-text">{selectedPeriod}</p>
+        <div className="period-years">(<b>{fullPeriods[selectedPeriod]}</b> ~ million years ago)</div>
+      </div>
       <div className="content-container">
         <div className={`left-panel ${isSidebarOpen ? "" : "expanded"}`}>
           <div className="globe-container">

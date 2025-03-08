@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import dinosaurs from "../../data/dinosaurs.json";
+import fullPeriods from "../../data/full-periods.json";
 import { motion } from "framer-motion";
 
 function QuizGame() {
@@ -51,14 +52,7 @@ function QuizGame() {
   const getOptions = (dino, difficulty) => {
     if (!dino) return [];
 
-    const fullPeriods = [
-      "Late Triassic",
-      "Early Jurassic",
-      "Mid Jurassic",
-      "Late Jurassic",
-      "Early Cretaceous",
-      "Late Cretaceous",
-    ];
+    const fullPeriodsList = Object.keys(fullPeriods);
     const groupedPeriods = ["Triassic", "Jurassic", "Cretaceous"];
 
     if (difficulty !== "hard") {
@@ -66,19 +60,19 @@ function QuizGame() {
     }
 
     const correctAnswer = dino.fullPeriod;
-    const correctIndex = fullPeriods.indexOf(correctAnswer);
-    if (correctIndex === -1) return fullPeriods.slice(0, 4); // Fallback
+    const correctIndex = fullPeriodsList.indexOf(correctAnswer);
+    if (correctIndex === -1) return fullPeriodsList.slice(0, 4); // Fallback
 
     let choices = new Set([correctAnswer]);
 
-    if (correctIndex > 0) choices.add(fullPeriods[correctIndex - 1]); // Before
-    if (correctIndex < fullPeriods.length - 1)
-      choices.add(fullPeriods[correctIndex + 1]); // After
+    if (correctIndex > 0) choices.add(fullPeriodsList[correctIndex - 1]); // Before
+    if (correctIndex < fullPeriodsList.length - 1)
+      choices.add(fullPeriodsList[correctIndex + 1]); // After
 
     for (let i = 2; choices.size < 4; i++) {
-      if (correctIndex - i >= 0) choices.add(fullPeriods[correctIndex - i]);
-      if (correctIndex + i < fullPeriods.length)
-        choices.add(fullPeriods[correctIndex + i]);
+      if (correctIndex - i >= 0) choices.add(fullPeriodsList[correctIndex - i]);
+      if (correctIndex + i < fullPeriodsList.length)
+        choices.add(fullPeriodsList[correctIndex + i]);
     }
 
     while (choices.size > 4) {
@@ -87,7 +81,7 @@ function QuizGame() {
     }
 
     return Array.from(choices).sort(
-      (a, b) => fullPeriods.indexOf(a) - fullPeriods.indexOf(b)
+      (a, b) => fullPeriodsList.indexOf(a) - fullPeriodsList.indexOf(b)
     );
   };
 
