@@ -1,10 +1,11 @@
 import React from "react";
+import DinoList from "../components/atoz/DinoList";
 
 function AtoZ() {
   return (
     <div className="container dynamic-margin-top">
       <h1 className="text-center">A-Z</h1>
-      <p className="text-center">Search and filter through dinosaurs here.</p>
+      <DinoList />
     </div>
   );
 }

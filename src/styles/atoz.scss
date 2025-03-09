@@ -1,0 +1,62 @@
+.dino-page-container {
+  font-family: sans-serif;
+}
+
+.rolling-list-container {
+  position: relative;
+  height: 38vh;
+  overflow: hidden;
+}
+
+.rolling-list {
+  overflow-y: auto;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.list-item {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: font-size 0.2s, opacity 0.2s;
+}
+
+.list-item.active-item {
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.dino-listing-image {
+  height: 200px;
+  object-fit: contain;
+  display: block;
+  margin: 30px auto;
+}
+
+.diet-pill {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.diet-pill.herb {
+  background-color: green;
+}
+
+.diet-pill.carn {
+  background-color: red;
+}
+
+.diet-pill.default {
+  background-color: #555;
+}
+
+.diet {
+  text-transform: capitalize;
+}

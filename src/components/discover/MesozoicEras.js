@@ -80,14 +80,16 @@ function MesozoicEras() {
             <ul className="dino-list">
               {dinosInCountry.map((dino) => (
                 <li key={dino.name} className="dino-item">
-                  <div className="dino-icon-container">
+                  <a href={'/dinosaur/' + dino.name.toLowerCase()} className="dino-icon-container">
                     <img
                       src={"images/dinosaurs/" + dino.image}
                       alt={dino.name}
                       className="dino-icon"
                     />
-                  </div>
-                  {dino.name}
+                  </a>
+                    <a href={'/dinosaur/' + dino.name.toLowerCase()}>
+                      {dino.name}
+                   </a>
                 </li>
               ))}
             </ul>
