@@ -11,6 +11,7 @@ const DinoPage = () => {
   const [filterDiet, setFilterDiet] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [showFilters, setShowFilters] = useState(false);
   const scrollContainerRef = useRef(null);
   const { dinoSlug } = useParams();
   const navigate = useNavigate();
@@ -22,10 +23,12 @@ const DinoPage = () => {
   }, []);
 
   useEffect(() => {
-    const dinos = DinosaurCollection.getAllDinosaurs();
-    dinos.sort((a, b) => a.name.localeCompare(b.name));
+    const dinos = DinosaurCollection.getAllDinosaurs().sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
     setDinosaurs(dinos);
     setFilteredDinosaurs(dinos);
+
     if (dinoSlug && dinos.length > 0) {
       const foundDino = dinos.find(
         (d) => d.name.toLowerCase() === dinoSlug.toLowerCase()
@@ -43,25 +46,30 @@ const DinoPage = () => {
     if (filterSubPeriod)
       filtered = filtered.filter((dino) => dino.fullPeriod === filterSubPeriod);
     if (filterDiet)
-      filtered = filtered.filter((dino) => dino.diet === filterDiet);
-    if (searchQuery) {
+      filtered = filtered.filter(
+        (dino) => dino.diet.toLowerCase() === filterDiet.toLowerCase()
+      );
+    if (searchQuery)
       filtered = filtered.filter((dino) =>
         dino.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
-    }
+
     setFilteredDinosaurs(filtered);
   }, [filterPeriod, filterSubPeriod, filterDiet, searchQuery, dinosaurs]);
 
-  const periods = Array.from(new Set(dinosaurs.map((d) => d.period)));
+  const periods = ["Triassic", "Jurassic", "Cretaceous"];
+  const subPeriodsOrder = ["Early", "Mid", "Late"];
+
   const subPeriods = filterPeriod
-    ? Array.from(
-        new Set(
-          dinosaurs
-            .filter((d) => d.period === filterPeriod)
-            .map((d) => d.fullPeriod)
+    ? subPeriodsOrder
+        .map((sub) => `${sub} ${filterPeriod}`)
+        .filter((sub) =>
+          dinosaurs.some(
+            (d) => d.fullPeriod === sub && d.period === filterPeriod
+          )
         )
-      )
     : [];
+
   const diets = Array.from(new Set(dinosaurs.map((d) => d.diet))).map(
     (diet) => diet.charAt(0).toUpperCase() + diet.slice(1).toLowerCase()
   );
@@ -73,116 +81,113 @@ const DinoPage = () => {
     return "default";
   };
 
-  const listContent = (
-    <div className="scroll-section mb-3">
-      <div className="rolling-list-container">
-        <div className="gradient-overlay top"></div>
-        <div className="gradient-overlay bottom"></div>
-        <div className="rolling-list" ref={scrollContainerRef}>
-          {filteredDinosaurs.map((dino, index) => {
-            const activeClass =
-              selectedDino && selectedDino.name === dino.name
-                ? "active-item"
-                : "";
-            return (
-              <div
-                key={index}
-                className={`list-item ${activeClass}`}
-                onClick={() => {
-                  setSelectedDino(dino);
-                  navigate(`/dinosaur/${dino.name.toLowerCase()}`);
-                }}
-              >
-                {dino.name}
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
-  );
-
-  const filtersContent = (
-    <div className="filters-section mb-3">
-      <h5>Filters</h5>
-      <div className="mb-2">
-        <label>Period</label>
-        <select
-          className="form-control"
-          value={filterPeriod}
-          onChange={(e) => {
-            setFilterPeriod(e.target.value);
-            setFilterSubPeriod("");
-          }}
-        >
-          <option value="">All</option>
-          {periods.map((period) => (
-            <option key={period} value={period}>
-              {period}
-            </option>
-          ))}
-        </select>
-      </div>
-      {filterPeriod && filterPeriod !== "Late Triassic" && (
-        <div className="mb-2">
-          <label>Sub Period</label>
-          <select
-            className="form-control"
-            value={filterSubPeriod}
-            onChange={(e) => setFilterSubPeriod(e.target.value)}
-          >
-            <option value="">All</option>
-            {subPeriods.map((sub) => (
-              <option key={sub} value={sub}>
-                {sub}
-              </option>
-            ))}
-          </select>
-        </div>
-      )}
-      <div className="mb-2">
-        <label>Diet</label>
-        <select
-          className="form-control"
-          value={filterDiet}
-          onChange={(e) => setFilterDiet(e.target.value)}
-        >
-          <option value="">All</option>
-          {diets.map((diet) => (
-            <option key={diet} value={diet}>
-              {diet}
-            </option>
-          ))}
-        </select>
-      </div>
-    </div>
-  );
-
-  const searchContent = (
-    <div className="mb-3">
-      <input
-        type="text"
-        className="form-control"
-        placeholder="Cera"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-      />
-    </div>
-  );
-
   return (
-    <div className="container py-3 dino-page-container">
+    <div className="container py-3">
       <div className="row">
         <div className="col-md-3">
-          <>
-            {searchContent}
-            {listContent}
-            {filtersContent}
-          </>
+          {isMobile && (
+            <button
+              className="btn btn-light w-100 mb-3"
+              onClick={() => setShowFilters(!showFilters)}
+            >
+              {showFilters ? "Hide Filters" : "Show Filters"}
+            </button>
+          )}
+
+          {(!isMobile || showFilters) && (
+            <>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search dinosaurs..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+              </div>
+
+              <div className="scroll-section mb-3">
+                <div className="rolling-list-container">
+                  <div className="gradient-overlay top"></div>
+                  <div className="gradient-overlay bottom"></div>
+                  <div className="rolling-list" ref={scrollContainerRef}>
+                    {filteredDinosaurs.map((dino) => (
+                      <div
+                        key={dino.name}
+                        className={`list-item ${
+                          selectedDino?.name === dino.name ? "active-item" : ""
+                        }`}
+                        onClick={() => {
+                          setSelectedDino(dino);
+                          navigate(`/dinosaur/${dino.name.toLowerCase()}`);
+                        }}
+                      >
+                        {dino.name}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="filters-section mb-3">
+                <h5>Filters</h5>
+                <select
+                  className="form-control mb-2"
+                  value={filterPeriod}
+                  onChange={(e) => {
+                    setFilterPeriod(e.target.value);
+                    setFilterSubPeriod("");
+                  }}
+                >
+                  <option value="">All Periods</option>
+                  {periods.map((period) => (
+                    <option key={period} value={period}>
+                      {period}
+                    </option>
+                  ))}
+                </select>
+
+                {filterPeriod && filterPeriod !== "Late Triassic" && (
+                  <select
+                    className="form-control mb-2"
+                    value={filterSubPeriod}
+                    onChange={(e) => setFilterSubPeriod(e.target.value)}
+                  >
+                    <option value="">All Subperiods</option>
+                    {subPeriods.map((sub) => (
+                      <option key={sub} value={sub}>
+                        {sub}
+                      </option>
+                    ))}
+                  </select>
+                )}
+
+                <select
+                  className="form-control"
+                  value={filterDiet}
+                  onChange={(e) => setFilterDiet(e.target.value)}
+                >
+                  <option value="">All Diets</option>
+                  {diets.map((diet) => (
+                    <option key={diet} value={diet}>
+                      {diet}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </>
+          )}
         </div>
+
         <div className="col-md-9">
           {selectedDino ? (
             <>
+              <div class="dinosaur-header">
+                <h2>{selectedDino.name}</h2>
+                <p class="pronunciation text-muted text-sm">
+                  ({selectedDino.pronunciation})
+                </p>
+              </div>
               <img
                 src={`/images/dinosaurs/${selectedDino.image}`}
                 alt={selectedDino.name}
@@ -190,10 +195,6 @@ const DinoPage = () => {
               />
               <div className="dino-details card">
                 <div className="card-body">
-                  <h3 className="card-title">{selectedDino.name}</h3>
-                  <p className="card-text">
-                    <strong>Pronunciation:</strong> {selectedDino.pronunciation}
-                  </p>
                   <p className="card-text">
                     <strong>Period:</strong> {selectedDino.fullPeriod} (
                     {selectedDino.yearsMya.start}-{selectedDino.yearsMya.end}{" "}
