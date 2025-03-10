@@ -29,11 +29,24 @@
   text-align: center;
   h2 {
     margin: 10px 0 0 0;
+    color: $color-primary;
   }
 }
 
+.dino-container {
+  padding: 0.5rem 1rem;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.dino-details {
+  padding: 16px 24px;
+  text-align: center;
+}
+
 .dino-listing-image {
-  height: 240px;
+  height: 230px;
   object-fit: contain;
   display: block;
   margin: 20px auto 30px auto;
@@ -49,11 +62,11 @@
 }
 
 .diet-pill.herb {
-  background-color: green;
+  background-color: $color-correct;
 }
 
 .diet-pill.carn {
-  background-color: red;
+  background-color: $color-incorrect;
 }
 
 .diet-pill.default {

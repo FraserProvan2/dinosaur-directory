@@ -94,7 +94,7 @@ function MesozoicEras() {
               ))}
             </ul>
             <button
-              className="close-btn btn btn-light w-100 mb-3"
+              className="close-btn btn w-100 mb-3"
               onClick={closeSidebar}
             >
               ➦ Close

@@ -149,13 +149,13 @@ function QuizGame() {
             Easy
           </button>
           <button
-            className="btn btn-start-game btn-light mx-1"
+            className="btn btn-start-game btn-secondary mx-1"
             onClick={() => startGame("medium")}
           >
             Medium
           </button>
           <button
-            className="btn btn-start-game btn-light mx-1"
+            className="btn btn-start-game btn-secondary mx-1"
             onClick={() => startGame("hard")}
           >
             Hard

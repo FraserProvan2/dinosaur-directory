@@ -83,11 +83,11 @@ const DinoPage = () => {
 
   return (
     <div className="container py-3">
-      <div className="row">
+      <div className="row justify-content-center">
         <div className="col-md-3">
           {isMobile && (
             <button
-              className="btn btn-light w-100 mb-3"
+              className="btn btn-primary w-100 mb-3"
               onClick={() => setShowFilters(!showFilters)}
             >
               {showFilters ? "Hide Filters" : "Show Filters"}
@@ -179,46 +179,50 @@ const DinoPage = () => {
           )}
         </div>
 
-        <div className="col-md-9">
+        <div className="col-md-5">
           {selectedDino ? (
             <>
-              <div class="dinosaur-header">
-                <h2>{selectedDino.name}</h2>
-                <p class="pronunciation text-muted text-sm">
-                  ({selectedDino.pronunciation})
-                </p>
-              </div>
-              <img
-                src={`/images/dinosaurs/${selectedDino.image}`}
-                alt={selectedDino.name}
-                className="img-fluid dino-listing-image mb-3"
-              />
-              <div className="dino-details card">
-                <div className="card-body">
-                  <p className="card-text">
-                    <strong>Period:</strong> {selectedDino.fullPeriod} (
-                    {selectedDino.yearsMya.start}-{selectedDino.yearsMya.end}{" "}
-                    MYA)
+              <div className="dino-container">
+                <div class="dinosaur-header">
+                  <h2>{selectedDino.name}</h2>
+                  <p class="pronunciation text-muted text-sm">
+                    ({selectedDino.pronunciation})
                   </p>
-                  <p className="card-text">
-                    <strong>Meaning:</strong> {selectedDino.meaning}
-                  </p>
-                  <p className="card-text">
-                    <strong>Length:</strong> {selectedDino.lengthMeters} meters
-                  </p>
-                  <p className="card-text">
-                    <strong>Found In:</strong> {selectedDino.foundIn.join(", ")}
-                  </p>
-                  <p className="card-text">
-                    <strong>Diet:</strong>{" "}
-                    <span
-                      className={`diet-pill ${getDietPillClass(
-                        selectedDino.diet
-                      )}`}
-                    >
-                      {selectedDino.diet}
-                    </span>
-                  </p>
+                </div>
+                <img
+                  src={`/images/dinosaurs/${selectedDino.image}`}
+                  alt={selectedDino.name}
+                  className="img-fluid dino-listing-image mb-3"
+                />
+                <div className="dino-details">
+                  <div className="card-body">
+                    <p className="card-text">
+                      <p className="card-text">
+                        <strong>Diet:</strong>{" "}
+                        <span
+                          className={`diet-pill ${getDietPillClass(
+                            selectedDino.diet
+                          )}`}
+                        >
+                          {selectedDino.diet}
+                        </span>
+                      </p>
+                      <strong>Period:</strong> {selectedDino.fullPeriod} (
+                      {selectedDino.yearsMya.start}-{selectedDino.yearsMya.end}{" "}
+                      MYA)
+                    </p>
+                    <p className="card-text">
+                      <strong>Meaning:</strong> {selectedDino.meaning}
+                    </p>
+                    <p className="card-text">
+                      <strong>Length:</strong> {selectedDino.lengthMeters}{" "}
+                      meters
+                    </p>
+                    <p className="card-text">
+                      <strong>Found In:</strong>{" "}
+                      {selectedDino.foundIn.join(", ")}
+                    </p>
+                  </div>
                 </div>
               </div>
             </>
