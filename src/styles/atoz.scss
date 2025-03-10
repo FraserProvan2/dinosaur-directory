@@ -23,13 +23,14 @@
   font-size: 1.2rem;
   font-weight: bold;
   opacity: 1;
+  color: $color-primary;
 }
 
 .dinosaur-header {
   text-align: center;
   h2 {
     margin: 10px 0 0 0;
-    color: $color-primary;
+    font-weight: bold;
   }
 }
 
@@ -75,4 +76,13 @@
 
 .diet {
   text-transform: capitalize;
+}
+
+.filters-text {
+  color: $color-primary;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }

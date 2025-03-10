@@ -130,7 +130,7 @@ const DinoPage = () => {
               </div>
 
               <div className="filters-section mb-3">
-                <h5>Filters</h5>
+                <div className="filters-text">Filters</div>
                 <select
                   className="form-control mb-2"
                   value={filterPeriod}
@@ -184,7 +184,7 @@ const DinoPage = () => {
             <>
               <div className="dino-container">
                 <div class="dinosaur-header">
-                  <h2>{selectedDino.name}</h2>
+                  <h2 className=" text-primary">{selectedDino.name}</h2>
                   <p class="pronunciation text-muted text-sm">
                     ({selectedDino.pronunciation})
                   </p>
@@ -227,7 +227,7 @@ const DinoPage = () => {
               </div>
             </>
           ) : (
-            <div>Select a dinosaur</div>
+            <div></div>
           )}
         </div>
       </div>
