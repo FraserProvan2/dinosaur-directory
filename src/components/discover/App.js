@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import Globe from "./Globe";
+import DinosaurSidebar from "./DinosaurSidebar";
+import PeriodSelector from "./PeriodSelector";
 import DinosaurCollection from "../../entities/DinosaurCollection";
 import fullPeriods from "../../data/full-periods.json";
 
-const PRIMARY_COLOR = "#AA0000";
 const periods = Object.keys(fullPeriods);
+const PRIMARY_COLOR = "#AA0000";
 
-function MesozoicEras() {
+const MesozoicEras = () => {
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -48,18 +50,13 @@ function MesozoicEras() {
 
   return (
     <div className="home-container">
-      <input
-        type="range"
-        min="0"
-        max={periods.length - 1}
-        step="1"
-        value={periods.indexOf(selectedPeriod)}
-        onChange={(e) => setSelectedPeriod(periods[e.target.value])}
-        className="period-slider"
+      <PeriodSelector
+        periods={periods}
+        selectedPeriod={selectedPeriod}
+        onChange={setSelectedPeriod}
       />
-      <div className="period-text-container text-center">
-        <p className="period-text">{selectedPeriod}</p>
-        <div className="period-years">(<b>{fullPeriods[selectedPeriod]}</b> ~ million years ago)</div>
+      <div className="period-years text-center">
+        (<b>{fullPeriods[selectedPeriod]}</b> ~ million years ago)
       </div>
       <div className="content-container">
         <div className={`left-panel ${isSidebarOpen ? "" : "expanded"}`}>
@@ -73,37 +70,16 @@ function MesozoicEras() {
           </div>
         </div>
         {isSidebarOpen && selectedCountry && (
-          <div className="right-panel">
-            <div className="in-period-title">
-              Dinosaurs in {selectedCountry} ({selectedPeriod})
-            </div>
-            <ul className="dino-list">
-              {dinosInCountry.map((dino) => (
-                <li key={dino.name} className="dino-item">
-                  <a href={'/dinosaur/' + dino.name.toLowerCase()} className="dino-icon-container">
-                    <img
-                      src={"images/dinosaurs/" + dino.image}
-                      alt={dino.name}
-                      className="dino-icon"
-                    />
-                  </a>
-                    <a href={'/dinosaur/' + dino.name.toLowerCase()}>
-                      {dino.name}
-                   </a>
-                </li>
-              ))}
-            </ul>
-            <button
-              className="close-btn btn w-100 mb-3"
-              onClick={closeSidebar}
-            >
-              ➦ Close
-            </button>
-          </div>
+          <DinosaurSidebar
+            selectedCountry={selectedCountry}
+            selectedPeriod={selectedPeriod}
+            dinosInCountry={dinosInCountry}
+            closeSidebar={closeSidebar}
+          />
         )}
       </div>
     </div>
   );
-}
+};
 
 export default MesozoicEras;
