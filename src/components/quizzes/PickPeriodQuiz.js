@@ -82,24 +82,21 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
 
   const handleAnswer = (choice) => {
     setSelected(choice);
-    const isCorrect =
-      difficulty === "hard"
-        ? choice === currentDino.fullPeriod
-        : choice === currentDino.period;
-    setCorrect(
-      isCorrect
-        ? choice
-        : difficulty === "hard"
-        ? currentDino.fullPeriod
-        : currentDino.period
-    );
-    setTotalQuestions((prev) => prev + 1);
+    const isCorrect = difficulty === "hard"
+      ? choice === currentDino.fullPeriod
+      : choice === currentDino.period;
+    setCorrect(isCorrect ? choice : (difficulty === "hard" ? currentDino.fullPeriod : currentDino.period));
+    const newTotal = totalQuestions + 1;
+    setTotalQuestions(newTotal);
     if (isCorrect) {
       setCorrectCount((prev) => prev + 1);
       setStreak((prev) => prev + 1);
       setAnsweredDinos(new Set(answeredDinos).add(currentDino.name));
     } else {
       setStreak(0);
+    }
+    if (newTotal >= MAX_QUESTIONS) {
+      setQuizComplete(true);
     }
   };
 

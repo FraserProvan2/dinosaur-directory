@@ -39,11 +39,16 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
 
   const handleAnswer = (dino) => {
     setSelected(dino);
-    setTotalQuestions((prev) => prev + 1);
+    const newTotal = totalQuestions + 1;
+    setTotalQuestions(newTotal);
     if (dino.name === currentDino.name) {
       setCorrectCount((prev) => prev + 1);
     }
+    if (newTotal >= MAX_QUESTIONS) {
+      setQuizComplete(true);
+    }
   };
+  
 
   const scorePercentage =
     totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;

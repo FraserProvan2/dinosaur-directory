@@ -12,7 +12,7 @@ const App = () => {
         <div className="col-md-8">
           <div className="quiz-card card p-3 text-center">
             <h4>Pick Period Quiz</h4>
-            <p>
+            <p className="mb-1">
               Test your knowledge of dinosaur eras by choosing the correct time period for each dinosaur.
             </p>
             <div className="d-flex justify-content-center">
@@ -43,7 +43,7 @@ const App = () => {
         <div className="col-md-8">
           <div className="quiz-card card p-3 text-center">
             <h4>Guess Correct Image Quiz</h4>
-            <p>
+            <p className="mb-1">
               Identify the dinosaur by its image. Choose the correct image among several options.
             </p>
             <div className="d-flex justify-content-center">
