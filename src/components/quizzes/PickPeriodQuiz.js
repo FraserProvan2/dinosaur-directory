@@ -1,4 +1,3 @@
-// quizzes/PickPeriodQuiz.js
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import dinosaurs from "../../data/dinosaurs.json";
@@ -17,12 +16,9 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
   const [streak, setStreak] = useState(0);
   const [answeredDinos, setAnsweredDinos] = useState(new Set());
   const [quizComplete, setQuizComplete] = useState(false);
-
   useEffect(() => {
     generateQuestion();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   const generateQuestion = () => {
     if (totalQuestions >= MAX_QUESTIONS) {
       setQuizComplete(true);
@@ -43,25 +39,20 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
     setSelected(null);
     setCorrect(null);
   };
-
   const getOptions = (dino) => {
     if (!dino) return [];
     const fullPeriodsList = Object.keys(fullPeriods);
     const groupedPeriods = ["Triassic", "Jurassic", "Cretaceous"];
-
     if (difficulty !== "hard") {
       return groupedPeriods;
     }
-
     const correctAnswer = dino.fullPeriod;
     const correctIndex = fullPeriodsList.indexOf(correctAnswer);
     if (correctIndex === -1) return fullPeriodsList.slice(0, 4);
-
     let choicesSet = new Set([correctAnswer]);
     if (correctIndex > 0) choicesSet.add(fullPeriodsList[correctIndex - 1]);
     if (correctIndex < fullPeriodsList.length - 1)
       choicesSet.add(fullPeriodsList[correctIndex + 1]);
-
     for (let i = 2; choicesSet.size < 4; i++) {
       if (correctIndex - i >= 0)
         choicesSet.add(fullPeriodsList[correctIndex - i]);
@@ -79,13 +70,20 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
       (a, b) => fullPeriodsList.indexOf(a) - fullPeriodsList.indexOf(b)
     );
   };
-
   const handleAnswer = (choice) => {
+    if (selected) return;
     setSelected(choice);
-    const isCorrect = difficulty === "hard"
-      ? choice === currentDino.fullPeriod
-      : choice === currentDino.period;
-    setCorrect(isCorrect ? choice : (difficulty === "hard" ? currentDino.fullPeriod : currentDino.period));
+    const isCorrect =
+      difficulty === "hard"
+        ? choice === currentDino.fullPeriod
+        : choice === currentDino.period;
+    setCorrect(
+      isCorrect
+        ? choice
+        : difficulty === "hard"
+        ? currentDino.fullPeriod
+        : currentDino.period
+    );
     const newTotal = totalQuestions + 1;
     setTotalQuestions(newTotal);
     if (isCorrect) {
@@ -95,47 +93,50 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
     } else {
       setStreak(0);
     }
-    if (newTotal >= MAX_QUESTIONS) {
-      setQuizComplete(true);
-    }
   };
-
   const getStreakEmoji = () => {
     if (streak >= 3) return "🔥";
     if (streak === 2) return "🚀";
     if (streak === 1) return "🎉";
     return "";
   };
-
   const scorePercentage =
     totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
-
+  const currentQuestionDisplay =
+    totalQuestions < MAX_QUESTIONS ? totalQuestions + 1 : MAX_QUESTIONS;
   if (quizComplete) {
     return (
       <div className="quiz-container">
         <h2>Quiz Complete!</h2>
-        <p>
-          You got {correctCount} / {totalQuestions} correct ({scorePercentage}%)
-        </p>
-        <p>
-          Question {totalQuestions} / {MAX_QUESTIONS}
-        </p>
+        {difficulty === "easy" ? (
+          <p>
+            You got {correctCount} correct ({scorePercentage}%)
+          </p>
+        ) : (
+          <p>
+            You got {correctCount} / {totalQuestions} correct ({scorePercentage}
+            %)
+          </p>
+        )}
         <button className="btn btn-link" onClick={onBack}>
           Back to Quiz Menu
         </button>
       </div>
     );
   }
-
   return (
     <div className="quiz-container">
       <div className="score-tracker">
         <p>
           {correctCount} / {totalQuestions} Correct ({scorePercentage}%)
         </p>
-        <p>
-          Question {totalQuestions + 1} / {MAX_QUESTIONS}
-        </p>
+        {difficulty === "easy" ? (
+          <p>Question {currentQuestionDisplay}</p>
+        ) : (
+          <p>
+            Question {currentQuestionDisplay} / {MAX_QUESTIONS}
+          </p>
+        )}
       </div>
       {currentDino ? (
         <>
@@ -156,7 +157,7 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
           <p className="mt-3">
             Which time period did the {currentDino.name} live in?
           </p>
-          <div className="options">
+          <div className="options mb-3">
             {choices.map((choice, index) => (
               <motion.button
                 key={index}
@@ -178,20 +179,14 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
               </motion.button>
             ))}
           </div>
-          {selected && (
-            <p className="feedback">
-              {selected === correct
-                ? `${getStreakEmoji()} Correct! The ${
-                    currentDino.name
-                  } lived between ${currentDino.yearsMya.start} - ${
-                    currentDino.yearsMya.end
-                  } million years ago.`
-                : `❌ Incorrect! The correct answer is ${correct}.`}
-            </p>
-          )}
           {selected && totalQuestions < MAX_QUESTIONS && (
             <button className="next-btn" onClick={generateQuestion}>
               Next Question
+            </button>
+          )}
+          {selected && totalQuestions === MAX_QUESTIONS && (
+            <button className="next-btn" onClick={() => setQuizComplete(true)}>
+              Finish Quiz
             </button>
           )}
           <button className="btn btn-link" onClick={onBack}>
