@@ -64,6 +64,13 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    align-content: center;
+  }
 }
 
 .image-option-btn {
@@ -75,6 +82,10 @@
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s;
+
+  @media only screen and (max-width: 600px) {
+    max-width: 80%;
+  }
 }
 
 .image-option-btn:hover {
