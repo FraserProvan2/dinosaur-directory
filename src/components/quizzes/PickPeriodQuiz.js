@@ -1,15 +1,17 @@
+// quizzes/PickPeriodQuiz.js
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import dinosaurs from "../../data/dinosaurs.json";
 import fullPeriods from "../../data/full-periods.json";
-import { motion } from "framer-motion";
+import { getRandomElement } from "./utils";
 
-function QuizGame() {
+const MAX_QUESTIONS = 20;
+
+const PickPeriodQuiz = ({ difficulty, onBack }) => {
   const [currentDino, setCurrentDino] = useState(null);
   const [choices, setChoices] = useState([]);
   const [selected, setSelected] = useState(null);
   const [correct, setCorrect] = useState(null);
-  const [showNext, setShowNext] = useState(false);
-  const [difficulty, setDifficulty] = useState(null);
   const [correctCount, setCorrectCount] = useState(0);
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [streak, setStreak] = useState(0);
@@ -17,20 +19,15 @@ function QuizGame() {
   const [quizComplete, setQuizComplete] = useState(false);
 
   useEffect(() => {
-    if (difficulty) generateQuestion();
-  }, [difficulty]);
-
-  const startGame = (level) => {
-    setDifficulty(level);
-    setCurrentDino(null);
-    setCorrectCount(0);
-    setTotalQuestions(0);
-    setStreak(0);
-    setAnsweredDinos(new Set());
-    setQuizComplete(false);
-  };
+    generateQuestion();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const generateQuestion = () => {
+    if (totalQuestions >= MAX_QUESTIONS) {
+      setQuizComplete(true);
+      return;
+    }
     let filteredDinos = dinosaurs.filter((d) => !answeredDinos.has(d.name));
     if (difficulty === "easy") {
       filteredDinos = filteredDinos.filter((d) => d.difficulty === 0);
@@ -39,48 +36,46 @@ function QuizGame() {
       setQuizComplete(true);
       return;
     }
-    const randomDino =
-      filteredDinos[Math.floor(Math.random() * filteredDinos.length)];
-    let options = getOptions(randomDino, difficulty);
+    const randomDino = getRandomElement(filteredDinos);
+    const options = getOptions(randomDino);
     setCurrentDino(randomDino);
     setChoices(options);
     setSelected(null);
     setCorrect(null);
-    setShowNext(false);
   };
 
-  const getOptions = (dino, difficulty) => {
+  const getOptions = (dino) => {
     if (!dino) return [];
-
     const fullPeriodsList = Object.keys(fullPeriods);
     const groupedPeriods = ["Triassic", "Jurassic", "Cretaceous"];
 
     if (difficulty !== "hard") {
-      return groupedPeriods; // Easy/Medium mode
+      return groupedPeriods;
     }
 
     const correctAnswer = dino.fullPeriod;
     const correctIndex = fullPeriodsList.indexOf(correctAnswer);
-    if (correctIndex === -1) return fullPeriodsList.slice(0, 4); // Fallback
+    if (correctIndex === -1) return fullPeriodsList.slice(0, 4);
 
-    let choices = new Set([correctAnswer]);
-
-    if (correctIndex > 0) choices.add(fullPeriodsList[correctIndex - 1]); // Before
+    let choicesSet = new Set([correctAnswer]);
+    if (correctIndex > 0) choicesSet.add(fullPeriodsList[correctIndex - 1]);
     if (correctIndex < fullPeriodsList.length - 1)
-      choices.add(fullPeriodsList[correctIndex + 1]); // After
+      choicesSet.add(fullPeriodsList[correctIndex + 1]);
 
-    for (let i = 2; choices.size < 4; i++) {
-      if (correctIndex - i >= 0) choices.add(fullPeriodsList[correctIndex - i]);
+    for (let i = 2; choicesSet.size < 4; i++) {
+      if (correctIndex - i >= 0)
+        choicesSet.add(fullPeriodsList[correctIndex - i]);
       if (correctIndex + i < fullPeriodsList.length)
-        choices.add(fullPeriodsList[correctIndex + i]);
+        choicesSet.add(fullPeriodsList[correctIndex + i]);
+      if (i > fullPeriodsList.length) break;
     }
-
-    while (choices.size > 4) {
-      let removable = [...choices].filter((p) => p !== correctAnswer);
-      choices.delete(removable[Math.floor(Math.random() * removable.length)]);
+    while (choicesSet.size > 4) {
+      let removable = [...choicesSet].filter((p) => p !== correctAnswer);
+      choicesSet.delete(
+        removable[Math.floor(Math.random() * removable.length)]
+      );
     }
-
-    return Array.from(choices).sort(
+    return Array.from(choicesSet).sort(
       (a, b) => fullPeriodsList.indexOf(a) - fullPeriodsList.indexOf(b)
     );
   };
@@ -98,15 +93,14 @@ function QuizGame() {
         ? currentDino.fullPeriod
         : currentDino.period
     );
-    setTotalQuestions(totalQuestions + 1);
+    setTotalQuestions((prev) => prev + 1);
     if (isCorrect) {
-      setCorrectCount(correctCount + 1);
-      setStreak(streak + 1);
+      setCorrectCount((prev) => prev + 1);
+      setStreak((prev) => prev + 1);
       setAnsweredDinos(new Set(answeredDinos).add(currentDino.name));
     } else {
       setStreak(0);
     }
-    setShowNext(true);
   };
 
   const getStreakEmoji = () => {
@@ -116,21 +110,20 @@ function QuizGame() {
     return "";
   };
 
+  const scorePercentage =
+    totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
+
   if (quizComplete) {
     return (
       <div className="quiz-container">
         <h2>Quiz Complete!</h2>
         <p>
-          You got {correctCount} / {totalQuestions} correct (
-          {totalQuestions > 0
-            ? Math.round((correctCount / totalQuestions) * 100)
-            : 0}
-          %).
+          You got {correctCount} / {totalQuestions} correct ({scorePercentage}%)
         </p>
-        <button
-          className="btn btn-link back-to-menu"
-          onClick={() => startGame(null)}
-        >
+        <p>
+          Question {totalQuestions} / {MAX_QUESTIONS}
+        </p>
+        <button className="btn btn-link" onClick={onBack}>
           Back to Quiz Menu
         </button>
       </div>
@@ -139,37 +132,16 @@ function QuizGame() {
 
   return (
     <div className="quiz-container">
-      {!difficulty ? (
-        <div className="difficulty-select">
-          <div className="mb-2">Select Difficulty</div>
-          <button
-            className="btn btn-start-game btn-primary mx-1"
-            onClick={() => startGame("easy")}
-          >
-            Easy
-          </button>
-          <button
-            className="btn btn-start-game btn-secondary mx-1"
-            onClick={() => startGame("medium")}
-          >
-            Medium
-          </button>
-          <button
-            className="btn btn-start-game btn-secondary mx-1"
-            onClick={() => startGame("hard")}
-          >
-            Hard
-          </button>
-        </div>
-      ) : currentDino ? (
+      <div className="score-tracker">
+        <p>
+          {correctCount} / {totalQuestions} Correct ({scorePercentage}%)
+        </p>
+        <p>
+          Question {totalQuestions + 1} / {MAX_QUESTIONS}
+        </p>
+      </div>
+      {currentDino ? (
         <>
-          <p className="score-tracker">
-            {correctCount} / {totalQuestions} Correct (
-            {totalQuestions > 0
-              ? Math.round((correctCount / totalQuestions) * 100)
-              : 0}
-            %)
-          </p>
           <div className="quiz-header">
             <h2>{currentDino.name}</h2>
             <p className="pronunciation text-muted text-sm">
@@ -191,7 +163,7 @@ function QuizGame() {
             {choices.map((choice, index) => (
               <motion.button
                 key={index}
-                className={`option-btn ${
+                className={`text-option-btn ${
                   selected
                     ? choice === correct
                       ? "correct"
@@ -220,15 +192,12 @@ function QuizGame() {
                 : `❌ Incorrect! The correct answer is ${correct}.`}
             </p>
           )}
-          {showNext && (
+          {selected && totalQuestions < MAX_QUESTIONS && (
             <button className="next-btn" onClick={generateQuestion}>
               Next Question
             </button>
           )}
-          <button
-            className="btn btn-link back-to-menu"
-            onClick={() => setDifficulty(null)}
-          >
+          <button className="btn btn-link" onClick={onBack}>
             Back to Quiz Menu
           </button>
         </>
@@ -237,6 +206,6 @@ function QuizGame() {
       )}
     </div>
   );
-}
+};
 
-export default QuizGame;
+export default PickPeriodQuiz;

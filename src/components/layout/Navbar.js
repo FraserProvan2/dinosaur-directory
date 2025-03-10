@@ -69,10 +69,10 @@ function Navbar() {
             <li className="nav-item">
               <Link
                 className="nav-link"
-                to="/quiz"
-                onClick={(e) => handleNavClick(e, "/quiz")}
+                to="/quizzes"
+                onClick={(e) => handleNavClick(e, "/quizzes")}
               >
-                Quiz
+                Quizzes
               </Link>
             </li>
           </ul>

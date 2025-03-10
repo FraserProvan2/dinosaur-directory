@@ -1,7 +1,7 @@
 import React from "react";
-import QuizGame from "../components/quiz/QuizGame";
+import QuizGame from "../components/quizzes/App";
 
-function Quiz() {
+function Quizzes() {
   return (
     <div className="container dynamic-margin-top">
       <h1 className="text-center">Dinosaur Quiz</h1>
@@ -10,4 +10,4 @@ function Quiz() {
   );
 }
 
-export default Quiz;
+export default Quizzes;

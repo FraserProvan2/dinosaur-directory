@@ -27,3 +27,17 @@
 .navbar-logo {
   max-width: 30px;
 }
+
+.image-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  max-height: 200px;
+  gap: 1rem;
+}
+
+.dino-image-option {
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+}

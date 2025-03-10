@@ -4,7 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Home from './pages/Home';
 import Discover from './pages/Discover';
 import AtoZ from './pages/AtoZ';
-import Quiz from './pages/Quiz';
+import Quizzes from './pages/Quizzes';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/discover" element={<Discover />} />
-        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/quizzes" element={<Quizzes />} />
         <Route path="/a-z" element={<AtoZ />} />
         <Route path="/dinosaur/:dinoSlug" element={<AtoZ />} />
       </Routes>
