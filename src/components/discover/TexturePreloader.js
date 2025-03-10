@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useTexture } from "@react-three/drei";
 import * as THREE from "three";
-import { periodTextures } from "./globeUtils";
+import { periodTextures } from "./utils";
 
 const TexturePreloader = ({ onLoadComplete }) => {
   const textureUrls = useMemo(() => {

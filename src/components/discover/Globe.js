@@ -5,7 +5,7 @@ import * as THREE from "three";
 import LoadingPlaceholder from "./LoadingPlaceholder";
 import TexturePreloader from "./TexturePreloader";
 import RotatingGlobe from "./RotatingGlobe";
-import { GLOBE_AMBIENT_LIGHT, GLOBE_BRIGHTNESS } from "./globeUtils";
+import { GLOBE_AMBIENT_LIGHT, GLOBE_BRIGHTNESS } from "./utils";
 
 const Globe = ({
   selectedPeriod,

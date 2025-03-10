@@ -1,5 +1,5 @@
 import React from "react";
-import DinoList from "../components/atoz/DinoList";
+import DinoList from "../components/atoz/App";
 
 function AtoZ() {
   return (

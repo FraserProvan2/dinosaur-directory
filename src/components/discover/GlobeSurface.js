@@ -1,5 +1,5 @@
 import React from "react";
-import { GLOBE_ROUGHNESS, GLOBE_METALNESS, GLOBE_OVERLAY } from "./globeUtils";
+import { GLOBE_ROUGHNESS, GLOBE_METALNESS, GLOBE_OVERLAY } from "./utils";
 
 const GlobeSurface = ({ texture }) => {
   return (

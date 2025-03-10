@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { useThree, useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import * as THREE from "three";
-import { latLonToSphereCoords } from "./globeUtils";
+import { latLonToSphereCoords } from "./utils";
 
 const CountryMarker = ({ country, latLon, PRIMARY_COLOR, onClick }) => {
   const { camera } = useThree();

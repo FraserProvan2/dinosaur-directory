@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import GlobeSurface from "./GlobeSurface";
 import CloudLayer from "./CloudLayer";
 import CountryMarker from "./CountryMarker";
-import { periodTextures } from "./globeUtils";
+import { periodTextures } from "./utils";
 import CountriesPosition from "../../data/countries-positions.json";
 
 const RotatingGlobe = ({
