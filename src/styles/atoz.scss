@@ -23,7 +23,7 @@
   font-size: 1.2rem;
   font-weight: bold;
   opacity: 1;
-  color: $color-primary;
+  color: $primary;
 }
 
 .dinosaur-header {
@@ -63,15 +63,15 @@
 }
 
 .diet-pill.herb {
-  background-color: $color-correct;
+  background-color: $green;
 }
 
 .diet-pill.carn {
-  background-color: $color-incorrect;
+  background-color: $incorrect;
 }
 
 .diet-pill.default {
-  background-color: #555;
+  background-color: #a9a9a9;
 }
 
 .diet {
@@ -79,7 +79,7 @@
 }
 
 .filters-text {
-  color: $color-primary;
+  color: $primary;
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 0.5rem;

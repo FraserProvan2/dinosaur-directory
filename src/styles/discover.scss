@@ -38,8 +38,8 @@
 
 .right-panel {
   display: block;
-  color: black;
-  background-color: white;
+  color: $black;
+  background-color: $white;
   padding: 0 20px;
   width: 25%;
   max-height: 70vh;
@@ -102,7 +102,7 @@
   height: 90px;
 
   a {
-    color: $color-primary;
+    color: $primary;
     font-weight: bold;
     text-decoration: none;
   }

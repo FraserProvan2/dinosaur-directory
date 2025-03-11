@@ -49,14 +49,14 @@
 }
 
 .text-option-btn.correct {
-  background: #28a745;
-  color: black;
+  background: $correct;
+  color: $white;
 }
 
 .text-option-btn.incorrect {
-  background: #dc3545;
+  background: $incorrect;
   animation: shake 0.3s;
-  color: black;
+  color: $white;
 }
 
 .image-options-grid {
@@ -77,7 +77,7 @@
   max-width: 40%;
   border: none;
   padding: 10px;
-  background-color: #f8f9fa;
+  background-color: $secondary;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s;
@@ -92,14 +92,14 @@
 }
 
 .image-option-btn.correct {
-  background: #28a745;
-  color: black;
+  background: $correct;
+  color: $black;
 }
 
 .image-option-btn.incorrect {
-  background: #dc3545;
+  background: $incorrect;
   animation: shake 0.3s;
-  color: black;
+  color: $black;
 }
 
 .image-option-btn img {
@@ -139,7 +139,7 @@ h2 {
   font-size: 24px;
   margin: 0px;
   font-weight: bold;
-  color: $color-primary;
+  color: $primary;
 }
 
 .pronunciation {

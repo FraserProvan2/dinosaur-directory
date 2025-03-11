@@ -6,7 +6,7 @@ import DinosaurCollection from "../../entities/DinosaurCollection";
 import fullPeriods from "../../data/full-periods.json";
 
 const periods = Object.keys(fullPeriods);
-const PRIMARY_COLOR = "#AA0000";
+const PRIMARY_COLOR = "#28a745";
 
 const MesozoicEras = () => {
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0]);
