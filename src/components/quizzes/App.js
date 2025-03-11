@@ -6,7 +6,7 @@ const App = () => {
   const [selectedQuiz, setSelectedQuiz] = useState(null);
   const renderQuizMenu = () => (
     <div className="quiz-menu">
-      <div className="row justify-content-center mb-4">
+      <div className="row justify-content-center my-3">
         <div className="col-md-8">
           <div className="quiz-card card p-3 text-center">
             <h4>Pick Period</h4>

@@ -12,7 +12,14 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
   const [correctCount, setCorrectCount] = useState(0);
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [quizComplete, setQuizComplete] = useState(false);
-  const numberOfOptions = difficulty === "easy" ? 3 : 4;
+  const numberOfOptions =
+    difficulty === "easy"
+      ? 3
+      : difficulty === "medium"
+      ? 4
+      : difficulty === "hard"
+      ? 5
+      : 0;
   const generateQuestion = () => {
     if (totalQuestions >= MAX_QUESTIONS) {
       setQuizComplete(true);
@@ -49,7 +56,7 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
         <p>
           You got {correctCount} / {totalQuestions} correct ({scorePercentage}%)
         </p>
-        <button className="btn btn-link" onClick={onBack}>
+        <button className="btn btn btn-secondary" onClick={onBack}>
           Back to Quiz Menu
         </button>
       </div>
@@ -98,16 +105,19 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
         ))}
       </div>
       {selected && totalQuestions < MAX_QUESTIONS && (
-        <button className="next-btn" onClick={generateQuestion}>
+        <button className="btn btn-next btn-primary" onClick={generateQuestion}>
           Next Question
         </button>
       )}
       {selected && totalQuestions === MAX_QUESTIONS && (
-        <button className="next-btn" onClick={() => setQuizComplete(true)}>
+        <button
+          className="btn btn-primary"
+          onClick={() => setQuizComplete(true)}
+        >
           Finish Quiz
         </button>
       )}
-      <button className="btn btn-link" onClick={onBack}>
+      <button className="btn btn-secondary" onClick={onBack}>
         Back to Quiz Menu
       </button>
     </div>

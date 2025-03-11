@@ -28,7 +28,10 @@ const DinosaurSidebar = ({
           </li>
         ))}
       </ul>
-      <button className="close-btn btn w-100 mb-3" onClick={closeSidebar}>
+      <button
+        className="close-btn btn btn-secondary w-100 mb-3"
+        onClick={closeSidebar}
+      >
         ➦ Close
       </button>
     </div>

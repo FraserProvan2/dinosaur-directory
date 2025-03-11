@@ -74,10 +74,9 @@
 }
 
 .image-option-btn {
-  flex: 0 0 calc(33.33% - 1rem);
-  max-width: calc(33.33% - 1rem);
+  max-width: 40%;
   border: none;
-  padding: 5px;
+  padding: 10px;
   background-color: #f8f9fa;
   border-radius: 5px;
   cursor: pointer;
@@ -108,6 +107,7 @@
   max-height: 250px;
   object-fit: contain;
   border-radius: 8px;
+  height: 220px;
 }
 
 @keyframes shake {
@@ -151,11 +151,7 @@ h2 {
   margin-top: 15px;
 }
 
-.next-btn {
-  padding: 10px 15px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.btn-next {
   transition: background 0.3s;
+  margin-right: 10px;
 }

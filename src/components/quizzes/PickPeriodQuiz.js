@@ -118,7 +118,7 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
             %)
           </p>
         )}
-        <button className="btn btn-link" onClick={onBack}>
+        <button className="btn btn btn-secondary" onClick={onBack}>
           Back to Quiz Menu
         </button>
       </div>
@@ -180,16 +180,22 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
             ))}
           </div>
           {selected && totalQuestions < MAX_QUESTIONS && (
-            <button className="next-btn" onClick={generateQuestion}>
+            <button
+              className="btn btn-next btn-primary"
+              onClick={generateQuestion}
+            >
               Next Question
             </button>
           )}
           {selected && totalQuestions === MAX_QUESTIONS && (
-            <button className="next-btn" onClick={() => setQuizComplete(true)}>
+            <button
+              className="btn btn-primary"
+              onClick={() => setQuizComplete(true)}
+            >
               Finish Quiz
             </button>
           )}
-          <button className="btn btn-link" onClick={onBack}>
+          <button className="btn btn-secondary" onClick={onBack}>
             Back to Quiz Menu
           </button>
         </>
