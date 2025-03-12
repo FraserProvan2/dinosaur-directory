@@ -24,8 +24,8 @@ const DinoDetails = ({ dino }) => {
             </span>
           </p>
           <p className="card-text">
-            <strong>Period:</strong> {dino.fullPeriod} ({dino.yearsMya.start}-
-            {dino.yearsMya.end} MYA)
+            <strong>Period:</strong> {dino.fullPeriod} (<b>{dino.yearsMya.start}-
+            {dino.yearsMya.end}</b> million years ago)
           </p>
           <p className="card-text">
             <strong>Meaning:</strong> {dino.meaning}

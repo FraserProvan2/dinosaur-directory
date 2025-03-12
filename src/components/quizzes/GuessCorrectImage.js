@@ -52,11 +52,11 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
   if (quizComplete) {
     return (
       <div className="quiz-container">
-        <h2>Quiz Complete!</h2>
+        <h2 className="mb-3">Quiz Complete!</h2>
         <p>
           You got {correctCount} / {totalQuestions} correct ({scorePercentage}%)
         </p>
-        <button className="btn btn btn-secondary" onClick={onBack}>
+        <button className="btn btn btn-secondary px-5" onClick={onBack}>
           Back to Quiz Menu
         </button>
       </div>
@@ -111,7 +111,7 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
       )}
       {selected && totalQuestions === MAX_QUESTIONS && (
         <button
-          className="btn btn-primary"
+          className="btn btn-primary btn-finish-quiz"
           onClick={() => setQuizComplete(true)}
         >
           Finish Quiz

@@ -107,7 +107,7 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
   if (quizComplete) {
     return (
       <div className="quiz-container">
-        <h2>Quiz Complete!</h2>
+        <h2 className="mb-3">Quiz Complete!</h2>
         {difficulty === "easy" ? (
           <p>
             You got {correctCount} correct ({scorePercentage}%)
@@ -189,7 +189,7 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
           )}
           {selected && totalQuestions === MAX_QUESTIONS && (
             <button
-              className="btn btn-primary"
+              className="btn btn-primary btn-finish-quiz"
               onClick={() => setQuizComplete(true)}
             >
               Finish Quiz
