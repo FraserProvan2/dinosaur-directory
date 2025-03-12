@@ -1,19 +1,29 @@
 import React from "react";
+import DinosaurCollection from "../../entities/DinosaurCollection";
 
 function DinosaurOfTheWeek() {
+  const dino = DinosaurCollection.getDinosaurOfTheWeek();
+  const dinoLink = "/dinosaur/" + dino.name.toLowerCase();
+  const livedPeriod = `${dino.fullPeriod} (${dino.yearsMya.start}-${dino.yearsMya.end} million years ago)`;
+
   return (
     <div className="card h-100 home-card--regular">
-      <img
-        src="https://placehold.co/300x200?text=Dinosaur+of+the+Week"
-        className="card-img-top"
-        alt="Dinosaur of the Week"
-      />
       <div className="card-body d-flex flex-column">
-        <h5 className="card-title">Dinosaur of the Week</h5>
-        <p className="card-text">
-          Check out our featured dinosaur of the week. Learn its history,
-          interesting facts, and see why it stands out.
-        </p>
+      <h5 class="card-title">Dinosaur of the Week</h5>
+      <a href={dinoLink}>
+        <img
+          src={"/images/dinosaurs/" + dino.image}
+          className="dino-week"
+          alt={dino.name}
+        />
+      </a>
+        <a href={dinoLink} className="text-decoration-none text-dark">
+          <h5 className="card-title">{dino.name}</h5>
+        </a>
+        <p className="card-text">{livedPeriod}</p>
+        <a href={dinoLink} className="btn btn-secondary home-btn">
+          Learn More
+        </a>
       </div>
     </div>
   );

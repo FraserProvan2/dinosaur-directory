@@ -1,5 +1,4 @@
 import dinosaurs from "../data/dinosaurs.json";
-import BaseCountriesPositions from "../data/base-countries-positions.json";
 
 class DinosaurCollection {
   constructor() {
@@ -10,27 +9,12 @@ class DinosaurCollection {
     return [...this.dinosaurs];
   }
 
-  getAllBaseCountriesCords() {
-    const countryMap = {};
-
-    this.dinosaurs.forEach((dino) => {
-      const period = dino.fullPeriod;
-
-      if (!countryMap[period]) {
-        countryMap[period] = {};
-      }
-
-      dino.foundIn.forEach((country) => {
-        if (!BaseCountriesPositions[country]) {
-          console.error(`Missing base coordinates for: ${country}`);
-          return;
-        }
-
-        countryMap[dino.fullPeriod][country] = BaseCountriesPositions[country];
-      });
-    });
-
-    return countryMap;
+  getDinosaurOfTheWeek() {
+    const oneWeekInMs = 7 * 24 * 60 * 60 * 1000;
+    const weekNumber = Math.floor(Date.now() / oneWeekInMs);
+    const index = weekNumber % this.dinosaurs.length;
+    const dinoData = this.dinosaurs[index];
+    return dinoData;
   }
 }
 
