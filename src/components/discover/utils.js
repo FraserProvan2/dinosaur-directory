@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
 // Globe Customisation
-export const GLOBE_BRIGHTNESS = 0.8;
+export const GLOBE_BRIGHTNESS = 0.9;
 export const GLOBE_AMBIENT_LIGHT = 0.5;
 export const GLOBE_ROUGHNESS = 0.8;
 export const GLOBE_METALNESS = 0.3;
