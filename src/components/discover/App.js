@@ -8,7 +8,7 @@ import fullPeriods from "../../data/full-periods.json";
 const periods = Object.keys(fullPeriods);
 const PRIMARY_COLOR = "#28a745";
 
-const MesozoicEras = () => {
+const App = () => {
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -82,4 +82,4 @@ const MesozoicEras = () => {
   );
 };
 
-export default MesozoicEras;
+export default App;

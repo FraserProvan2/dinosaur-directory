@@ -22,8 +22,14 @@ $incorrect: #dc3545;
 @import "./styles/atoz.scss";
 
 // Global classes
-button, input, select, .card, .btn, .nav-link {
-  border-radius: 0px!important;
+button,
+input,
+select,
+.card,
+.btn,
+.nav-link,
+.card-img-top {
+  border-radius: 0px !important;
 }
 
 .dynamic-margin-top {
