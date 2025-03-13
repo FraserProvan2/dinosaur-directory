@@ -11,13 +11,13 @@ const DinoList = ({ dinosaurs, selectedDino, onDinoSelect }) => {
         <div className="rolling-list" ref={scrollContainerRef}>
           {dinosaurs.map((dino) => (
             <div
-              key={dino.name}
+              key={dino.getName()}
               className={`list-item ${
-                selectedDino?.name === dino.name ? "active-item" : ""
+                selectedDino?.getName() === dino.getName() ? "active-item" : ""
               }`}
               onClick={() => onDinoSelect(dino)}
             >
-              {dino.name}
+              {dino.getName()}
             </div>
           ))}
         </div>

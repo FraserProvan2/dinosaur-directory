@@ -13,18 +13,18 @@ const DinosaurSidebar = ({
       </div>
       <ul className="dino-list">
         {dinosInCountry.map((dino) => (
-          <li key={dino.name} className="dino-item">
+          <li key={dino.getName()} className="dino-item">
             <a
-              href={"/dinosaur/" + dino.name.toLowerCase()}
+              href={"/dinosaur/" + dino.getNameLower()}
               className="dino-icon-container"
             >
               <img
-                src={"images/dinosaurs/" + dino.image}
-                alt={dino.name}
+                src={"images/dinosaurs/" + dino.getImage()}
+                alt={dino.getName()}
                 className="dino-icon"
               />
             </a>
-            <a href={"/dinosaur/" + dino.name.toLowerCase()}>{dino.name}</a>
+            <a href={"/dinosaur/" + dino.getNameLower()}>{dino.getName()}</a>
           </li>
         ))}
       </ul>

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { shuffleArray, getRandomElement } from "./utils";
-import dinosaurs from "../../data/dinosaurs.json";
+import DinosaurCollection from "../../entities/DinosaurCollection";
 
 const MAX_QUESTIONS = 20;
+const dinosaurs = DinosaurCollection.getAllDinosaurs();
 
 const GuessCorrectImage = ({ difficulty, onBack }) => {
   const [currentDino, setCurrentDino] = useState(null);
@@ -20,35 +21,40 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
       : difficulty === "hard"
       ? 5
       : 0;
+
   const generateQuestion = () => {
     if (totalQuestions >= MAX_QUESTIONS) {
       setQuizComplete(true);
       return;
     }
     const target = getRandomElement(dinosaurs);
-    let otherDinos = dinosaurs.filter((d) => d.name !== target.name);
+    let otherDinos = dinosaurs.filter((d) => d.getName() !== target.getName());
     otherDinos = shuffleArray(otherDinos).slice(0, numberOfOptions - 1);
     const options = shuffleArray([target, ...otherDinos]);
     setCurrentDino(target);
     setChoices(options);
     setSelected(null);
   };
+
   useEffect(() => {
     generateQuestion();
   }, []);
+
   const handleAnswer = (dino) => {
     if (selected) return;
     setSelected(dino);
     const newTotal = totalQuestions + 1;
     setTotalQuestions(newTotal);
-    if (dino.name === currentDino.name) {
+    if (dino.getName() === currentDino.getName()) {
       setCorrectCount((prev) => prev + 1);
     }
   };
+
   const scorePercentage =
     totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
   const currentQuestionDisplay =
     totalQuestions < MAX_QUESTIONS ? totalQuestions + 1 : MAX_QUESTIONS;
+
   if (quizComplete) {
     return (
       <div className="quiz-container">
@@ -56,12 +62,13 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
         <p>
           You got {correctCount} / {totalQuestions} correct ({scorePercentage}%)
         </p>
-        <button className="btn btn btn-secondary px-5" onClick={onBack}>
+        <button className="btn btn-secondary px-5" onClick={onBack}>
           Back to Quiz Menu
         </button>
       </div>
     );
   }
+
   return (
     <div className="quiz-container">
       <div className="score-tracker">
@@ -75,7 +82,7 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
       <h2>Guess the Correct Image</h2>
       {currentDino && (
         <p className="quiz-question">
-          Select the image of <strong>{currentDino.name}</strong>
+          Select the image of <strong>{currentDino.getName()}</strong>
         </p>
       )}
       <div className="image-options-grid mb-3">
@@ -84,7 +91,7 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
             key={index}
             className={`image-option-btn ${
               selected
-                ? dino.name === currentDino.name
+                ? dino.getName() === currentDino.getName()
                   ? "correct"
                   : dino === selected
                   ? "incorrect"
@@ -97,8 +104,8 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
             whileHover={{ scale: 1.02 }}
           >
             <img
-              src={`/images/dinosaurs/${dino.name.toLowerCase()}.png`}
-              alt={dino.name}
+              src={`/images/dinosaurs/${dino.getImage()}`}
+              alt={dino.getName()}
               className="dino-image-option"
             />
           </motion.button>

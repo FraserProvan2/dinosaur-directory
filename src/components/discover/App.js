@@ -18,8 +18,8 @@ const App = () => {
   useEffect(() => {
     setAvailableLocations(
       allDinosaurs.current.reduce((acc, dino) => {
-        if (dino.fullPeriod === selectedPeriod) {
-          dino.foundIn.forEach((location) => {
+        if (dino.getFullPeriod() === selectedPeriod) {
+          dino.getFoundIn().forEach((location) => {
             if (!acc.includes(location)) {
               acc.push(location);
             }
@@ -33,8 +33,8 @@ const App = () => {
   const dinosInCountry = selectedCountry
     ? allDinosaurs.current.filter(
         (dino) =>
-          dino.foundIn.includes(selectedCountry) &&
-          dino.fullPeriod === selectedPeriod
+          dino.getFoundIn().includes(selectedCountry) &&
+          dino.getFullPeriod() === selectedPeriod
       )
     : [];
 

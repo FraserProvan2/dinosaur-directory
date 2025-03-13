@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import dinosaurs from "../../data/dinosaurs.json";
+import DinosaurCollection from "../../entities/DinosaurCollection";
 import fullPeriods from "../../data/full-periods.json";
 import { getRandomElement } from "./utils";
 
 const MAX_QUESTIONS = 20;
+const dinosaurs = DinosaurCollection.getAllDinosaurs();
 
 const PickPeriodQuiz = ({ difficulty, onBack }) => {
   const [currentDino, setCurrentDino] = useState(null);
@@ -16,17 +17,21 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
   const [streak, setStreak] = useState(0);
   const [answeredDinos, setAnsweredDinos] = useState(new Set());
   const [quizComplete, setQuizComplete] = useState(false);
+
   useEffect(() => {
     generateQuestion();
   }, []);
+
   const generateQuestion = () => {
     if (totalQuestions >= MAX_QUESTIONS) {
       setQuizComplete(true);
       return;
     }
-    let filteredDinos = dinosaurs.filter((d) => !answeredDinos.has(d.name));
+    let filteredDinos = dinosaurs.filter(
+      (d) => !answeredDinos.has(d.getName())
+    );
     if (difficulty === "easy") {
-      filteredDinos = filteredDinos.filter((d) => d.difficulty === 0);
+      filteredDinos = filteredDinos.filter((d) => d.getDifficulty() === 0);
     }
     if (filteredDinos.length === 0) {
       setQuizComplete(true);
@@ -39,6 +44,7 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
     setSelected(null);
     setCorrect(null);
   };
+
   const getOptions = (dino) => {
     if (!dino) return [];
     const fullPeriodsList = Object.keys(fullPeriods);
@@ -46,7 +52,7 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
     if (difficulty !== "hard") {
       return groupedPeriods;
     }
-    const correctAnswer = dino.fullPeriod;
+    const correctAnswer = dino.getFullPeriod();
     const correctIndex = fullPeriodsList.indexOf(correctAnswer);
     if (correctIndex === -1) return fullPeriodsList.slice(0, 4);
     let choicesSet = new Set([correctAnswer]);
@@ -70,40 +76,44 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
       (a, b) => fullPeriodsList.indexOf(a) - fullPeriodsList.indexOf(b)
     );
   };
+
   const handleAnswer = (choice) => {
     if (selected) return;
     setSelected(choice);
     const isCorrect =
       difficulty === "hard"
-        ? choice === currentDino.fullPeriod
-        : choice === currentDino.period;
+        ? choice === currentDino.getFullPeriod()
+        : choice === currentDino.getPeriod();
     setCorrect(
       isCorrect
         ? choice
         : difficulty === "hard"
-        ? currentDino.fullPeriod
-        : currentDino.period
+        ? currentDino.getFullPeriod()
+        : currentDino.getPeriod()
     );
     const newTotal = totalQuestions + 1;
     setTotalQuestions(newTotal);
     if (isCorrect) {
       setCorrectCount((prev) => prev + 1);
       setStreak((prev) => prev + 1);
-      setAnsweredDinos(new Set(answeredDinos).add(currentDino.name));
+      setAnsweredDinos(new Set(answeredDinos).add(currentDino.getName()));
     } else {
       setStreak(0);
     }
   };
+
   const getStreakEmoji = () => {
     if (streak >= 3) return "🔥";
     if (streak === 2) return "🚀";
     if (streak === 1) return "🎉";
     return "";
   };
+
   const scorePercentage =
     totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
   const currentQuestionDisplay =
     totalQuestions < MAX_QUESTIONS ? totalQuestions + 1 : MAX_QUESTIONS;
+
   if (quizComplete) {
     return (
       <div className="quiz-container">
@@ -115,15 +125,16 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
         ) : (
           <p>
             You got {correctCount} / {totalQuestions} correct ({scorePercentage}
-            %)
+            % )
           </p>
         )}
-        <button className="btn btn btn-secondary" onClick={onBack}>
+        <button className="btn btn-secondary" onClick={onBack}>
           Back to Quiz Menu
         </button>
       </div>
     );
   }
+
   return (
     <div className="quiz-container">
       <div className="score-tracker">
@@ -141,21 +152,21 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
       {currentDino ? (
         <>
           <div className="quiz-header">
-            <h2>{currentDino.name}</h2>
+            <h2>{currentDino.getName()}</h2>
             <p className="pronunciation text-muted text-sm">
-              ({currentDino.pronunciation})
+              ({currentDino.getPronunciation()})
             </p>
           </div>
           <motion.img
-            src={`/images/dinosaurs/${currentDino.name.toLowerCase()}.png`}
-            alt={currentDino.name}
+            src={`/images/dinosaurs/${currentDino.getImage()}`}
+            alt={currentDino.getName()}
             className="dino-image"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           />
           <p className="mt-3">
-            Which time period did the {currentDino.name} live in?
+            Which time period did the {currentDino.getName()} live in?
           </p>
           <div className="options mb-3">
             {choices.map((choice, index) => (

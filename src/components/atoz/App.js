@@ -1,4 +1,3 @@
-// atoz/DinoPage.js
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import DinosaurCollection from "../../entities/DinosaurCollection";
@@ -19,24 +18,69 @@ const App = () => {
   const { dinoSlug } = useParams();
   const navigate = useNavigate();
 
-  // Handle responsive behavior
+  const filterDinosaurs = (
+    dinosaurs,
+    filterPeriod,
+    filterSubPeriod,
+    filterDiet,
+    searchQuery
+  ) => {
+    let filtered = dinosaurs;
+    if (filterPeriod) {
+      filtered = filtered.filter((dino) => dino.getPeriod() === filterPeriod);
+    }
+    if (filterSubPeriod) {
+      filtered = filtered.filter(
+        (dino) => dino.getFullPeriod() === filterSubPeriod
+      );
+    }
+    if (filterDiet) {
+      filtered = filtered.filter(
+        (dino) => dino.getDiet().toLowerCase() === filterDiet.toLowerCase()
+      );
+    }
+    if (searchQuery) {
+      filtered = filtered.filter((dino) =>
+        dino.getName().toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+    return filtered;
+  };
+
+  const getSubPeriods = (dinosaurs, filterPeriod) => {
+    const subPeriodsOrder = ["Early", "Mid", "Late"];
+    return filterPeriod
+      ? subPeriodsOrder
+          .map((sub) => `${sub} ${filterPeriod}`)
+          .filter((sub) =>
+            dinosaurs.some(
+              (d) => d.getFullPeriod() === sub && d.getPeriod() === filterPeriod
+            )
+          )
+      : [];
+  };
+
+  const getDietOptions = (dinosaurs) => {
+    return Array.from(new Set(dinosaurs.map((d) => d.getDiet()))).map(
+      (diet) => diet.charAt(0).toUpperCase() + diet.slice(1).toLowerCase()
+    );
+  };
+
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Load dinosaurs and set the selected dinosaur based on URL param
   useEffect(() => {
     const dinos = DinosaurCollection.getAllDinosaurs().sort((a, b) =>
-      a.name.localeCompare(b.name)
+      a.getNameLower().localeCompare(b.getNameLower())
     );
     setDinosaurs(dinos);
     setFilteredDinosaurs(dinos);
-
     if (dinoSlug && dinos.length > 0) {
       const foundDino = dinos.find(
-        (d) => d.name.toLowerCase() === dinoSlug.toLowerCase()
+        (d) => d.getNameLower() === dinoSlug.toLowerCase()
       );
       setSelectedDino(foundDino || dinos[0]);
     } else if (dinos.length > 0) {
@@ -44,49 +88,30 @@ const App = () => {
     }
   }, [dinoSlug]);
 
-  // Apply filters to the dinosaur list
   useEffect(() => {
-    let filtered = dinosaurs;
-    if (filterPeriod)
-      filtered = filtered.filter((dino) => dino.period === filterPeriod);
-    if (filterSubPeriod)
-      filtered = filtered.filter((dino) => dino.fullPeriod === filterSubPeriod);
-    if (filterDiet)
-      filtered = filtered.filter(
-        (dino) => dino.diet.toLowerCase() === filterDiet.toLowerCase()
-      );
-    if (searchQuery)
-      filtered = filtered.filter((dino) =>
-        dino.name.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    setFilteredDinosaurs(filtered);
-  }, [filterPeriod, filterSubPeriod, filterDiet, searchQuery, dinosaurs]);
+    setFilteredDinosaurs(
+      filterDinosaurs(
+        dinosaurs,
+        filterPeriod,
+        filterSubPeriod,
+        filterDiet,
+        searchQuery
+      )
+    );
+  }, [dinosaurs, filterPeriod, filterSubPeriod, filterDiet, searchQuery]);
 
-  // Define options for filters
   const periods = ["Triassic", "Jurassic", "Cretaceous"];
-  const subPeriodsOrder = ["Early", "Mid", "Late"];
-  const subPeriods = filterPeriod
-    ? subPeriodsOrder
-        .map((sub) => `${sub} ${filterPeriod}`)
-        .filter((sub) =>
-          dinosaurs.some(
-            (d) => d.fullPeriod === sub && d.period === filterPeriod
-          )
-        )
-    : [];
-  const diets = Array.from(new Set(dinosaurs.map((d) => d.diet))).map(
-    (diet) => diet.charAt(0).toUpperCase() + diet.slice(1).toLowerCase()
-  );
+  const subPeriods = getSubPeriods(dinosaurs, filterPeriod);
+  const diets = getDietOptions(dinosaurs);
 
   const handleDinoSelect = (dino) => {
     setSelectedDino(dino);
-    navigate(`/dinosaur/${dino.name.toLowerCase()}`);
+    navigate(`/dinosaur/${dino.getNameLower()}`);
   };
 
   return (
     <div className="container py-3">
       <div className="row justify-content-center">
-        {/* Left Panel: Filters and List */}
         <div className="col-md-3">
           {isMobile && (
             <button
@@ -96,7 +121,6 @@ const App = () => {
               {showFilters ? "Hide Filters" : "Show Filters"}
             </button>
           )}
-
           {(!isMobile || showFilters) && (
             <>
               <DinoFilters
@@ -123,8 +147,6 @@ const App = () => {
             </>
           )}
         </div>
-
-        {/* Right Panel: Dinosaur Details */}
         <div className="col-md-5">
           {selectedDino && <DinoDetails dino={selectedDino} />}
         </div>
