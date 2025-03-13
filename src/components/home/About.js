@@ -11,7 +11,7 @@ function About() {
       <div className="card-body d-flex flex-column">
         <h5 className="card-title">Resources</h5>
         <p className="card-text small mt-2">
-          DinoWebApp couldn’t have been made without the help of these resources:
+          dinosaur.directory couldn’t have been made without the help of these resources:
         </p>
         <ul className="list-unstyled small">
           <li>
@@ -25,7 +25,7 @@ function About() {
             </a>
           </li>
           <li>
-            Maps from{" "}
+            Maps, Images from{" "}
             <a
               href="https://dinosaurpictures.org/"
               target="_blank"
