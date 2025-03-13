@@ -10,11 +10,11 @@ class DinosaurCollection {
   }
 
   getDinosaurOfTheWeek() {
-    const oneWeekInMs = 7 * 24 * 60 * 60 * 1000;
-    const weekNumber = Math.floor(Date.now() / oneWeekInMs);
-    const index = weekNumber % this.dinosaurs.length;
-    const dinoData = this.dinosaurs[index];
-    return dinoData;
+    const now = new Date();
+    const d = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
+    d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
+    const weekNo = Math.ceil((((d - new Date(Date.UTC(d.getUTCFullYear(), 0, 1))) / 86400000) + 1) / 7);
+    return this.dinosaurs[(weekNo - 1) % this.dinosaurs.length];
   }
 }
 

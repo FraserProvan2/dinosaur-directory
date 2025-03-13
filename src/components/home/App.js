@@ -13,13 +13,13 @@ function App() {
           <DiscoverLink />
         </div>
         <div className="col-md-6 mb-4">
-          <AtoZLink />
-        </div>
-        <div className="col-md-6 mb-4">
           <QuzziesLink />
         </div>
         <div className="col-md-6 mb-4">
           <DinosaurOfTheWeek />
+        </div>
+        <div className="col-md-6 mb-4">
+          <AtoZLink />
         </div>
         <div className="col-md-6 mb-4">
           <About />
