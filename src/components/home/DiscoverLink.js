@@ -8,6 +8,7 @@ function DiscoverLink() {
           src="/images/home/discover.png"
           className="card-img-top"
           alt="Discover Dinosaurs"
+          loading="lazy"
         />
       </a>
       <div className="card-body d-flex flex-column">

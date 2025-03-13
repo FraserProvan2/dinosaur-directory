@@ -8,6 +8,7 @@ function QuzziesLink() {
           src="/images/home/quizzes.png"
           className="card-img-top"
           alt="Quizzes"
+          loading="lazy"
         />
       </a>
       <div className="card-body d-flex flex-column">

@@ -18,6 +18,7 @@ function DinosaurOfTheWeek() {
             src={"/images/dinosaurs/" + dino.getImage()}
             className="dino-week"
             alt={dino.getName()}
+            loading="lazy"
           />
         </a>
         <a href={dinoLink} className="text-decoration-none text-dark">

@@ -8,6 +8,7 @@ function AtoZLink() {
           src="/images/home/a-z.png"
           className="card-img-top"
           alt="Dinosaur A-Z"
+          loading="lazy"
         />
       </a>
       <div className="card-body d-flex flex-column">

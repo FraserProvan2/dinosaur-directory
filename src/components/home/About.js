@@ -7,6 +7,7 @@ function About() {
         src="/images/home/about.png"
         className="card-img-top"
         alt="About"
+        loading="lazy"
       />
       <div className="card-body d-flex flex-column">
         <h5 className="card-title">Resources</h5>
@@ -15,7 +16,7 @@ function About() {
         </p>
         <ul className="list-unstyled small">
           <li>
-            Data from{" "}
+            Data, Images from{" "}
             <a
               href="https://www.nhm.ac.uk/"
               target="_blank"
@@ -25,7 +26,7 @@ function About() {
             </a>
           </li>
           <li>
-            Maps, Images from{" "}
+            Maps from{" "}
             <a
               href="https://dinosaurpictures.org/"
               target="_blank"
