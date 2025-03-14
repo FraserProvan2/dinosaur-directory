@@ -1,7 +1,21 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 
 const DinoList = ({ dinosaurs, selectedDino, onDinoSelect }) => {
   const scrollContainerRef = useRef(null);
+  const autoScrollRef = useRef(true);
+
+  useEffect(() => {
+    if (selectedDino && scrollContainerRef.current && autoScrollRef.current) {
+      setTimeout(() => {
+        const activeElement =
+          scrollContainerRef.current.querySelector(".active-item");
+        if (activeElement) {
+          activeElement.scrollIntoView({ behavior: "smooth", block: "center" });
+          autoScrollRef.current = false;
+        }
+      }, 100);
+    }
+  }, [selectedDino]);
 
   return (
     <div className="scroll-section mb-3">
@@ -15,7 +29,10 @@ const DinoList = ({ dinosaurs, selectedDino, onDinoSelect }) => {
               className={`list-item ${
                 selectedDino?.getName() === dino.getName() ? "active-item" : ""
               }`}
-              onClick={() => onDinoSelect(dino)}
+              onClick={() => {
+                autoScrollRef.current = false;
+                onDinoSelect(dino);
+              }}
             >
               {dino.getName()}
             </div>
