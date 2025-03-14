@@ -25,7 +25,7 @@ function DinosaurOfTheWeek() {
           <h5 className="card-title">{dino.getName()}</h5>
         </a>
         <p className="card-text">{livedPeriod}</p>
-        <a href={dinoLink} className="btn btn-secondary home-btn">
+        <a href={dinoLink} className="btn btn-secondary home-btn mt-auto">
           Learn More
         </a>
       </div>

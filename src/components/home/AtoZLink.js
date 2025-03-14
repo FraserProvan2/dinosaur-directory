@@ -19,7 +19,7 @@ function AtoZLink() {
           Browse our comprehensive list of dinosaurs from A to Z and explore
           detailed information on each species.
         </p>
-        <a href="/a-z" className="btn btn-secondary home-btn">
+        <a href="/a-z" className="btn btn-secondary home-btn mt-auto">
           Browse A-Z
         </a>
       </div>

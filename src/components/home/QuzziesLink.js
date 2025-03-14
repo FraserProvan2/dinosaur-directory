@@ -19,7 +19,7 @@ function QuzziesLink() {
           Test your dinosaur knowledge with our fun quizzes. Challenge yourself
           and learn cool facts along the way.
         </p>
-        <a href="/quizzes" className="btn btn-primary home-btn">
+        <a href="/quizzes" className="btn btn-primary home-btn mt-auto">
           Take a Quiz
         </a>
       </div>

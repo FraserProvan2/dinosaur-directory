@@ -19,7 +19,7 @@ function DiscoverLink() {
           Explore our interactive globe. Drag the sliders through different eras
           and click on countries to see which dinosaurs were found.
         </p>
-        <a href="/discover" className="btn btn-primary home-btn">
+        <a href="/discover" className="btn btn-primary home-btn mt-auto">
           Explore
         </a>
       </div>

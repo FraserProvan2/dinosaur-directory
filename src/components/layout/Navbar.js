@@ -31,7 +31,7 @@ function Navbar() {
             alt="Dino Logo"
             className="navbar-logo"
           />
-          <span className="ms-2">dinosaur.directory</span>
+          <span className="ms-2 mb-1">dinosaur.directory</span>
         </Link>
 
         <button
