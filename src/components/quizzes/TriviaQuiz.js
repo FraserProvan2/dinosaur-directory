@@ -8,7 +8,6 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(null);
-  const [shuffledAnswers, setShuffledAnswers] = useState([]);
   const [displayOptions, setDisplayOptions] = useState([]);
   const [selected, setSelected] = useState(null);
   const [correct, setCorrect] = useState(null);
@@ -49,7 +48,6 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
       const firstQuestion = shuffledQuestions[0];
       setCurrentQuestion(firstQuestion);
       const shuffledAns = shuffleArray(firstQuestion.answers);
-      setShuffledAnswers(shuffledAns);
       setDisplayOptions(
         computeDisplayOptions(
           shuffledAns,
@@ -60,6 +58,7 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
     } else {
       setQuizComplete(true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [difficulty]);
 
   const handleAnswer = (choice) => {
@@ -81,7 +80,6 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
       const nextQ = questions[nextIndex];
       setCurrentQuestion(nextQ);
       const shuffledAns = shuffleArray(nextQ.answers);
-      setShuffledAnswers(shuffledAns);
       setDisplayOptions(
         computeDisplayOptions(shuffledAns, difficulty, nextQ.correctAnswer)
       );
@@ -102,7 +100,7 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
         <h2 className="mb-3">Quiz Complete!</h2>
         <p>
           You got {correctCount} / {questions.length} correct ({scorePercentage}
-          %)
+          % )
         </p>
         <button className="btn btn-secondary" onClick={onBack}>
           Back to Quiz Menu

@@ -14,12 +14,12 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
   const [correct, setCorrect] = useState(null);
   const [correctCount, setCorrectCount] = useState(0);
   const [totalQuestions, setTotalQuestions] = useState(0);
-  const [streak, setStreak] = useState(0);
   const [answeredDinos, setAnsweredDinos] = useState(new Set());
   const [quizComplete, setQuizComplete] = useState(false);
 
   useEffect(() => {
     generateQuestion();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const generateQuestion = () => {
@@ -95,10 +95,7 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
     setTotalQuestions(newTotal);
     if (isCorrect) {
       setCorrectCount((prev) => prev + 1);
-      setStreak((prev) => prev + 1);
       setAnsweredDinos(new Set(answeredDinos).add(currentDino.getName()));
-    } else {
-      setStreak(0);
     }
   };
 

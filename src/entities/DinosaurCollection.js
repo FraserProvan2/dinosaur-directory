@@ -21,4 +21,5 @@ class DinosaurCollection {
   }
 }
 
-export default new DinosaurCollection();
+const dinosaurCollectionInstance = new DinosaurCollection();
+export default dinosaurCollectionInstance;

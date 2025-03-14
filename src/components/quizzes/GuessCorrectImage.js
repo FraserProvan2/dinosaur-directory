@@ -38,6 +38,7 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
 
   useEffect(() => {
     generateQuestion();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleAnswer = (dino) => {
