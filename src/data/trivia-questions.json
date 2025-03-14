@@ -1,0 +1,569 @@
+[
+  {
+    "question": "Which period is known as the 'Age of Dinosaurs'?",
+    "difficulty": 0,
+    "answers": ["Mesozoic", "Cenozoic", "Paleozoic"],
+    "correctAnswer": "Mesozoic"
+  },
+  {
+    "question": "What does the name 'Tyrannosaurus Rex' mean?",
+    "difficulty": 0,
+    "answers": ["Tyrant lizard king", "Terrible lizard", "Giant lizard"],
+    "correctAnswer": "Tyrant lizard king"
+  },
+  {
+    "question": "Which dinosaur had a long neck and was one of the largest land animals?",
+    "difficulty": 0,
+    "answers": ["Brachiosaurus", "Stegosaurus", "Velociraptor"],
+    "correctAnswer": "Brachiosaurus"
+  },
+  {
+    "question": "Which dinosaur is known for its three horns?",
+    "difficulty": 0,
+    "answers": ["Triceratops", "Stegosaurus", "Diplodocus"],
+    "correctAnswer": "Triceratops"
+  },
+  {
+    "question": "What does the name 'Velociraptor' mean?",
+    "difficulty": 0,
+    "answers": ["Swift thief", "Speedy predator", "Quick runner"],
+    "correctAnswer": "Swift thief"
+  },
+  {
+    "question": "Which dinosaur is famous for its spiked tail and plates along its back?",
+    "difficulty": 0,
+    "answers": ["Stegosaurus", "Ankylosaurus", "Allosaurus"],
+    "correctAnswer": "Stegosaurus"
+  },
+  {
+    "question": "What kind of creature was the Pterodactyl?",
+    "difficulty": 0,
+    "answers": ["A flying dinosaur", "A pterosaur", "A prehistoric bird"],
+    "correctAnswer": "A pterosaur"
+  },
+  {
+    "question": "Which dinosaur was known for its tiny arms?",
+    "difficulty": 0,
+    "answers": ["Tyrannosaurus Rex", "Brachiosaurus", "Triceratops"],
+    "correctAnswer": "Tyrannosaurus Rex"
+  },
+  {
+    "question": "Which period did the Stegosaurus live in?",
+    "difficulty": 0,
+    "answers": ["Jurassic", "Triassic", "Cretaceous"],
+    "correctAnswer": "Jurassic"
+  },
+  {
+    "question": "What does the term 'dinosaur' literally mean?",
+    "difficulty": 0,
+    "answers": ["Terrible lizard", "Ancient reptile", "Giant lizard"],
+    "correctAnswer": "Terrible lizard"
+  },
+  {
+    "question": "Which dinosaur is often depicted with a frill on its head?",
+    "difficulty": 0,
+    "answers": ["Triceratops", "Tyrannosaurus Rex", "Velociraptor"],
+    "correctAnswer": "Triceratops"
+  },
+  {
+    "question": "What is the main food source for a herbivorous dinosaur?",
+    "difficulty": 0,
+    "answers": ["Plants", "Other dinosaurs", "Insects"],
+    "correctAnswer": "Plants"
+  },
+  {
+    "question": "Which dinosaur is known for having a long, bony crest on its head?",
+    "difficulty": 0,
+    "answers": ["Parasaurolophus", "Stegosaurus", "Allosaurus"],
+    "correctAnswer": "Parasaurolophus"
+  },
+  {
+    "question": "Which dinosaur was one of the fastest runners?",
+    "difficulty": 0,
+    "answers": ["Velociraptor", "Brachiosaurus", "Diplodocus"],
+    "correctAnswer": "Velociraptor"
+  },
+  {
+    "question": "What type of environment did many dinosaurs live in?",
+    "difficulty": 0,
+    "answers": ["Forests and plains", "Deserts only", "Oceanic islands"],
+    "correctAnswer": "Forests and plains"
+  },
+  {
+    "question": "Which dinosaur had a body built for speed with long legs and a slender build?",
+    "difficulty": 0,
+    "answers": ["Ornithomimus", "Triceratops", "Stegosaurus"],
+    "correctAnswer": "Ornithomimus"
+  },
+  {
+    "question": "Which dinosaur is known as the 'King of Dinosaurs'?",
+    "difficulty": 0,
+    "answers": ["Tyrannosaurus Rex", "Brachiosaurus", "Ankylosaurus"],
+    "correctAnswer": "Tyrannosaurus Rex"
+  },
+  {
+    "question": "What is the study of dinosaurs called?",
+    "difficulty": 0,
+    "answers": ["Paleontology", "Archaeology", "Geology"],
+    "correctAnswer": "Paleontology"
+  },
+  {
+    "question": "Which dinosaur had a heavily armored body and a club-like tail?",
+    "difficulty": 0,
+    "answers": ["Ankylosaurus", "Velociraptor", "Diplodocus"],
+    "correctAnswer": "Ankylosaurus"
+  },
+  {
+    "question": "Which dinosaur is known for its sail-like structure on its back?",
+    "difficulty": 0,
+    "answers": ["Spinosaurus", "Pachycephalosaurus", "Allosaurus"],
+    "correctAnswer": "Spinosaurus"
+  },
+  {
+    "question": "Which dinosaur is famous for its large, spike-like thumb?",
+    "difficulty": 0,
+    "answers": ["Iguanodon", "Allosaurus", "Pachycephalosaurus"],
+    "correctAnswer": "Iguanodon"
+  },
+  {
+    "question": "Which dinosaur was one of the first to be scientifically described, helping launch the field of paleontology?",
+    "difficulty": 0,
+    "answers": ["Megalosaurus", "Diplodocus", "Velociraptor"],
+    "correctAnswer": "Megalosaurus"
+  },
+  {
+    "question": "Which group of dinosaurs is characterized by a duck-bill shaped snout and often found in herds?",
+    "difficulty": 0,
+    "answers": ["Hadrosaurs", "Sauropods", "Theropods"],
+    "correctAnswer": "Hadrosaurs"
+  },
+  {
+    "question": "Which dinosaur is known for its distinctive helmet-like crest on its head that might have been used for sound amplification?",
+    "difficulty": 0,
+    "answers": ["Corythosaurus", "Stegosaurus", "Triceratops"],
+    "correctAnswer": "Corythosaurus"
+  },
+  {
+    "question": "Which small, feathered dinosaur had four wings and might have been capable of gliding?",
+    "difficulty": 0,
+    "answers": ["Microraptor", "Velociraptor", "Compsognathus"],
+    "correctAnswer": "Microraptor"
+  },
+  {
+    "question": "Which dinosaur's name translates to 'egg thief', even though it likely was protecting its nest?",
+    "difficulty": 0,
+    "answers": ["Oviraptor", "Troodon", "Iguanodon"],
+    "correctAnswer": "Oviraptor"
+  },
+  {
+    "question": "Which small, fast-running dinosaur is often considered one of the smallest and most agile?",
+    "difficulty": 0,
+    "answers": ["Compsognathus", "Brachiosaurus", "Ankylosaurus"],
+    "correctAnswer": "Compsognathus"
+  },
+  {
+    "question": "Which dinosaur is believed to have had a keen sense of smell due to its large nasal passages?",
+    "difficulty": 0,
+    "answers": ["Troodon", "Velociraptor", "Iguanodon"],
+    "correctAnswer": "Troodon"
+  },
+  {
+    "question": "Which dinosaur is known for its thick skull roof, giving it a dome-like appearance?",
+    "difficulty": 0,
+    "answers": ["Pachycephalosaurus", "Triceratops", "Allosaurus"],
+    "correctAnswer": "Pachycephalosaurus"
+  },
+  {
+    "question": "Which long-necked dinosaur is often depicted reaching high into trees for food?",
+    "difficulty": 0,
+    "answers": ["Apatosaurus", "Velociraptor", "Stegosaurus"],
+    "correctAnswer": "Apatosaurus"
+  },
+  {
+    "question": "Which carnivorous dinosaur was known for its sharp, serrated teeth ideal for slicing flesh?",
+    "difficulty": 0,
+    "answers": ["Allosaurus", "Stegosaurus", "Diplodocus"],
+    "correctAnswer": "Allosaurus"
+  },
+  {
+    "question": "Which carnivorous dinosaur is distinguished by a prominent horn on its snout?",
+    "difficulty": 0,
+    "answers": ["Ceratosaurus", "Tyrannosaurus Rex", "Velociraptor"],
+    "correctAnswer": "Ceratosaurus"
+  },
+  {
+    "question": "Which giant predator from South America rivaled T. rex in size?",
+    "difficulty": 0,
+    "answers": ["Giganotosaurus", "Brachiosaurus", "Diplodocus"],
+    "correctAnswer": "Giganotosaurus"
+  },
+  {
+    "question": "Which dinosaur is famously known as the 'thunder lizard'?",
+    "difficulty": 0,
+    "answers": ["Brontosaurus", "Velociraptor", "Pachycephalosaurus"],
+    "correctAnswer": "Brontosaurus"
+  },
+  {
+    "question": "Which long-tailed sauropod is recognized for its record-breaking length?",
+    "difficulty": 0,
+    "answers": ["Diplodocus", "Triceratops", "Stegosaurus"],
+    "correctAnswer": "Diplodocus"
+  },
+  {
+    "question": "Which dinosaur's name translates to 'terrible claw' due to its large, curved talons?",
+    "difficulty": 0,
+    "answers": ["Deinonychus", "Velociraptor", "Oviraptor"],
+    "correctAnswer": "Deinonychus"
+  },
+  {
+    "question": "Which ancient creature, often regarded as the first bird, had both dinosaur and bird-like features?",
+    "difficulty": 0,
+    "answers": ["Archaeopteryx", "Pterodactyl", "Iguanodon"],
+    "correctAnswer": "Archaeopteryx"
+  },
+  {
+    "question": "Which dinosaur had a long, narrow snout with needle-like teeth, adapted for catching fish?",
+    "difficulty": 0,
+    "answers": ["Baryonyx", "Stegosaurus", "Diplodocus"],
+    "correctAnswer": "Baryonyx"
+  },
+  {
+    "question": "Which large dromaeosaurid dinosaur is known for its enormous, curved claws on its feet?",
+    "difficulty": 0,
+    "answers": ["Utahraptor", "Deinonychus", "Troodon"],
+    "correctAnswer": "Utahraptor"
+  },
+  {
+    "question": "Which small, feathered dinosaur's fossils provided evidence that some dinosaurs might have been warm-blooded?",
+    "difficulty": 0,
+    "answers": ["Sinosauropteryx", "Triceratops", "Diplodocus"],
+    "correctAnswer": "Sinosauropteryx"
+  },
+  {
+    "question": "Which dinosaur's brain was one of the largest relative to its body size among non-avian dinosaurs?",
+    "difficulty": 1,
+    "answers": ["Troodon", "Tyrannosaurus Rex", "Stegosaurus", "Diplodocus"],
+    "correctAnswer": "Troodon"
+  },
+  {
+    "question": "Which dinosaur had a highly specialized dental battery with continuous tooth replacement, boasting hundreds of teeth?",
+    "difficulty": 1,
+    "answers": ["Nigersaurus", "Iguanodon", "Velociraptor", "Triceratops"],
+    "correctAnswer": "Nigersaurus"
+  },
+  {
+    "question": "Which small theropod dinosaur is believed to have had an unusually flexible wrist that contributed to its precise grasping abilities?",
+    "difficulty": 1,
+    "answers": ["Bambiraptor", "Deinonychus", "Utahraptor", "Oviraptor"],
+    "correctAnswer": "Bambiraptor"
+  },
+  {
+    "question": "Which dinosaur's fossil evidence provided the first clear impressions of feather-like structures on its body?",
+    "difficulty": 1,
+    "answers": [
+      "Sinosauropteryx",
+      "Compsognathus",
+      "Pachycephalosaurus",
+      "Ankylosaurus"
+    ],
+    "correctAnswer": "Sinosauropteryx"
+  },
+  {
+    "question": "Which theropod dinosaur's inner ear morphology suggests it had exceptional balance and agility?",
+    "difficulty": 1,
+    "answers": [
+      "Velociraptor",
+      "Allosaurus",
+      "Ceratosaurus",
+      "Tyrannosaurus Rex"
+    ],
+    "correctAnswer": "Velociraptor"
+  },
+  {
+    "question": "Which dinosaur's name translates to 'terrible claw', referencing its large, curved talons?",
+    "difficulty": 1,
+    "answers": ["Deinonychus", "Utahraptor", "Megalosaurus", "Bambiraptor"],
+    "correctAnswer": "Deinonychus"
+  },
+  {
+    "question": "Which early sauropod dinosaur, often called the 'proto-sauropod', paved the way for later giant sauropods?",
+    "difficulty": 1,
+    "answers": ["Cetiosaurus", "Apatosaurus", "Brachiosaurus", "Diplodocus"],
+    "correctAnswer": "Cetiosaurus"
+  },
+  {
+    "question": "Which armored dinosaur is renowned for having ossified tendons along its back that formed a natural armor?",
+    "difficulty": 1,
+    "answers": ["Ankylosaurus", "Euoplocephalus", "Stegosaurus", "Triceratops"],
+    "correctAnswer": "Ankylosaurus"
+  },
+  {
+    "question": "Which large theropod's bonebed in the Cleveland-Lloyd Quarry has been interpreted as a sign of possible social or pack behavior?",
+    "difficulty": 1,
+    "answers": [
+      "Allosaurus",
+      "Tyrannosaurus Rex",
+      "Ceratosaurus",
+      "Spinosaurus"
+    ],
+    "correctAnswer": "Allosaurus"
+  },
+  {
+    "question": "Which dinosaur's discovery in North America was a catalyst for the early exploration of dinosaur fossils on the continent?",
+    "difficulty": 1,
+    "answers": ["Hadrosaurus", "Iguanodon", "Triceratops", "Stegosaurus"],
+    "correctAnswer": "Hadrosaurus"
+  },
+  {
+    "question": "Which small ceratopsian dinosaur is noted for its frill with large openings that may have been used for display?",
+    "difficulty": 1,
+    "answers": [
+      "Leptoceratops",
+      "Protoceratops",
+      "Pachyrhinosaurus",
+      "Styracosaurus"
+    ],
+    "correctAnswer": "Leptoceratops"
+  },
+  {
+    "question": "Which dinosaur was initially misinterpreted as an aquatic reptile because of its streamlined body and long neck?",
+    "difficulty": 1,
+    "answers": ["Spinosaurus", "Plesiosaurus", "Ichthyosaurus", "Mosasaurs"],
+    "correctAnswer": "Spinosaurus"
+  },
+  {
+    "question": "Which herbivorous dinosaur is famous for its complex dental batteries that continuously replaced teeth throughout its life?",
+    "difficulty": 1,
+    "answers": ["Edmontosaurus", "Iguanodon", "Parasaurolophus", "Stegosaurus"],
+    "correctAnswer": "Edmontosaurus"
+  },
+  {
+    "question": "Which dinosaur exhibits a peculiar blend of theropod and ornithischian characteristics, challenging traditional classifications?",
+    "difficulty": 1,
+    "answers": [
+      "Chilesaurus",
+      "Oviraptor",
+      "Therizinosaurus",
+      "Pachycephalosaurus"
+    ],
+    "correctAnswer": "Chilesaurus"
+  },
+  {
+    "question": "Which sauropod dinosaur is distinguished by its relatively short neck compared to its giant relatives?",
+    "difficulty": 1,
+    "answers": ["Dicraeosaurus", "Apatosaurus", "Brachiosaurus", "Diplodocus"],
+    "correctAnswer": "Dicraeosaurus"
+  },
+  {
+    "question": "Which dinosaur's bone structure indicates a rapid growth rate and hints at a possible warm-blooded metabolism?",
+    "difficulty": 1,
+    "answers": [
+      "Ornithomimus",
+      "Tyrannosaurus Rex",
+      "Stegosaurus",
+      "Allosaurus"
+    ],
+    "correctAnswer": "Ornithomimus"
+  },
+  {
+    "question": "Which small theropod is recognized for its unusually large eyes, suggesting it had enhanced night vision capabilities?",
+    "difficulty": 1,
+    "answers": ["Saurornithoides", "Troodon", "Deinonychus", "Bambiraptor"],
+    "correctAnswer": "Saurornithoides"
+  },
+  {
+    "question": "Which early ornithischian dinosaur is noted for having a beak-like structure, indicating an early adaptation for cropping vegetation?",
+    "difficulty": 1,
+    "answers": ["Psittacosaurus", "Triceratops", "Iguanodon", "Stegosaurus"],
+    "correctAnswer": "Psittacosaurus"
+  },
+  {
+    "question": "Which dinosaur had remarkably elongated neural spines that likely supported a sail or hump along its back?",
+    "difficulty": 1,
+    "answers": ["Ouranosaurus", "Spinosaurus", "Iguanodon", "Brachiosaurus"],
+    "correctAnswer": "Ouranosaurus"
+  },
+  {
+    "question": "Which ankylosaurid dinosaur is known for its well-developed tail club that served as a formidable defensive weapon?",
+    "difficulty": 1,
+    "answers": [
+      "Euoplocephalus",
+      "Ankylosaurus",
+      "Stegosaurus",
+      "Pachycephalosaurus"
+    ],
+    "correctAnswer": "Euoplocephalus"
+  },
+  [
+    {
+      "question": "Which dinosaur fossil provided the first evidence of medullary bone tissue, indicating reproductive status in non-avian dinosaurs?",
+      "difficulty": 1,
+      "answers": [
+        "Tyrannosaurus Rex",
+        "Velociraptor",
+        "Oviraptor",
+        "Allosaurus"
+      ],
+      "correctAnswer": "Tyrannosaurus Rex"
+    },
+    {
+      "question": "Which early dinosaur is known for its transitional limb posture, showing features between sprawling and fully erect locomotion?",
+      "difficulty": 1,
+      "answers": ["Herrerasaurus", "Plateosaurus", "Stegosaurus", "Iguanodon"],
+      "correctAnswer": "Herrerasaurus"
+    },
+    {
+      "question": "Which sauropod dinosaur is known for its extremely pneumatized vertebrae, helping reduce its overall body weight?",
+      "difficulty": 1,
+      "answers": [
+        "Sauroposeidon",
+        "Apatosaurus",
+        "Brachiosaurus",
+        "Diplodocus"
+      ],
+      "correctAnswer": "Sauroposeidon"
+    },
+    {
+      "question": "Which theropod dinosaur is characterized by an extremely deep skull with prominent supraorbital horns and a reduced snout?",
+      "difficulty": 1,
+      "answers": [
+        "Carnotaurus",
+        "Ceratosaurus",
+        "Allosaurus",
+        "Tyrannosaurus Rex"
+      ],
+      "correctAnswer": "Carnotaurus"
+    },
+    {
+      "question": "Which small, early dinosaur has sparked debates over the origin of feathers due to possible evidence of filamentous integumentary structures?",
+      "difficulty": 1,
+      "answers": ["Kulindadromeus", "Eoraptor", "Herrerasaurus", "Coelophysis"],
+      "correctAnswer": "Kulindadromeus"
+    },
+    {
+      "question": "Which ceratopsian dinosaur is known from fossil evidence indicating tail regeneration, one of the earliest examples of this phenomenon in dinosaurs?",
+      "difficulty": 1,
+      "answers": [
+        "Psittacosaurus",
+        "Protoceratops",
+        "Leptoceratops",
+        "Montanoceratops"
+      ],
+      "correctAnswer": "Psittacosaurus"
+    },
+    {
+      "question": "Which ornithomimid dinosaur is noted for its unexpectedly large and complex brain, suggesting keen sensory perception?",
+      "difficulty": 1,
+      "answers": ["Gallimimus", "Struthiomimus", "Ornithomimus", "Anserimimus"],
+      "correctAnswer": "Gallimimus"
+    },
+    {
+      "question": "Which herbivorous dinosaur is believed to have developed complex social behaviors, as evidenced by bonebed discoveries indicating group living?",
+      "difficulty": 1,
+      "answers": ["Maiasaura", "Edmontosaurus", "Iguanodon", "Ankylosaurus"],
+      "correctAnswer": "Maiasaura"
+    },
+    {
+      "question": "Which early sauropodomorph is recognized for its transitional features, including a long, slender tail, linking early prosauropods to giant sauropods?",
+      "difficulty": 1,
+      "answers": [
+        "Plateosaurus",
+        "Massospondylus",
+        "Riojasaurus",
+        "Melanorosaurus"
+      ],
+      "correctAnswer": "Massospondylus"
+    },
+    {
+      "question": "Which small ornithischian dinosaur is noted for its unusually boxy skull and suggests a specialized feeding strategy?",
+      "difficulty": 1,
+      "answers": [
+        "Thescelosaurus",
+        "Hypsilophodon",
+        "Orodromeus",
+        "Dryosaurus"
+      ],
+      "correctAnswer": "Thescelosaurus"
+    },
+    {
+      "question": "Which large theropod is thought to have been capable of rapid, agile movements despite its size?",
+      "difficulty": 1,
+      "answers": [
+        "Ceratosaurus",
+        "Giganotosaurus",
+        "Tyrannosaurus Rex",
+        "Carcharodontosaurus"
+      ],
+      "correctAnswer": "Ceratosaurus"
+    },
+    {
+      "question": "Which ceratopsian dinosaur, known from the Hell Creek Formation, is considered one of the last horned dinosaurs before the mass extinction?",
+      "difficulty": 1,
+      "answers": ["Triceratops", "Torosaurus", "Styracosaurus", "Centrosaurus"],
+      "correctAnswer": "Triceratops"
+    },
+    {
+      "question": "Which ceratopsian dinosaur is noted for its elaborate skull ornamentation featuring multiple horn cores and a wide frill, suggesting complex social displays?",
+      "difficulty": 1,
+      "answers": ["Pentaceratops", "Chasmosaurus", "Triceratops", "Torosaurus"],
+      "correctAnswer": "Pentaceratops"
+    },
+    {
+      "question": "Which theropod dinosaur is hypothesized to have possessed an exceptionally acute sense of hearing, inferred from the morphology of its inner ear?",
+      "difficulty": 1,
+      "answers": ["Baryonyx", "Ceratosaurus", "Deinonychus", "Allosaurus"],
+      "correctAnswer": "Baryonyx"
+    },
+    {
+      "question": "Which feathered dinosaur, discovered in China, is noted for its well-preserved filamentous integument and provides insight into the evolution of feathers?",
+      "difficulty": 1,
+      "answers": [
+        "Beipiaosaurus",
+        "Caudipteryx",
+        "Sinosauropteryx",
+        "Microraptor"
+      ],
+      "correctAnswer": "Beipiaosaurus"
+    },
+    {
+      "question": "Which small ornithischian dinosaur is notable for its heterodont dentition, featuring both slender incisors and robust cheek teeth for processing varied vegetation?",
+      "difficulty": 1,
+      "answers": [
+        "Heterodontosaurus",
+        "Lesothosaurus",
+        "Hypsilophodon",
+        "Orodromeus"
+      ],
+      "correctAnswer": "Heterodontosaurus"
+    },
+    {
+      "question": "Which dinosaur is a leading candidate for the trackmaker of the famous Eubrontes footprints, shedding light on its locomotion and possible social behavior?",
+      "difficulty": 1,
+      "answers": ["Dilophosaurus", "Coelophysis", "Stegosaurus", "Iguanodon"],
+      "correctAnswer": "Dilophosaurus"
+    },
+    {
+      "question": "Which theropod dinosaur’s fossilized braincase revealed evidence of medially folded cerebral hemispheres, suggesting advanced sensory processing?",
+      "difficulty": 1,
+      "answers": ["Troodon", "Deinonychus", "Oviraptor", "Tyrannosaurus Rex"],
+      "correctAnswer": "Troodon"
+    },
+    {
+      "question": "Which ceratopsian dinosaur has been studied for potential evidence of sexual dimorphism in skull morphology, hinting at differences between males and females?",
+      "difficulty": 1,
+      "answers": [
+        "Triceratops",
+        "Centrosaurus",
+        "Styracosaurus",
+        "Chasmosaurus"
+      ],
+      "correctAnswer": "Triceratops"
+    },
+    {
+      "question": "Which dinosaur’s skeletal structure shows unusually large openings in its cranial bones, possibly indicating advanced sensory adaptations?",
+      "difficulty": 1,
+      "answers": ["Carnotaurus", "Noasaurus", "Ceratosaurus", "Majungasaurus"],
+      "correctAnswer": "Noasaurus"
+    }
+  ]
+]

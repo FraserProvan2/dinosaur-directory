@@ -102,13 +102,6 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
     }
   };
 
-  const getStreakEmoji = () => {
-    if (streak >= 3) return "🔥";
-    if (streak === 2) return "🚀";
-    if (streak === 1) return "🎉";
-    return "";
-  };
-
   const scorePercentage =
     totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
   const currentQuestionDisplay =
