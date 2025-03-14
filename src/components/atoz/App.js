@@ -62,7 +62,8 @@ const App = () => {
 
   const getDietOptions = (dinosaurs) => {
     return Array.from(new Set(dinosaurs.map((d) => d.getDiet()))).map(
-      (diet) => diet.charAt(0).toUpperCase() + diet.slice(1).toLowerCase()
+      (diet) =>
+        diet.charAt(0).toUpperCase() + diet.slice(1).toLowerCase()
     );
   };
 
@@ -82,11 +83,16 @@ const App = () => {
       const foundDino = dinos.find(
         (d) => d.getNameLower() === dinoSlug.toLowerCase()
       );
-      setSelectedDino(foundDino || dinos[0]);
+      if (!foundDino) {
+        // Redirect to 404 if the dinosaur doesn't exist
+        navigate("/404", { replace: true });
+        return;
+      }
+      setSelectedDino(foundDino);
     } else if (dinos.length > 0) {
       setSelectedDino(dinos[0]);
     }
-  }, [dinoSlug]);
+  }, [dinoSlug, navigate]);
 
   useEffect(() => {
     setFilteredDinosaurs(

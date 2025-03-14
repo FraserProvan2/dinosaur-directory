@@ -1,0 +1,26 @@
+.not-found {
+  text-align: center;
+  padding: 2rem;
+
+  &-logo {
+    max-width: 200px;
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &-description {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &-link {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

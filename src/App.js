@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Discover from './pages/Discover';
 import AtoZ from './pages/AtoZ';
 import Quizzes from './pages/Quizzes';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/quizzes" element={<Quizzes />} />
         <Route path="/a-z" element={<AtoZ />} />
         <Route path="/dinosaur/:dinoSlug" element={<AtoZ />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
