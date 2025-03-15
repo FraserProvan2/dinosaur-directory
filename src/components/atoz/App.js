@@ -63,8 +63,7 @@ const App = () => {
 
   const getDietOptions = (dinosaurs) => {
     return Array.from(new Set(dinosaurs.map((d) => d.getDiet()))).map(
-      (diet) =>
-        diet.charAt(0).toUpperCase() + diet.slice(1).toLowerCase()
+      (diet) => diet.charAt(0).toUpperCase() + diet.slice(1).toLowerCase()
     );
   };
 
@@ -85,7 +84,6 @@ const App = () => {
         (d) => d.getNameLower() === dinoSlug.toLowerCase()
       );
       if (!foundDino) {
-        // Redirect to 404 if the dinosaur doesn't exist
         navigate("/404", { replace: true });
         return;
       }
@@ -127,9 +125,8 @@ const App = () => {
       ? `https://dinosaur.directory/dinosaur/${selectedDino.name.toLowerCase()}`
       : "https://dinosaur.directory/a-z";
     const imgUrl = selectedDino
-      ? `https://dinosaur.directory/path-to-dinosaur-images/${selectedDino.image}`
-      : "https://dinosaur.directory/path-to-default-image.jpg";
-
+      ? `https://dinosaur.directory/images/dinosaurs/${selectedDino.image}`
+      : "https://dinosaur.directory/images/dinosaurs/dilophosaurus.png";
     return {
       pageTitle: title,
       pageDescription: description,
@@ -141,24 +138,30 @@ const App = () => {
   return (
     <>
       <Helmet>
-        {/* Standard Meta Tags */}
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
-
-        {/* Open Graph Meta Tags */}
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={imageUrl} />
-
-        {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dinosaur_directory" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={imageUrl} />
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Dinosaur A–Z",
+            "description": "Explore an alphabetical directory of dinosaurs on dinosaur.directory. Discover detailed information, interactive filters, and stunning visuals.",
+            "url": "https://dinosaur.directory/a-z"
+          }
+          `}
+        </script>
       </Helmet>
       <div className="container py-3">
         <div className="row justify-content-center">

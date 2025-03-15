@@ -16,6 +16,32 @@ function App() {
           content="Welcome to dinosaur.directory, your gateway to exploring dinosaurs. Discover interactive features, dinosaur collections, Dinosaur of the Week, quizzes, and more."
         />
         <link rel="canonical" href="https://dinosaur.directory/" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "dinosaur.directory",
+              "url": "https://dinosaur.directory/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://dinosaur.directory/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }
+          `}
+        </script>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "dinosaur.directory",
+              "url": "https://dinosaur.directory/",
+              "logo": "https://dinosaur.directory/images/logo/logo-circle.png"
+            }
+          `}
+        </script>
       </Helmet>
       <div className="container text-center dynamic-margin-top">
         <div className="row mt-5">

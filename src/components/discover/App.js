@@ -58,6 +58,17 @@ const App = () => {
           content="Explore our interactive prehistoric globe on dinosaur.directory. Rotate the globe to view continents during the Mesozoic era, click on country pins to see dinosaurs discovered from that period, and navigate to our comprehensive A–Z dinosaur directory."
         />
         <link rel="canonical" href="https://dinosaur.directory/discover" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Discover Dinosaurs",
+              "description": "Explore our interactive prehistoric globe on dinosaur.directory. Rotate the globe to view continents during the Mesozoic era, click on country pins to see dinosaurs discovered from that period, and navigate to our comprehensive A–Z dinosaur directory.",
+              "url": "https://dinosaur.directory/discover"
+            }
+          `}
+        </script>
       </Helmet>
       <div className="home-container">
         <PeriodSelector

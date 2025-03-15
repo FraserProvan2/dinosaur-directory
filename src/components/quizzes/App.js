@@ -9,7 +9,6 @@ const App = () => {
 
   const renderQuizMenu = () => (
     <div className="quiz-menu">
-      {/* Pick Period Quiz Section */}
       <div className="row justify-content-center my-3">
         <div className="col-md-8">
           <div className="quiz-card card p-4 text-center">
@@ -47,7 +46,6 @@ const App = () => {
           </div>
         </div>
       </div>
-      {/* Trivia Quiz Section */}
       <div className="row justify-content-center my-3">
         <div className="col-md-8">
           <div className="quiz-card card p-4 text-center">
@@ -85,7 +83,6 @@ const App = () => {
           </div>
         </div>
       </div>
-      {/* Guess Correct Image Quiz Section */}
       <div className="row justify-content-center my-3">
         <div className="col-md-8">
           <div className="quiz-card card p-4 text-center">
@@ -127,18 +124,10 @@ const App = () => {
   );
 
   const getHeaderTitle = () => {
-    if (!selectedQuiz) {
-      return "Dinosaur Quizzes";
-    }
-    if (selectedQuiz.type === "pickPeriod") {
-      return "Pick Period Quiz";
-    }
-    if (selectedQuiz.type === "guessImage") {
-      return "Guess Correct Image Quiz";
-    }
-    if (selectedQuiz.type === "trivia") {
-      return "Trivia Quiz";
-    }
+    if (!selectedQuiz) return "Dinosaur Quizzes";
+    if (selectedQuiz.type === "pickPeriod") return "Pick Period Quiz";
+    if (selectedQuiz.type === "guessImage") return "Guess Correct Image Quiz";
+    if (selectedQuiz.type === "trivia") return "Trivia Quiz";
     return "Dinosaur Quizzes";
   };
 
@@ -151,6 +140,17 @@ const App = () => {
           content="Test your dinosaur knowledge with our interactive quizzes on dinosaur.directory. Choose from Pick Period, Trivia, or Guess Correct Image quizzes and challenge yourself!"
         />
         <link rel="canonical" href="https://dinosaur.directory/quizzes" />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Dinosaur Quizzes",
+              "description": "Test your dinosaur knowledge with our interactive quizzes on dinosaur.directory. Choose from Pick Period, Trivia, or Guess Correct Image quizzes and challenge yourself!",
+              "url": "https://dinosaur.directory/quizzes"
+            }
+          `}
+        </script>
       </Helmet>
       <h1 className="text-center">{getHeaderTitle()}</h1>
       {selectedQuiz === null && renderQuizMenu()}
