@@ -2,6 +2,7 @@
   "name": "dino-quiz",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@react-three/drei": "^10.0.3",
