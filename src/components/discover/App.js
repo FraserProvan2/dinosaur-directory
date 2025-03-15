@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import Globe from "./Globe";
 import DinosaurSidebar from "./DinosaurSidebar";
 import PeriodSelector from "./PeriodSelector";
@@ -49,36 +50,46 @@ const App = () => {
   };
 
   return (
-    <div className="home-container">
-      <PeriodSelector
-        periods={periods}
-        selectedPeriod={selectedPeriod}
-        onChange={setSelectedPeriod}
-      />
-      <div className="period-years text-center">
-        (<b>{fullPeriods[selectedPeriod]}</b> ~ million years ago)
-      </div>
-      <div className="content-container">
-        <div className={`left-panel ${isSidebarOpen ? "" : "expanded"}`}>
-          <div className="globe-container">
-            <Globe
-              selectedPeriod={selectedPeriod}
-              availableLocations={availableLocations}
-              onCountryClick={handleCountryClick}
-              PRIMARY_COLOR={PRIMARY_COLOR}
-            />
-          </div>
+    <>
+      <Helmet>
+        <title>Discover Dinosaurs - dinosaur.directory</title>
+        <meta
+          name="description"
+          content="Explore our interactive prehistoric globe on dinosaur.directory. Rotate the globe to view continents during the Mesozoic era, click on country pins to see dinosaurs discovered from that period, and navigate to our comprehensive A–Z dinosaur directory."
+        />
+        <link rel="canonical" href="https://dinosaur.directory/discover" />
+      </Helmet>
+      <div className="home-container">
+        <PeriodSelector
+          periods={periods}
+          selectedPeriod={selectedPeriod}
+          onChange={setSelectedPeriod}
+        />
+        <div className="period-years text-center">
+          (<b>{fullPeriods[selectedPeriod]}</b> ~ million years ago)
         </div>
-        {isSidebarOpen && selectedCountry && (
-          <DinosaurSidebar
-            selectedCountry={selectedCountry}
-            selectedPeriod={selectedPeriod}
-            dinosInCountry={dinosInCountry}
-            closeSidebar={closeSidebar}
-          />
-        )}
+        <div className="content-container">
+          <div className={`left-panel ${isSidebarOpen ? "" : "expanded"}`}>
+            <div className="globe-container">
+              <Globe
+                selectedPeriod={selectedPeriod}
+                availableLocations={availableLocations}
+                onCountryClick={handleCountryClick}
+                PRIMARY_COLOR={PRIMARY_COLOR}
+              />
+            </div>
+          </div>
+          {isSidebarOpen && selectedCountry && (
+            <DinosaurSidebar
+              selectedCountry={selectedCountry}
+              selectedPeriod={selectedPeriod}
+              dinosInCountry={dinosInCountry}
+              closeSidebar={closeSidebar}
+            />
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

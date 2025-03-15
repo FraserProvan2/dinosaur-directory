@@ -24,21 +24,20 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
   };
 
   const computeDisplayOptions = (answers, diff, correctAnswer) => {
-    if (diff === "medium" && answers.length > 3) {
-      if (!answers.slice(0, 3).includes(correctAnswer)) {
+    if (diff !== "easy" && answers.length > 3) {
+      const firstThree = answers.slice(0, 3);
+      if (!firstThree.includes(correctAnswer)) {
         return shuffleArray([...answers.slice(0, 2), correctAnswer]);
       } else {
-        return answers.slice(0, 3);
+        return firstThree;
       }
     }
     return answers;
   };
 
   useEffect(() => {
-    const questionDifficulty = difficulty === "medium" ? 1 : difficulty;
-    let filtered = triviaQuestions.filter(
-      (q) => q.difficulty === questionDifficulty
-    );
+    const effectiveDifficulty = difficulty === "easy" ? 0 : 1;
+    let filtered = triviaQuestions.filter((q) => q.difficulty === effectiveDifficulty);
     let shuffledQuestions = shuffleArray(filtered);
     if (shuffledQuestions.length > MAX_QUESTIONS) {
       shuffledQuestions = shuffledQuestions.slice(0, MAX_QUESTIONS);
@@ -48,17 +47,10 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
       const firstQuestion = shuffledQuestions[0];
       setCurrentQuestion(firstQuestion);
       const shuffledAns = shuffleArray(firstQuestion.answers);
-      setDisplayOptions(
-        computeDisplayOptions(
-          shuffledAns,
-          difficulty,
-          firstQuestion.correctAnswer
-        )
-      );
+      setDisplayOptions(computeDisplayOptions(shuffledAns, difficulty, firstQuestion.correctAnswer));
     } else {
       setQuizComplete(true);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [difficulty]);
 
   const handleAnswer = (choice) => {
@@ -80,18 +72,13 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
       const nextQ = questions[nextIndex];
       setCurrentQuestion(nextQ);
       const shuffledAns = shuffleArray(nextQ.answers);
-      setDisplayOptions(
-        computeDisplayOptions(shuffledAns, difficulty, nextQ.correctAnswer)
-      );
+      setDisplayOptions(computeDisplayOptions(shuffledAns, difficulty, nextQ.correctAnswer));
       setSelected(null);
       setCorrect(null);
     }
   };
 
-  const scorePercentage =
-    questions.length > 0
-      ? Math.round((correctCount / questions.length) * 100)
-      : 0;
+  const scorePercentage = questions.length > 0 ? Math.round((correctCount / questions.length) * 100) : 0;
   const currentQuestionDisplay = currentIndex + 1;
 
   if (quizComplete) {
@@ -99,8 +86,7 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
       <div className="quiz-container">
         <h2 className="mb-3">Quiz Complete!</h2>
         <p>
-          You got {correctCount} / {questions.length} correct ({scorePercentage}
-          % )
+          You got {correctCount} / {questions.length} correct ({scorePercentage}%)
         </p>
         <button className="btn btn-secondary" onClick={onBack}>
           Back to Quiz Menu
@@ -152,10 +138,7 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
             </button>
           )}
           {selected && currentIndex === questions.length - 1 && (
-            <button
-              className="btn btn-primary btn-finish-quiz"
-              onClick={() => setQuizComplete(true)}
-            >
+            <button className="btn btn-primary btn-finish-quiz" onClick={() => setQuizComplete(true)}>
               Finish Quiz
             </button>
           )}

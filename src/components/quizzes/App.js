@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import PickPeriodQuiz from "./PickPeriodQuiz";
 import GuessCorrectImage from "./GuessCorrectImage";
 import TriviaQuiz from "./TriviaQuiz";
@@ -59,7 +60,7 @@ const App = () => {
               <button
                 className="btn btn-primary mx-2 quiz-option"
                 onClick={() =>
-                  setSelectedQuiz({ type: "trivia", difficulty: 0 })
+                  setSelectedQuiz({ type: "trivia", difficulty: "easy" })
                 }
               >
                 Easy
@@ -75,7 +76,7 @@ const App = () => {
               <button
                 className="btn btn-secondary mx-2 quiz-option"
                 onClick={() =>
-                  setSelectedQuiz({ type: "trivia", difficulty: 1 })
+                  setSelectedQuiz({ type: "trivia", difficulty: "hard" })
                 }
               >
                 Hard
@@ -143,6 +144,14 @@ const App = () => {
 
   return (
     <div className="quiz-app">
+      <Helmet>
+        <title>Dinosaur Quizzes - dinosaur.directory</title>
+        <meta
+          name="description"
+          content="Test your dinosaur knowledge with our interactive quizzes on dinosaur.directory. Choose from Pick Period, Trivia, or Guess Correct Image quizzes and challenge yourself!"
+        />
+        <link rel="canonical" href="https://dinosaur.directory/quizzes" />
+      </Helmet>
       <h1 className="text-center">{getHeaderTitle()}</h1>
       {selectedQuiz === null && renderQuizMenu()}
       {selectedQuiz?.type === "pickPeriod" && (
