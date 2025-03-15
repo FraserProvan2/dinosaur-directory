@@ -1,5 +1,6 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { initGA, logPageView } from './third-party/ga';
 import Navbar from './components/layout/Navbar';
 import Home from './pages/Home';
 import Discover from './pages/Discover';
@@ -7,9 +8,24 @@ import AtoZ from './pages/AtoZ';
 import Quizzes from './pages/Quizzes';
 import NotFound from './pages/NotFound';
 
+const Analytics = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    logPageView();
+  }, [location]);
+
+  return null;
+};
+
 function App() {
+  useEffect(() => {
+    initGA();
+  }, []);
+
   return (
     <Router>
+      <Analytics />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
