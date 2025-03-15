@@ -134,7 +134,7 @@ const App = () => {
   return (
     <div className="quiz-app">
       <Helmet>
-        <title>Dinosaur Quizzes - dinosaur.directory</title>
+        <title>Quizzes - dinosaur.directory</title>
         <meta
           name="description"
           content="Test your dinosaur knowledge with our interactive quizzes on dinosaur.directory. Choose from Pick Period, Trivia, or Guess Correct Image quizzes and challenge yourself!"

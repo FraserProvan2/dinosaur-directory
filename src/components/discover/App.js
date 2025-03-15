@@ -52,7 +52,7 @@ const App = () => {
   return (
     <>
       <Helmet>
-        <title>Discover Dinosaurs - dinosaur.directory</title>
+        <title>Discover - dinosaur.directory</title>
         <meta
           name="description"
           content="Explore our interactive prehistoric globe on dinosaur.directory. Rotate the globe to view continents during the Mesozoic era, click on country pins to see dinosaurs discovered from that period, and navigate to our comprehensive A–Z dinosaur directory."

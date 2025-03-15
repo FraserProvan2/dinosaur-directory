@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>dinosaur.directory - Home</title>
+        <title>Home - dinosaur.directory</title>
         <meta
           name="description"
           content="Welcome to dinosaur.directory, your gateway to exploring dinosaurs. Discover interactive features, dinosaur collections, Dinosaur of the Week, quizzes, and more."
