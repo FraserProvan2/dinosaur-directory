@@ -39,6 +39,9 @@ const DinoList = ({ dinosaurs, selectedDino, onDinoSelect }) => {
           ))}
         </div>
       </div>
+      <div className="results-found text-center mt-3">
+        <b>{dinosaurs.length}</b> results found
+      </div>
     </div>
   );
 };

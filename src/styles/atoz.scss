@@ -1,6 +1,6 @@
 .rolling-list-container {
   position: relative;
-  height: 50vh;
+  height: 45vh;
   overflow: hidden;
 
   @media only screen and (max-width: 1024px) {
@@ -89,4 +89,8 @@
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
+}
+
+.results-found {
+  color: $primary;
 }
