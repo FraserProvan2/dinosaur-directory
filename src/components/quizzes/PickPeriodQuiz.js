@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import DinosaurCollection from "../../entities/DinosaurCollection";
 import fullPeriods from "../../data/full-periods.json";
 import { getRandomElement } from "./utils";
+import { trackEvent } from "../../third-party/ga";
 
 const MAX_QUESTIONS = 20;
 const dinosaurs = DinosaurCollection.getAllDinosaurs();
@@ -191,7 +192,15 @@ const PickPeriodQuiz = ({ difficulty, onBack }) => {
           {selected && totalQuestions === MAX_QUESTIONS && (
             <button
               className="btn btn-primary btn-finish-quiz"
-              onClick={() => setQuizComplete(true)}
+              onClick={() => {
+                trackEvent({
+                  category: "Quiz",
+                  action: "Complete Pick Period Quiz",
+                  label: difficulty,
+                  value: correctCount,
+                });
+                setQuizComplete(true);
+              }}
             >
               Finish Quiz
             </button>

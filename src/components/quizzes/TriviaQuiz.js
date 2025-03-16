@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import triviaQuestions from "../../data/trivia-questions.json";
+import { shuffleArray } from "./utils";
+import { trackEvent } from "../../third-party/ga";
 
 const MAX_QUESTIONS = 20;
 
@@ -14,30 +16,21 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
   const [correctCount, setCorrectCount] = useState(0);
   const [quizComplete, setQuizComplete] = useState(false);
 
-  const shuffleArray = (array) => {
-    const arr = [...array];
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
-    }
-    return arr;
-  };
-
   const computeDisplayOptions = (answers, diff, correctAnswer) => {
-    if (diff !== "easy" && answers.length > 3) {
-      const firstThree = answers.slice(0, 3);
-      if (!firstThree.includes(correctAnswer)) {
-        return shuffleArray([...answers.slice(0, 2), correctAnswer]);
-      } else {
-        return firstThree;
-      }
+    if (diff === "easy") {
+      return shuffleArray(answers).slice(0, 3);
+    } else if (diff === "medium") {
+      return shuffleArray(answers).slice(0, 3);
+    } else {
+      return shuffleArray(answers).slice(0, 4);
     }
-    return answers;
   };
 
   useEffect(() => {
     const effectiveDifficulty = difficulty === "easy" ? 0 : 1;
-    let filtered = triviaQuestions.filter((q) => q.difficulty === effectiveDifficulty);
+    let filtered = triviaQuestions.filter(
+      (q) => q.difficulty === effectiveDifficulty
+    );
     let shuffledQuestions = shuffleArray(filtered);
     if (shuffledQuestions.length > MAX_QUESTIONS) {
       shuffledQuestions = shuffledQuestions.slice(0, MAX_QUESTIONS);
@@ -47,7 +40,13 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
       const firstQuestion = shuffledQuestions[0];
       setCurrentQuestion(firstQuestion);
       const shuffledAns = shuffleArray(firstQuestion.answers);
-      setDisplayOptions(computeDisplayOptions(shuffledAns, difficulty, firstQuestion.correctAnswer));
+      setDisplayOptions(
+        computeDisplayOptions(
+          shuffledAns,
+          difficulty,
+          firstQuestion.correctAnswer
+        )
+      );
     } else {
       setQuizComplete(true);
     }
@@ -66,19 +65,30 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
   const nextQuestion = () => {
     const nextIndex = currentIndex + 1;
     if (nextIndex >= questions.length) {
+      trackEvent({
+        category: "Quiz",
+        action: "Complete Trivia Quiz",
+        label: difficulty,
+        value: correctCount,
+      });
       setQuizComplete(true);
     } else {
       setCurrentIndex(nextIndex);
       const nextQ = questions[nextIndex];
       setCurrentQuestion(nextQ);
       const shuffledAns = shuffleArray(nextQ.answers);
-      setDisplayOptions(computeDisplayOptions(shuffledAns, difficulty, nextQ.correctAnswer));
+      setDisplayOptions(
+        computeDisplayOptions(shuffledAns, difficulty, nextQ.correctAnswer)
+      );
       setSelected(null);
       setCorrect(null);
     }
   };
 
-  const scorePercentage = questions.length > 0 ? Math.round((correctCount / questions.length) * 100) : 0;
+  const scorePercentage =
+    questions.length > 0
+      ? Math.round((correctCount / questions.length) * 100)
+      : 0;
   const currentQuestionDisplay = currentIndex + 1;
 
   if (quizComplete) {
@@ -86,7 +96,8 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
       <div className="quiz-container">
         <h2 className="mb-3">Quiz Complete!</h2>
         <p>
-          You got {correctCount} / {questions.length} correct ({scorePercentage}%)
+          You got {correctCount} / {questions.length} correct ({scorePercentage}
+          %)
         </p>
         <button className="btn btn-secondary" onClick={onBack}>
           Back to Quiz Menu
@@ -138,7 +149,10 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
             </button>
           )}
           {selected && currentIndex === questions.length - 1 && (
-            <button className="btn btn-primary btn-finish-quiz" onClick={() => setQuizComplete(true)}>
+            <button
+              className="btn btn-primary btn-finish-quiz"
+              onClick={nextQuestion}
+            >
               Finish Quiz
             </button>
           )}

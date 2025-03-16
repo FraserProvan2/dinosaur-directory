@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { shuffleArray, getRandomElement } from "./utils";
 import DinosaurCollection from "../../entities/DinosaurCollection";
+import { trackEvent } from "../../third-party/ga";
 
 const MAX_QUESTIONS = 20;
 const dinosaurs = DinosaurCollection.getAllDinosaurs();
@@ -120,7 +121,15 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
       {selected && totalQuestions === MAX_QUESTIONS && (
         <button
           className="btn btn-primary btn-finish-quiz"
-          onClick={() => setQuizComplete(true)}
+          onClick={() => {
+            trackEvent({
+              category: "Quiz",
+              action: "Complete Guess Image Quiz",
+              label: difficulty,
+              value: correctCount,
+            });
+            setQuizComplete(true);
+          }}
         >
           Finish Quiz
         </button>
