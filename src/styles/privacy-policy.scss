@@ -1,0 +1,65 @@
+.privacy-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    z-index: 1000;
+    animation: slide-up 0.5s ease-in-out;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.privacy-banner p {
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+.privacy-banner button {
+    background: white;
+    color: #222;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-left: 10px;
+}
+
+.privacy-banner button:hover {
+    background: #ddd;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .privacy-banner {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .privacy-banner p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .privacy-banner button {
+        width: 100%;
+        margin-left: 0;
+    }
+}
