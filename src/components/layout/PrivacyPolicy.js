@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
     if (!hasSeenPolicy) {
       const timer = setTimeout(() => {
         setIsVisible(true);
-      }, 3000);
+      }, 1000);
 
       return () => clearTimeout(timer);
     }

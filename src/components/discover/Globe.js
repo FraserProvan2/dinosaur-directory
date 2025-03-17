@@ -1,7 +1,9 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import * as THREE from "three";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Tooltip } from "bootstrap";
 import LoadingPlaceholder from "./LoadingPlaceholder";
 import TexturePreloader from "./TexturePreloader";
 import RotatingGlobe from "./RotatingGlobe";
@@ -17,6 +19,7 @@ const Globe = ({
   const [isLoading, setIsLoading] = useState(true);
   const [loadedTextures, setLoadedTextures] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+  const globeRef = useRef(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -27,6 +30,24 @@ const Globe = ({
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  useEffect(() => {
+    if (!localStorage.getItem("globeTooltipShown")) {
+      const tooltip = new Tooltip(globeRef.current, {
+        title: "Click on a country to uncover its ancient dinosaurs!",
+        placement: "top",
+        trigger: "manual",
+      });
+      setTimeout(() => {
+        tooltip.show();
+      }, 9000);
+      localStorage.setItem("globeTooltipShown", "true");
+      
+      setTimeout(() => {
+        tooltip.hide();
+      }, 15000);
+    }
+  }, []);
+
   const handleTexturesLoaded = (textureMap) => {
     setLoadedTextures(textureMap);
     setIsLoading(false);
@@ -34,7 +55,7 @@ const Globe = ({
 
   return (
     <div className="globe-container">
-      <div className="globe-wrapper">
+      <div className="globe-wrapper" ref={globeRef}>
         <Canvas
           className="globe-canvas"
           camera={{ position: [0, 0, 7], fov: 45 }}
