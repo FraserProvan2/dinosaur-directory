@@ -10,10 +10,10 @@
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
-    z-index: 1000;
     animation: slide-up 0.5s ease-in-out;
     flex-wrap: wrap;
     text-align: center;
+    z-index: 20000000; // hack for dynamic labels
 }
 
 .privacy-banner p {

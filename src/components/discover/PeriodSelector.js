@@ -7,7 +7,7 @@ const PeriodSelector = ({ periods, selectedPeriod, onChange }) => {
   const tooltipRef = useRef(null);
 
   useEffect(() => {
-    if (!localStorage.getItem("tooltipShown")) {
+    if (!localStorage.getItem("tipPeriodSliderShown")) {
       const tooltip = new Tooltip(sliderRef.current, {
         title: "Use the slider to select a period",
         placement: "right",
@@ -19,7 +19,7 @@ const PeriodSelector = ({ periods, selectedPeriod, onChange }) => {
       }, 3000);
 
       tooltipRef.current = tooltip;
-      localStorage.setItem("tooltipShown", "true");
+      localStorage.setItem("tipPeriodSliderShown", "true");
 
       setTimeout(() => {
         tooltip.hide();

@@ -31,7 +31,7 @@ const Globe = ({
   }, []);
 
   useEffect(() => {
-    if (!localStorage.getItem("globeTooltipShown")) {
+    if (!localStorage.getItem("tipClickCountriesShown")) {
       const tooltip = new Tooltip(globeRef.current, {
         title: "Click on a country to uncover its ancient dinosaurs!",
         placement: "top",
@@ -40,7 +40,7 @@ const Globe = ({
       setTimeout(() => {
         tooltip.show();
       }, 9000);
-      localStorage.setItem("globeTooltipShown", "true");
+      localStorage.setItem("tipClickCountriesShown", "true");
       
       setTimeout(() => {
         tooltip.hide();
