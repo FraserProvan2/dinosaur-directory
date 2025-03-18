@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Tooltip } from "bootstrap";
 
 const PeriodSelector = ({ periods, selectedPeriod, onChange }) => {

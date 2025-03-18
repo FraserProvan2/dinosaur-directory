@@ -2,7 +2,6 @@ import React, { useState, useEffect, Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import * as THREE from "three";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Tooltip } from "bootstrap";
 import LoadingPlaceholder from "./LoadingPlaceholder";
 import TexturePreloader from "./TexturePreloader";
