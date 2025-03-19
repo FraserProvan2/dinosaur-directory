@@ -20,6 +20,7 @@ $incorrect: #dc3545;
 @import "./styles/discover.scss";
 @import "./styles/globe.scss";
 @import "./styles/atoz.scss";
+@import "./styles/faq.scss";
 @import "./styles/privacy-policy.scss";
 @import "./styles/not-found.scss";
 
@@ -30,7 +31,9 @@ select,
 .card,
 .btn,
 .nav-link,
-.card-img-top {
+.card-img-top,
+.accordion,
+.accordion-item {
   border-radius: 0px !important;
 }
 

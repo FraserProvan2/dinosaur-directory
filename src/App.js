@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Discover from "./pages/Discover";
 import AtoZ from "./pages/AtoZ";
 import Quizzes from "./pages/Quizzes";
+import Faq from "./pages/Faq";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./components/layout/PrivacyPolicy";
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/quizzes" element={<Quizzes />} />
         <Route path="/a-z" element={<AtoZ />} />
         <Route path="/dinosaur/:dinoSlug" element={<AtoZ />} />
+        <Route path="/faq" element={<Faq />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

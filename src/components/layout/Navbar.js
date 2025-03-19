@@ -73,6 +73,15 @@ function Navbar() {
                 Quizzes
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link"
+                to="/faq"
+                onClick={(e) => handleNavClick(e, "/faq")}
+              >
+                FAQ
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
