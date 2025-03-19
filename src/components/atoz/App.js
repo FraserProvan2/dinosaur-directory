@@ -141,25 +141,40 @@ const App = () => {
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
         <link rel="canonical" href={canonicalUrl} />
+
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={imageUrl} />
+
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dinosaur_directory" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={imageUrl} />
+
         <script type="application/ld+json">
           {`
-          {
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Dinosaur A–Z",
-            "description": "Explore an alphabetical directory of dinosaurs on dinosaur.directory. Discover detailed information, interactive filters, and stunning visuals.",
-            "url": "https://dinosaur.directory/a-z"
-          }
+            ${
+              selectedDino
+                ? JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    headline: selectedDino.name,
+                    image: `https://dinosaur.directory/images/dinosaurs/${selectedDino.image}`,
+                    description: pageDescription,
+                    url: canonicalUrl,
+                  })
+                : JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "CollectionPage",
+                    name: "Dinosaur A–Z",
+                    description:
+                      "Explore an alphabetical directory of dinosaurs on dinosaur.directory. Discover detailed information, interactive filters, and stunning visuals.",
+                    url: "https://dinosaur.directory/a-z",
+                  })
+              }
           `}
         </script>
       </Helmet>

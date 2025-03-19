@@ -16,6 +16,31 @@ function App() {
           content="Welcome to dinosaur.directory, your gateway to exploring dinosaurs. Discover interactive features, dinosaur collections, Dinosaur of the Week, quizzes, and more."
         />
         <link rel="canonical" href="https://dinosaur.directory/" />
+
+        <meta property="og:title" content="Home - dinosaur.directory" />
+        <meta
+          property="og:description"
+          content="Welcome to dinosaur.directory, your gateway to exploring dinosaurs. Discover interactive features, dinosaur collections, Dinosaur of the Week, quizzes, and more."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dinosaur.directory/" />
+        <meta
+          property="og:image"
+          content="https://dinosaur.directory/images/home-og-image.png"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dinosaur_directory" />
+        <meta name="twitter:title" content="Home - dinosaur.directory" />
+        <meta
+          name="twitter:description"
+          content="Welcome to dinosaur.directory, your gateway to exploring dinosaurs. Discover interactive features, dinosaur collections, Dinosaur of the Week, quizzes, and more."
+        />
+        <meta
+          name="twitter:image"
+          content="https://dinosaur.directory/images/home-og-image.png"
+        />
+
         <script type="application/ld+json">
           {`
             {

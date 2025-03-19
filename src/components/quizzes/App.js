@@ -140,6 +140,31 @@ const App = () => {
           content="Test your dinosaur knowledge with our interactive quizzes on dinosaur.directory. Choose from Pick Period, Trivia, or Guess Correct Image quizzes and challenge yourself!"
         />
         <link rel="canonical" href="https://dinosaur.directory/quizzes" />
+
+        <meta property="og:title" content="Quizzes - dinosaur.directory" />
+        <meta
+          property="og:description"
+          content="Test your dinosaur knowledge with our interactive quizzes on dinosaur.directory. Choose from Pick Period, Trivia, or Guess Correct Image quizzes and challenge yourself!"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dinosaur.directory/quizzes" />
+        <meta
+          property="og:image"
+          content="https://dinosaur.directory/images/quizzes-og.png"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dinosaur_directory" />
+        <meta name="twitter:title" content="Quizzes - dinosaur.directory" />
+        <meta
+          name="twitter:description"
+          content="Test your dinosaur knowledge with our interactive quizzes on dinosaur.directory. Choose from Pick Period, Trivia, or Guess Correct Image quizzes and challenge yourself!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://dinosaur.directory/images/quizzes-og.png"
+        />
+
         <script type="application/ld+json">
           {`
             {

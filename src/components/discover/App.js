@@ -58,6 +58,30 @@ const App = () => {
           content="Explore our interactive prehistoric globe on dinosaur.directory. Rotate the globe to view continents during the Mesozoic era, click on country pins to see dinosaurs discovered from that period, and navigate to our comprehensive A–Z dinosaur directory."
         />
         <link rel="canonical" href="https://dinosaur.directory/discover" />
+
+        <meta property="og:title" content="Discover - dinosaur.directory" />
+        <meta
+          property="og:description"
+          content="Explore our interactive prehistoric globe on dinosaur.directory. Rotate the globe to view continents during the Mesozoic era, click on country pins to see dinosaurs discovered from that period, and navigate to our comprehensive A–Z dinosaur directory."
+        />
+        <meta property="og:url" content="https://dinosaur.directory/discover" />
+        <meta
+          property="og:image"
+          content="https://dinosaur.directory/images/discover.png"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dinosaur_directory" />
+        <meta name="twitter:title" content="Discover - dinosaur.directory" />
+        <meta
+          name="twitter:description"
+          content="Explore our interactive prehistoric globe on dinosaur.directory. Rotate the globe to view continents during the Mesozoic era, click on country pins to see dinosaurs discovered from that period, and navigate to our comprehensive A–Z dinosaur directory."
+        />
+        <meta
+          name="twitter:image"
+          content="https://dinosaur.directory/images/discover.png"
+        />
+
         <script type="application/ld+json">
           {`
             {
