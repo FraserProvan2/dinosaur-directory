@@ -9,7 +9,7 @@ const DinosaurSidebar = ({
   return (
     <div className="right-panel">
       <div className="in-period-title">
-        Dinosaurs in {selectedCountry} ({selectedPeriod})
+        Dinosaurs found in {selectedCountry} ({selectedPeriod})
       </div>
       <ul className="dino-list">
         {dinosInCountry.map((dino) => (
