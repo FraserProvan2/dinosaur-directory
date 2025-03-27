@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
 import * as THREE from "three";
-import CountriesPosition from "../../data/countries-positions.json";
+import CountriesPosition from "../data/countries-positions.json";
 
 const periodTextures = {
   "Late Triassic": "/images/textures/late_triassic.jpg",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Globe from "./Globe";
-import DinosaurCollection from "../../entities/DinosaurCollection";
+import DinosaurCollection from "../entities/DinosaurCollection";
 
 const DEV_MODE = true;
 const PRIMARY_COLOR = DEV_MODE ? "#800080" : "#AA0000";
@@ -13,7 +13,7 @@ const periods = [
   "Late Cretaceous",
 ];
 
-function MesozoicEras() {
+function MappingGlobe() {
 
   const [selectedPeriod, setSelectedPeriod] = useState(periods[0]);
   const [selectedCountry, setSelectedCountry] = useState(null);
@@ -112,4 +112,4 @@ function MesozoicEras() {
   );
 }
 
-export default MesozoicEras;
+export default MappingGlobe;
