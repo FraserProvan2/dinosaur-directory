@@ -1,8 +1,7 @@
-# Dinosaur Directory
-
-Dinosaur Directory is a web application for exploring and learning about dinosaurs and the Mesozoic era. Built with React, it offers interactive 3D experiences, quizzes, and a comprehensive dinosaur A-Z page.
+# dinosaur.directory
 
 Built with:
+
 - React
 - Bootstrap 5
 - SCSS
@@ -15,18 +14,19 @@ Built with:
   - Banners linking to main sections.
 
 ![ScreenShot](/showcase/home.png)
+![ScreenShot](/showcase/home-mobile.png)
 
 - **Discover Page:**
   - Interactive 3D globe to explore the Mesozoic era.
   - Timeline slider to view different periods.
   - Clickable location markers revealing dinosaurs found in that region.
   - Links to A-Z pages from dinosaur names.
-  - *(Insert screenshot of Discover Page here)*
+  - _(Insert screenshot of Discover Page here)_
 
 ![ScreenShot](/showcase/discover.gif)
 
 - **A-Z Page:**
-  - Pokedex-like page with search and filter options.
+  - Interactive encyclopedia of dinosaurs with search and filter capabilities.
   - Filter by diet, period, and sub-period.
   - Detailed pages for each dinosaur.
 
@@ -42,27 +42,34 @@ Built with:
 ![ScreenShot](/showcase/quizzes1.png)
 ![ScreenShot](/showcase/quizzes2.png)
 ![ScreenShot](/showcase/quizzes3.png)
+![ScreenShot](/showcase/quizzes4.png)
 
 - **FAQ Page:**
   - Frequently asked questions about dinosaurs and the application.
 
 ![ScreenShot](/showcase/faq.png)
 
+## Data Sources
+
+Dinosaur Directory couldn’t have been made without the help of these resources:
+
+- Data and images from the Natural History Museum
+- Maps from Dinosaur Pictures
+
 ## Getting Started
 
 To get the project up and running locally:
 
 1. Install dependencies:
-   ```npm install```
+   `npm install`
 
 2. Start the development server:
-    ```npm start```
+   `npm start`
 
 ## Building for Production
 
 1. To create a production build:
-   ```npm run build```
+   `npm run build`
 
 2. To serve the production build locally:
-   ```serve -s build```
-
+   `serve -s build`
