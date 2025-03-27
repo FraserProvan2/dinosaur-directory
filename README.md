@@ -21,7 +21,6 @@ Built with:
   - Timeline slider to view different periods.
   - Clickable location markers revealing dinosaurs found in that region.
   - Links to A-Z pages from dinosaur names.
-  - _(Insert screenshot of Discover Page here)_
 
 ![ScreenShot](/showcase/discover.gif)
 
