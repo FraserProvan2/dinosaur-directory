@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import PickPeriodQuiz from "./PickPeriodQuiz";
-import GuessCorrectImage from "./GuessCorrectImage";
+import GuessCorrectImageQuiz from "./GuessCorrectImageQuiz";
 import TriviaQuiz from "./TriviaQuiz";
 
 const App = () => {
@@ -186,7 +186,7 @@ const App = () => {
         />
       )}
       {selectedQuiz?.type === "guessImage" && (
-        <GuessCorrectImage
+        <GuessCorrectImageQuiz
           difficulty={selectedQuiz.difficulty}
           onBack={() => setSelectedQuiz(null)}
         />

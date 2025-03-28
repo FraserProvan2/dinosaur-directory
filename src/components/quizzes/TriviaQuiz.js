@@ -85,11 +85,11 @@ const TriviaQuiz = ({ difficulty, onBack }) => {
     }
   };
 
-  const scorePercentage =
-    questions.length > 0
-      ? Math.round((correctCount / questions.length) * 100)
-      : 0;
   const currentQuestionDisplay = currentIndex + 1;
+  const scorePercentage =
+    currentQuestionDisplay > 0
+      ? Math.round((correctCount / currentQuestionDisplay) * 100)
+      : 0;
 
   if (quizComplete) {
     return (

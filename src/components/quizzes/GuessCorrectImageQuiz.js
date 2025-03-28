@@ -7,7 +7,7 @@ import { trackEvent } from "../../third-party/ga";
 const MAX_QUESTIONS = 20;
 const dinosaurs = DinosaurCollection.getAllDinosaurs();
 
-const GuessCorrectImage = ({ difficulty, onBack }) => {
+const GuessCorrectImageQuiz = ({ difficulty, onBack }) => {
   const [currentDino, setCurrentDino] = useState(null);
   const [choices, setChoices] = useState([]);
   const [selected, setSelected] = useState(null);
@@ -141,4 +141,4 @@ const GuessCorrectImage = ({ difficulty, onBack }) => {
   );
 };
 
-export default GuessCorrectImage;
+export default GuessCorrectImageQuiz;

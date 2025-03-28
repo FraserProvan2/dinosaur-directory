@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /static/
-Disallow: /private/
-Sitemap: https://dinosaur.directory/sitemap.xml
