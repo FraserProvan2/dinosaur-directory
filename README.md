@@ -13,7 +13,7 @@ Built with:
   - Highlights the Dinosaur of the Week.
   - Banners linking to main sections.
 
-![ScreenShot](/showcase/home2.png)
+![ScreenShot](/showcase/home.png)
 
 - **Discover Page:**
   - Interactive 3D globe to explore the Mesozoic era.
