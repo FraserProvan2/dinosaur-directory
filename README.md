@@ -13,8 +13,7 @@ Built with:
   - Highlights the Dinosaur of the Week.
   - Banners linking to main sections.
 
-![ScreenShot](/showcase/home.png)
-![ScreenShot](/showcase/home-mobile.png)
+![ScreenShot](/showcase/home2.png)
 
 - **Discover Page:**
   - Interactive 3D globe to explore the Mesozoic era.
@@ -38,10 +37,7 @@ Built with:
     - **Trivia:** Text-based questions.
     - **Guess Correct Image:** Identify the correct dinosaur image.
 
-![ScreenShot](/showcase/quizzes1.png)
-![ScreenShot](/showcase/quizzes2.png)
-![ScreenShot](/showcase/quizzes3.png)
-![ScreenShot](/showcase/quizzes4.png)
+![ScreenShot](/showcase/quizzes.png)
 
 - **FAQ Page:**
   - Frequently asked questions about dinosaurs and the application.
