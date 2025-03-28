@@ -1,16 +1,12 @@
 {
   "name": "dino-quiz",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "homepage": "/",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@react-three/drei": "^10.0.3",
     "@react-three/fiber": "^9.0.4",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
-    "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
     "bootswatch": "^5.3.3",
     "framer-motion": "^12.4.10",
@@ -30,8 +26,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "postbuild": "node src/scripts/generate-sitemap.js"
   },
   "reactSnap": {
